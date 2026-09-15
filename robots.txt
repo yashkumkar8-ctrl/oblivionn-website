@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yashkumkar8-ctrl.github.io/oblivionn-website/sitemap.xml
