@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Sikho — Zero se Hero</title>
+    <meta name="description" content="Free Data Analytics training platform - Learn Excel, Statistics, SQL, Python step by step in Hindi">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>DataSikho</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="user-profile">
+            <div class="avatar" id="user-avatar">Y</div>
+            <div class="user-info">
+                <span class="user-name">Yash</span>
+                <span class="user-level" id="user-level">Beginner</span>
+            </div>
+        </div>
+
+        <div class="progress-overview">
+            <div class="progress-label">
+                <span>Overall Progress</span>
+                <span id="overall-progress-pct">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="overall-progress-bar" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item active" data-section="dashboard">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </li>
+            <li class="nav-item" data-section="module-1">
+                <i class="fas fa-table"></i>
+                <span>Module 1: Data Basics</span>
+                <span class="badge" id="m1-badge">0/5</span>
+            </li>
+            <li class="nav-item" data-section="module-2">
+                <i class="fas fa-file-excel"></i>
+                <span>Module 2: Excel/Sheets</span>
+                <span class="badge" id="m2-badge">0/5</span>
+            </li>
+            <li class="nav-item" data-section="module-3">
+                <i class="fas fa-calculator"></i>
+                <span>Module 3: Statistics</span>
+                <span class="badge" id="m3-badge">0/5</span>
+            </li>
+            <li class="nav-item" data-section="module-4">
+                <i class="fas fa-database"></i>
+                <span>Module 4: SQL</span>
+                <span class="badge" id="m4-badge">0/4</span>
+            </li>
+            <li class="nav-item" data-section="module-5">
+                <i class="fas fa-python"></i>
+                <span>Module 5: Python</span>
+                <span class="badge" id="m5-badge">0/4</span>
+            </li>
+            <li class="nav-item" data-section="quiz">
+                <i class="fas fa-question-circle"></i>
+                <span>Quiz Zone</span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+
+        <!-- Dashboard Section -->
+        <section class="content-section active" id="section-dashboard">
+            <div class="welcome-hero">
+                <div class="welcome-text">
+                    <h1>Namaste, Yash! 👋</h1>
+                    <p>Data Analytics sikhne ka safar shuru karo — bilkul <span class="highlight">zero</span> se!</p>
+                    <button class="btn-primary btn-glow" id="start-learning-btn">
+                        <i class="fas fa-rocket"></i> Sikhna Shuru Karo
+                    </button>
+                </div>
+                <div class="welcome-visual">
+                    <div class="floating-chart">
+                        <div class="chart-bar" style="--height: 40%; --delay: 0s; --color: #6366f1"></div>
+                        <div class="chart-bar" style="--height: 65%; --delay: 0.1s; --color: #8b5cf6"></div>
+                        <div class="chart-bar" style="--height: 45%; --delay: 0.2s; --color: #a78bfa"></div>
+                        <div class="chart-bar" style="--height: 80%; --delay: 0.3s; --color: #c084fc"></div>
+                        <div class="chart-bar" style="--height: 55%; --delay: 0.4s; --color: #e879f9"></div>
+                        <div class="chart-bar" style="--height: 90%; --delay: 0.5s; --color: #f472b6"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="--accent: #6366f1"><i class="fas fa-book-open"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="lessons-completed">0</span>
+                        <span class="stat-label">Lessons Done</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="--accent: #10b981"><i class="fas fa-check-circle"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="quizzes-passed">0</span>
+                        <span class="stat-label">Quizzes Passed</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="--accent: #f59e0b"><i class="fas fa-fire"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="streak-count">0</span>
+                        <span class="stat-label">Day Streak</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="--accent: #ef4444"><i class="fas fa-trophy"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="xp-count">0</span>
+                        <span class="stat-label">XP Earned</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-road"></i> Tumhara Learning Path</h2>
+            <div class="roadmap">
+                <div class="roadmap-item active" data-target="module-1">
+                    <div class="roadmap-icon"><i class="fas fa-table"></i></div>
+                    <div class="roadmap-info">
+                        <h3>Module 1: Data Basics</h3>
+                        <p>Data kya hai, types of data, real-life examples</p>
+                    </div>
+                    <span class="roadmap-status" id="rm-m1">Start →</span>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item locked" data-target="module-2">
+                    <div class="roadmap-icon"><i class="fas fa-file-excel"></i></div>
+                    <div class="roadmap-info">
+                        <h3>Module 2: Excel / Google Sheets</h3>
+                        <p>Formulas, Charts, Pivot Tables</p>
+                    </div>
+                    <span class="roadmap-status">🔒 Locked</span>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item locked" data-target="module-3">
+                    <div class="roadmap-icon"><i class="fas fa-calculator"></i></div>
+                    <div class="roadmap-info">
+                        <h3>Module 3: Statistics</h3>
+                        <p>Mean, Median, Mode, Probability</p>
+                    </div>
+                    <span class="roadmap-status">🔒 Locked</span>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item locked" data-target="module-4">
+                    <div class="roadmap-icon"><i class="fas fa-database"></i></div>
+                    <div class="roadmap-info">
+                        <h3>Module 4: SQL</h3>
+                        <p>Database queries, filtering, joining</p>
+                    </div>
+                    <span class="roadmap-status">🔒 Locked</span>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item locked" data-target="module-5">
+                    <div class="roadmap-icon"><i class="fas fa-python"></i></div>
+                    <div class="roadmap-info">
+                        <h3>Module 5: Python</h3>
+                        <p>Pandas, Matplotlib, Data Cleaning</p>
+                    </div>
+                    <span class="roadmap-status">🔒 Locked</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 1: Data Basics -->
+        <section class="content-section" id="section-module-1">
+            <div class="module-header">
+                <div class="module-badge" style="--accent: #6366f1"><i class="fas fa-table"></i></div>
+                <div>
+                    <h1>Module 1: Data Basics</h1>
+                    <p>Data kya hota hai aur usse kaise samjhein</p>
+                </div>
+            </div>
+
+            <div class="lessons-list" id="module-1-lessons">
+                <!-- Lesson 1.1 -->
+                <div class="lesson-card" data-lesson="1-1" id="lesson-1-1">
+                    <div class="lesson-status"><i class="fas fa-circle"></i></div>
+                    <div class="lesson-content">
+                        <h3>1.1 — Data Kya Hai?</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <strong>Definition:</strong> Data matlab koi bhi information jo hum collect karte hain — numbers, words, dates, ya facts ke roop mein.
+                                </div>
+
+                                <h4>🌍 Real Life mein Data:</h4>
+                                <div class="example-grid">
+                                    <div class="example-card">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <h5>Phone Usage</h5>
+                                        <p>Har din kitne hours phone use karte ho — ye <strong>data</strong> hai!</p>
+                                    </div>
+                                    <div class="example-card">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <h5>Shopping</h5>
+                                        <p>Kitna paisa kharcha kiya, kya kharida — ye bhi <strong>data</strong> hai!</p>
+                                    </div>
+                                    <div class="example-card">
+                                        <i class="fas fa-cloud-sun"></i>
+                                        <h5>Weather</h5>
+                                        <p>Temperature, humidity, rain — ye sab <strong>data</strong> hai!</p>
+                                    </div>
+                                    <div class="example-card">
+                                        <i class="fas fa-cricket"></i>
+                                        <h5>Cricket</h5>
+                                        <p>Runs, wickets, strike rate — ye sports <strong>data</strong> hai!</p>
+                                    </div>
+                                </div>
+
+                                <div class="key-point">
+                                    <h4>🎯 Key Point:</h4>
+                                    <p><strong>Data Analyst</strong> ye data dekhta hai, patterns dhundhta hai, aur smart decisions lene mein help karta hai.</p>
+                                    <p><em>Jaise: "Sunday ko sabse zyada samosa bikta hai" → toh Sunday ko extra banao!</em></p>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('1-1')">
+                                    <i class="fas fa-check"></i> Samajh Gaya! ✅
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lesson 1.2 -->
+                <div class="lesson-card" data-lesson="1-2" id="lesson-1-2">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>1.2 — Data Ke Types</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <p>Data kai tarah ka hota hai. Chalo samjhte hain:</p>
+
+                                <div class="type-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Kya Hai</th>
+                                                <th>Example</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="tag tag-blue">Numerical</span></td>
+                                                <td>Numbers wala data</td>
+                                                <td>Age: 25, Marks: 85, Price: ₹500</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tag tag-green">Categorical</span></td>
+                                                <td>Categories/Groups wala data</td>
+                                                <td>Gender: M/F, City: Mumbai/Delhi</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tag tag-purple">Text</span></td>
+                                                <td>Words aur sentences</td>
+                                                <td>Names, Reviews, Comments</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tag tag-orange">Date/Time</span></td>
+                                                <td>Date aur time wala data</td>
+                                                <td>16 Sept 2026, 5:30 PM</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tag tag-red">Boolean</span></td>
+                                                <td>Haan ya Naa (True/False)</td>
+                                                <td>Pass: Yes, Active: No</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="interactive-exercise">
+                                    <h4>🧠 Practice: Ye kaunsa data type hai?</h4>
+                                    <div class="exercise-question" id="ex-1-2">
+                                        <p class="exercise-prompt">"Rahul ki age <strong>22</strong> saal hai"</p>
+                                        <div class="exercise-options">
+                                            <button class="option-btn" onclick="checkAnswer(this, false)">Categorical</button>
+                                            <button class="option-btn" onclick="checkAnswer(this, true)">Numerical</button>
+                                            <button class="option-btn" onclick="checkAnswer(this, false)">Text</button>
+                                            <button class="option-btn" onclick="checkAnswer(this, false)">Boolean</button>
+                                        </div>
+                                        <div class="exercise-feedback" style="display:none"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('1-2')">
+                                    <i class="fas fa-check"></i> Samajh Gaya! ✅
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lesson 1.3 -->
+                <div class="lesson-card" data-lesson="1-3" id="lesson-1-3">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>1.3 — Rows & Columns (Table mein Data)</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Data ko hamesha <strong>Table</strong> mein organize karte hain — jaise Excel ya Google Sheets mein.
+                                </div>
+
+                                <h4>📊 Table ke parts:</h4>
+                                <ul class="styled-list">
+                                    <li><strong>Row (↔️ Horizontal):</strong> Ek row = ek cheez ka poora record. Jaise ek student ki poori info.</li>
+                                    <li><strong>Column (↕️ Vertical):</strong> Ek column = ek type ki information. Jaise sabke names ya sabke marks.</li>
+                                </ul>
+
+                                <h4>Example Table:</h4>
+                                <div class="interactive-table-wrapper">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>👤 Name</th>
+                                                <th>📍 City</th>
+                                                <th>📊 Marks</th>
+                                                <th>✅ Pass</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Rahul</td><td>Mumbai</td><td>85</td><td>Yes</td></tr>
+                                            <tr><td>Priya</td><td>Delhi</td><td>92</td><td>Yes</td></tr>
+                                            <tr><td>Amit</td><td>Pune</td><td>32</td><td>No</td></tr>
+                                            <tr><td>Sneha</td><td>Chennai</td><td>78</td><td>Yes</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="interactive-exercise">
+                                    <h4>🧠 Practice: Is table mein kitne Rows hain? (Header chhod ke)</h4>
+                                    <div class="exercise-options">
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">3</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, true)">4</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">5</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">2</button>
+                                    </div>
+                                    <div class="exercise-feedback" style="display:none"></div>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('1-3')">
+                                    <i class="fas fa-check"></i> Samajh Gaya! ✅
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lesson 1.4 -->
+                <div class="lesson-card" data-lesson="1-4" id="lesson-1-4">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>1.4 — Data Collection: Data Kahan Se Aata Hai?</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <p>Data Analyst ko pehle data chahiye — toh ye data kahan se aata hai?</p>
+
+                                <div class="source-grid">
+                                    <div class="source-card">
+                                        <div class="source-icon"><i class="fas fa-file-csv"></i></div>
+                                        <h5>CSV / Excel Files</h5>
+                                        <p>Company ka data files mein milta hai — jaise sales.csv, students.xlsx</p>
+                                    </div>
+                                    <div class="source-card">
+                                        <div class="source-icon"><i class="fas fa-database"></i></div>
+                                        <h5>Databases</h5>
+                                        <p>Bade companies ka data databases mein store hota hai (SQL use karke)</p>
+                                    </div>
+                                    <div class="source-card">
+                                        <div class="source-icon"><i class="fas fa-globe"></i></div>
+                                        <h5>Web / APIs</h5>
+                                        <p>Weather data, stock prices — internet se aata hai</p>
+                                    </div>
+                                    <div class="source-card">
+                                        <div class="source-icon"><i class="fas fa-poll"></i></div>
+                                        <h5>Surveys / Forms</h5>
+                                        <p>Google Forms se log feedback dete hain — wo bhi data hai!</p>
+                                    </div>
+                                </div>
+
+                                <div class="key-point">
+                                    <h4>🎯 Yaad Rakho:</h4>
+                                    <p>Hum is course mein mostly <strong>CSV files</strong> aur <strong>tables</strong> ke saath kaam karenge — kyunki wahi sabse common hai!</p>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('1-4')">
+                                    <i class="fas fa-check"></i> Samajh Gaya! ✅
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lesson 1.5 -->
+                <div class="lesson-card" data-lesson="1-5" id="lesson-1-5">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>1.5 — Data Analysis Process</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <p>Data Analyst kaise kaam karta hai? Ek simple process follow karta hai:</p>
+
+                                <div class="process-steps">
+                                    <div class="process-step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h5>❓ Question Pucho</h5>
+                                            <p>"Kaunse din sabse zyada sale hoti hai?"</p>
+                                        </div>
+                                    </div>
+                                    <div class="process-arrow"><i class="fas fa-arrow-down"></i></div>
+                                    <div class="process-step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h5>📥 Data Collect Karo</h5>
+                                            <p>CSV file ya database se data lo</p>
+                                        </div>
+                                    </div>
+                                    <div class="process-arrow"><i class="fas fa-arrow-down"></i></div>
+                                    <div class="process-step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h5>🧹 Data Clean Karo</h5>
+                                            <p>Galat ya missing values fix karo</p>
+                                        </div>
+                                    </div>
+                                    <div class="process-arrow"><i class="fas fa-arrow-down"></i></div>
+                                    <div class="process-step">
+                                        <div class="step-number">4</div>
+                                        <div class="step-content">
+                                            <h5>📊 Analyze Karo</h5>
+                                            <p>Charts banao, patterns dekho</p>
+                                        </div>
+                                    </div>
+                                    <div class="process-arrow"><i class="fas fa-arrow-down"></i></div>
+                                    <div class="process-step">
+                                        <div class="step-number">5</div>
+                                        <div class="step-content">
+                                            <h5>💡 Insights Share Karo</h5>
+                                            <p>"Sunday ko 3x zyada sale hoti hai — extra staff rakho!"</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="congrats-box">
+                                    <h4>🎉 Congratulations!</h4>
+                                    <p>Module 1 complete! Ab tum jaante ho:</p>
+                                    <ul>
+                                        <li>✅ Data kya hai</li>
+                                        <li>✅ Data ke types</li>
+                                        <li>✅ Tables mein data kaise organize hota hai</li>
+                                        <li>✅ Data kahan se aata hai</li>
+                                        <li>✅ Analysis ka process</li>
+                                    </ul>
+                                    <p><strong>Next: Module 2 mein Excel/Google Sheets sikhenge!</strong></p>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('1-5')">
+                                    <i class="fas fa-check"></i> Module Complete! 🎉
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 2: Excel -->
+        <section class="content-section" id="section-module-2">
+            <div class="module-header">
+                <div class="module-badge" style="--accent: #10b981"><i class="fas fa-file-excel"></i></div>
+                <div>
+                    <h1>Module 2: Excel / Google Sheets</h1>
+                    <p>Data ko organize karna aur basic formulas sikhna</p>
+                </div>
+            </div>
+
+            <div class="lessons-list" id="module-2-lessons">
+                <div class="lesson-card" data-lesson="2-1" id="lesson-2-1">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>2.1 — Excel/Sheets Introduction</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <strong>Excel / Google Sheets</strong> ek spreadsheet tool hai jahan hum data ko table mein rakhte hain aur calculations karte hain.
+                                </div>
+
+                                <h4>📋 Basic Concepts:</h4>
+                                <ul class="styled-list">
+                                    <li><strong>Cell:</strong> Ek chhota box jahan data likhte hain (jaise A1, B2)</li>
+                                    <li><strong>Row:</strong> Horizontal line (1, 2, 3...)</li>
+                                    <li><strong>Column:</strong> Vertical line (A, B, C...)</li>
+                                    <li><strong>Sheet:</strong> Ek poora page of cells</li>
+                                    <li><strong>Workbook:</strong> Multiple sheets ka collection</li>
+                                </ul>
+
+                                <h4>🖱️ Try Karo:</h4>
+                                <p>Abhi <a href="https://sheets.google.com" target="_blank">Google Sheets</a> open karo aur ek nayi sheet banao. Usme ye data dalo:</p>
+
+                                <div class="interactive-table-wrapper">
+                                    <table class="data-table">
+                                        <thead><tr><th>Name</th><th>Subject</th><th>Marks</th></tr></thead>
+                                        <tbody>
+                                            <tr><td>Rahul</td><td>Maths</td><td>85</td></tr>
+                                            <tr><td>Priya</td><td>Science</td><td>92</td></tr>
+                                            <tr><td>Amit</td><td>English</td><td>78</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('2-1')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="2-2" id="lesson-2-2">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>2.2 — Basic Formulas (SUM, AVERAGE, COUNT)</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <p>Excel ki taakat <strong>Formulas</strong> mein hai. Chalo sikhte hain:</p>
+
+                                <div class="formula-cards">
+                                    <div class="formula-card">
+                                        <h5>=SUM()</h5>
+                                        <p>Sabko jodta hai</p>
+                                        <code>=SUM(C2:C4)</code>
+                                        <span class="formula-result">= 255 (85+92+78)</span>
+                                    </div>
+                                    <div class="formula-card">
+                                        <h5>=AVERAGE()</h5>
+                                        <p>Average nikalata hai</p>
+                                        <code>=AVERAGE(C2:C4)</code>
+                                        <span class="formula-result">= 85 (255÷3)</span>
+                                    </div>
+                                    <div class="formula-card">
+                                        <h5>=COUNT()</h5>
+                                        <p>Kitne numbers hain count karta hai</p>
+                                        <code>=COUNT(C2:C4)</code>
+                                        <span class="formula-result">= 3</span>
+                                    </div>
+                                    <div class="formula-card">
+                                        <h5>=MAX() / =MIN()</h5>
+                                        <p>Sabse bada / chhota number</p>
+                                        <code>=MAX(C2:C4)</code>
+                                        <span class="formula-result">= 92 (highest marks)</span>
+                                    </div>
+                                </div>
+
+                                <div class="interactive-exercise">
+                                    <h4>🧠 Quiz: =SUM(10, 20, 30) ka answer kya hoga?</h4>
+                                    <div class="exercise-options">
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">20</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, true)">60</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">30</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">50</button>
+                                    </div>
+                                    <div class="exercise-feedback" style="display:none"></div>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('2-2')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="2-3" id="lesson-2-3">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>2.3 — IF Formula (Conditions)</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <strong>=IF()</strong> formula se hum conditions check karte hain — agar ye hai toh ye karo, warna wo karo.
+                                </div>
+
+                                <h4>Syntax:</h4>
+                                <div class="code-block">
+                                    <code>=IF(condition, value_if_true, value_if_false)</code>
+                                </div>
+
+                                <h4>Examples:</h4>
+                                <div class="formula-cards">
+                                    <div class="formula-card">
+                                        <h5>Pass ya Fail?</h5>
+                                        <code>=IF(C2>=40, "Pass", "Fail")</code>
+                                        <span class="formula-result">Agar marks 40+ hain toh "Pass", warna "Fail"</span>
+                                    </div>
+                                    <div class="formula-card">
+                                        <h5>Discount dena hai?</h5>
+                                        <code>=IF(D2>1000, "10% Off", "No Discount")</code>
+                                        <span class="formula-result">Agar price 1000+ hai toh discount do</span>
+                                    </div>
+                                </div>
+
+                                <div class="interactive-exercise">
+                                    <h4>🧠 Quiz: =IF(85>=40, "Pass", "Fail") ka result kya hoga?</h4>
+                                    <div class="exercise-options">
+                                        <button class="option-btn" onclick="checkAnswer(this, true)">Pass</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">Fail</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">Error</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">85</button>
+                                    </div>
+                                    <div class="exercise-feedback" style="display:none"></div>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('2-3')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="2-4" id="lesson-2-4">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>2.4 — Charts Banana (Data Visualization)</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <p>Numbers se zyada impact <strong>pictures</strong> ka hota hai. Charts se data ko visual banate hain!</p>
+
+                                <h4>📊 Common Chart Types:</h4>
+                                <div class="chart-types-grid">
+                                    <div class="chart-type-card">
+                                        <div class="mini-chart bar-mini">
+                                            <div style="height:40%"></div>
+                                            <div style="height:70%"></div>
+                                            <div style="height:55%"></div>
+                                            <div style="height:85%"></div>
+                                        </div>
+                                        <h5>Bar Chart</h5>
+                                        <p>Compare karne ke liye</p>
+                                    </div>
+                                    <div class="chart-type-card">
+                                        <div class="mini-chart pie-mini">
+                                            <div class="pie-slice"></div>
+                                        </div>
+                                        <h5>Pie Chart</h5>
+                                        <p>Percentage dikhane ke liye</p>
+                                    </div>
+                                    <div class="chart-type-card">
+                                        <div class="mini-chart line-mini">
+                                            <svg viewBox="0 0 100 50"><polyline points="0,40 25,20 50,30 75,10 100,25" fill="none" stroke="#6366f1" stroke-width="3"/></svg>
+                                        </div>
+                                        <h5>Line Chart</h5>
+                                        <p>Trend dikhane ke liye</p>
+                                    </div>
+                                </div>
+
+                                <div class="key-point">
+                                    <h4>🖱️ Google Sheets mein Chart banana:</h4>
+                                    <ol>
+                                        <li>Data select karo</li>
+                                        <li>Insert → Chart click karo</li>
+                                        <li>Chart type choose karo</li>
+                                        <li>Customize karo (colors, labels)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('2-4')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="2-5" id="lesson-2-5">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>2.5 — Sorting & Filtering</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <h4>🔽 Sorting (Arrange karna):</h4>
+                                <ul class="styled-list">
+                                    <li><strong>A → Z:</strong> Alphabetically ya smallest to largest</li>
+                                    <li><strong>Z → A:</strong> Reverse order ya largest to smallest</li>
+                                </ul>
+
+                                <h4>🔍 Filtering (Chhanna):</h4>
+                                <p>Sirf wahi data dikhao jo chahiye. Jaise:</p>
+                                <ul class="styled-list">
+                                    <li>"Sirf Mumbai ke students dikhao"</li>
+                                    <li>"Sirf 80+ marks wale dikhao"</li>
+                                </ul>
+
+                                <div class="key-point">
+                                    <h4>🖱️ Google Sheets mein:</h4>
+                                    <ol>
+                                        <li>Data menu → Create a filter</li>
+                                        <li>Column header pe dropdown click karo</li>
+                                        <li>Sort ya filter options use karo</li>
+                                    </ol>
+                                </div>
+
+                                <div class="congrats-box">
+                                    <h4>🎉 Module 2 Complete!</h4>
+                                    <p>Ab tum jaante ho:</p>
+                                    <ul>
+                                        <li>✅ Excel/Sheets basics</li>
+                                        <li>✅ SUM, AVERAGE, COUNT formulas</li>
+                                        <li>✅ IF conditions</li>
+                                        <li>✅ Charts banana</li>
+                                        <li>✅ Sorting & Filtering</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('2-5')"><i class="fas fa-check"></i> Module Complete! 🎉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 3: Statistics -->
+        <section class="content-section" id="section-module-3">
+            <div class="module-header">
+                <div class="module-badge" style="--accent: #f59e0b"><i class="fas fa-calculator"></i></div>
+                <div>
+                    <h1>Module 3: Statistics Basics</h1>
+                    <p>Numbers ko samajhne ka science</p>
+                </div>
+            </div>
+
+            <div class="lessons-list" id="module-3-lessons">
+                <div class="lesson-card" data-lesson="3-1" id="lesson-3-1">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>3.1 — Mean, Median, Mode</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <p>Ye teen cheezein data ko summarize karti hain:</p>
+
+                                <div class="formula-cards">
+                                    <div class="formula-card">
+                                        <h5>📐 Mean (Average)</h5>
+                                        <p>Sabko jodo aur count se divide karo</p>
+                                        <code>Data: 10, 20, 30 → Mean = 60÷3 = <strong>20</strong></code>
+                                    </div>
+                                    <div class="formula-card">
+                                        <h5>📏 Median (Middle Value)</h5>
+                                        <p>Data ko sort karo, beech wala number lo</p>
+                                        <code>Data: 10, 20, 30 → Median = <strong>20</strong></code>
+                                    </div>
+                                    <div class="formula-card">
+                                        <h5>🔄 Mode (Most Common)</h5>
+                                        <p>Jo number sabse zyada baar aaye</p>
+                                        <code>Data: 10, 20, 20, 30 → Mode = <strong>20</strong></code>
+                                    </div>
+                                </div>
+
+                                <div class="interactive-exercise">
+                                    <h4>🧠 Quiz: Data: 5, 10, 15, 20, 25 — Mean kya hai?</h4>
+                                    <div class="exercise-options">
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">10</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, true)">15</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">20</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">25</button>
+                                    </div>
+                                    <div class="exercise-feedback" style="display:none"></div>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('3-1')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="3-2" id="lesson-3-2">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>3.2 — Range & Standard Deviation</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="formula-cards">
+                                    <div class="formula-card">
+                                        <h5>📏 Range</h5>
+                                        <p>Sabse bada - Sabse chhota = Range</p>
+                                        <code>Data: 10, 20, 50 → Range = 50-10 = <strong>40</strong></code>
+                                    </div>
+                                    <div class="formula-card">
+                                        <h5>📊 Standard Deviation</h5>
+                                        <p>Data kitna spread hai mean se</p>
+                                        <code>Low SD = Data close to mean<br>High SD = Data spread out</code>
+                                    </div>
+                                </div>
+
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Socho: 2 classes ke marks hain. Dono ka average 70 hai. Lekin ek class mein sab 65-75 ke beech hain (Low SD), doosri mein 30-100 ke beech (High SD). Average same hai, par data bahut alag hai!
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('3-2')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="3-3" id="lesson-3-3">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>3.3 — Percentage & Ratios</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <h4>📊 Percentage:</h4>
+                                <div class="code-block">
+                                    <code>Percentage = (Part ÷ Total) × 100</code>
+                                </div>
+                                <p><strong>Example:</strong> 85 marks out of 100 = (85÷100)×100 = <strong>85%</strong></p>
+
+                                <h4>📐 Growth Rate:</h4>
+                                <div class="code-block">
+                                    <code>Growth = ((New - Old) ÷ Old) × 100</code>
+                                </div>
+                                <p><strong>Example:</strong> Last month sales ₹10,000, this month ₹15,000</p>
+                                <p>Growth = ((15000-10000)÷10000)×100 = <strong>50% growth!</strong></p>
+
+                                <div class="interactive-exercise">
+                                    <h4>🧠 Quiz: 45 out of 60 students pass. Pass percentage?</h4>
+                                    <div class="exercise-options">
+                                        <button class="option-btn" onclick="checkAnswer(this, true)">75%</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">45%</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">60%</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">80%</button>
+                                    </div>
+                                    <div class="exercise-feedback" style="display:none"></div>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('3-3')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="3-4" id="lesson-3-4">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>3.4 — Correlation (Connection between data)</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <strong>Correlation</strong> = Kya 2 cheezein ek saath badhti/ghatati hain?
+                                </div>
+
+                                <div class="formula-cards">
+                                    <div class="formula-card">
+                                        <h5>📈 Positive Correlation</h5>
+                                        <p>Ek badhta hai toh doosra bhi badhta hai</p>
+                                        <code>Study hours ↑ = Marks ↑</code>
+                                    </div>
+                                    <div class="formula-card">
+                                        <h5>📉 Negative Correlation</h5>
+                                        <p>Ek badhta hai toh doosra ghatta hai</p>
+                                        <code>Phone use ↑ = Sleep ↓</code>
+                                    </div>
+                                    <div class="formula-card">
+                                        <h5>🔄 No Correlation</h5>
+                                        <p>Dono mein koi connection nahi</p>
+                                        <code>Shoe size ↔ Marks = No link</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('3-4')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="3-5" id="lesson-3-5">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>3.5 — Outliers (Unusual Data Points)</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <strong>Outlier</strong> = Jo data baaki se bahut alag ho. Ye galat ho sakta hai ya interesting ho sakta hai!
+                                </div>
+
+                                <p><strong>Example:</strong> Class marks: 70, 75, 80, 72, 78, <span class="highlight">15</span>, 82</p>
+                                <p>Yahan <strong>15</strong> ek outlier hai — baaki sab 70+ hain!</p>
+
+                                <h4>Outlier ka kya karein?</h4>
+                                <ul class="styled-list">
+                                    <li><strong>Check karo:</strong> Kya ye data entry mistake hai?</li>
+                                    <li><strong>Investigate karo:</strong> Shayad kuch real reason hai (student beemar tha)</li>
+                                    <li><strong>Decide karo:</strong> Analysis mein rakhein ya hatayein?</li>
+                                </ul>
+
+                                <div class="congrats-box">
+                                    <h4>🎉 Module 3 Complete!</h4>
+                                    <p>Ab tum basic statistics jaante ho! 📊</p>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('3-5')"><i class="fas fa-check"></i> Module Complete! 🎉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 4: SQL -->
+        <section class="content-section" id="section-module-4">
+            <div class="module-header">
+                <div class="module-badge" style="--accent: #3b82f6"><i class="fas fa-database"></i></div>
+                <div>
+                    <h1>Module 4: SQL Basics</h1>
+                    <p>Database se data nikalna sikhna</p>
+                </div>
+            </div>
+
+            <div class="lessons-list" id="module-4-lessons">
+                <div class="lesson-card" data-lesson="4-1" id="lesson-4-1">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>4.1 — SQL Kya Hai? SELECT Statement</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <strong>SQL</strong> (Structured Query Language) = Database se data maangne ki language. Jaise Google pe search karte ho, waise database pe SQL likhte ho!
+                                </div>
+
+                                <h4>Basic SELECT:</h4>
+                                <div class="code-block sql-code">
+                                    <pre><code>-- Sab students ka data dikhao
+SELECT * FROM students;
+
+-- Sirf name aur marks dikhao  
+SELECT name, marks FROM students;
+
+-- Sirf top 5 dikhao
+SELECT * FROM students LIMIT 5;</code></pre>
+                                </div>
+
+                                <div class="key-point">
+                                    <h4>🎯 Yaad Rakho:</h4>
+                                    <ul>
+                                        <li><code>SELECT</code> = Kya chahiye</li>
+                                        <li><code>FROM</code> = Kahan se chahiye</li>
+                                        <li><code>*</code> = Sab kuch chahiye</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('4-1')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="4-2" id="lesson-4-2">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>4.2 — WHERE (Filtering Data)</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <p>WHERE se hum condition lagaate hain — sirf wahi data dikhta hai jo condition match kare.</p>
+
+                                <div class="code-block sql-code">
+                                    <pre><code>-- 80+ marks wale students
+SELECT * FROM students WHERE marks > 80;
+
+-- Mumbai ke students
+SELECT * FROM students WHERE city = 'Mumbai';
+
+-- Pass students (marks >= 40) jo Delhi se hain
+SELECT * FROM students 
+WHERE marks >= 40 AND city = 'Delhi';</code></pre>
+                                </div>
+
+                                <div class="interactive-exercise">
+                                    <h4>🧠 Quiz: "Sirf 90+ marks wale dikhao" ke liye kya likhenge?</h4>
+                                    <div class="exercise-options">
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">SELECT * FROM students WHERE marks = 90</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, true)">SELECT * FROM students WHERE marks > 90</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">SELECT marks FROM students</button>
+                                    </div>
+                                    <div class="exercise-feedback" style="display:none"></div>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('4-2')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="4-3" id="lesson-4-3">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>4.3 — GROUP BY & Aggregate Functions</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <p>GROUP BY se data ko groups mein todke calculations karte hain:</p>
+
+                                <div class="code-block sql-code">
+                                    <pre><code>-- Har city mein kitne students hain?
+SELECT city, COUNT(*) as total_students
+FROM students
+GROUP BY city;
+
+-- Har city ka average marks?
+SELECT city, AVG(marks) as avg_marks
+FROM students
+GROUP BY city;
+
+-- Results ko sort karo
+SELECT city, AVG(marks) as avg_marks
+FROM students
+GROUP BY city
+ORDER BY avg_marks DESC;</code></pre>
+                                </div>
+
+                                <div class="key-point">
+                                    <h4>SQL Aggregate Functions:</h4>
+                                    <ul>
+                                        <li><code>COUNT()</code> - Kitne hain</li>
+                                        <li><code>SUM()</code> - Total</li>
+                                        <li><code>AVG()</code> - Average</li>
+                                        <li><code>MAX()</code> - Sabse bada</li>
+                                        <li><code>MIN()</code> - Sabse chhota</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('4-3')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="4-4" id="lesson-4-4">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>4.4 — JOIN (Tables ko jodna)</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Real world mein data alag-alag tables mein hota hai. JOIN se hum 2 tables ko jodte hain!
+                                </div>
+
+                                <div class="code-block sql-code">
+                                    <pre><code>-- Students table + Marks table ko jodo
+SELECT students.name, marks.subject, marks.score
+FROM students
+JOIN marks ON students.id = marks.student_id;
+
+-- LEFT JOIN: Sab students dikhao, marks na ho toh bhi
+SELECT students.name, marks.score
+FROM students
+LEFT JOIN marks ON students.id = marks.student_id;</code></pre>
+                                </div>
+
+                                <div class="congrats-box">
+                                    <h4>🎉 Module 4 Complete!</h4>
+                                    <p>Ab tum SQL basics jaante ho! Practice karne ke liye <a href="https://www.w3schools.com/sql/trysql.asp" target="_blank">W3Schools SQL Editor</a> use karo.</p>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('4-4')"><i class="fas fa-check"></i> Module Complete! 🎉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 5: Python -->
+        <section class="content-section" id="section-module-5">
+            <div class="module-header">
+                <div class="module-badge" style="--accent: #eab308"><i class="fab fa-python"></i></div>
+                <div>
+                    <h1>Module 5: Python for Data Analysis</h1>
+                    <p>Python ke saath data ko handle karna</p>
+                </div>
+            </div>
+
+            <div class="lessons-list" id="module-5-lessons">
+                <div class="lesson-card" data-lesson="5-1" id="lesson-5-1">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>5.1 — Python Basics (Variables & Print)</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="code-block python-code">
+                                    <pre><code># Variable banana
+name = "Yash"
+age = 20
+marks = 85.5
+
+# Print karna
+print("Hello", name)
+print("Age:", age)
+print("Marks:", marks)
+
+# Math operations
+total = 85 + 90 + 78
+average = total / 3
+print("Average marks:", average)</code></pre>
+                                </div>
+
+                                <div class="key-point">
+                                    <h4>🖱️ Practice karo:</h4>
+                                    <p><a href="https://colab.research.google.com" target="_blank">Google Colab</a> open karo (free hai!) aur ye code type karke Run karo.</p>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('5-1')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="5-2" id="lesson-5-2">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>5.2 — Lists & Loops</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="code-block python-code">
+                                    <pre><code># List banana
+marks = [85, 90, 78, 92, 88]
+
+# List ke operations
+print("Total students:", len(marks))
+print("Highest:", max(marks))
+print("Lowest:", min(marks))
+print("Average:", sum(marks)/len(marks))
+
+# Loop: Har student ka marks print karo
+for m in marks:
+    if m >= 80:
+        print(m, "- Excellent! 🌟")
+    else:
+        print(m, "- Good 👍")</code></pre>
+                                </div>
+
+                                <div class="interactive-exercise">
+                                    <h4>🧠 Quiz: len([10, 20, 30, 40]) ka result kya hoga?</h4>
+                                    <div class="exercise-options">
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">100</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">3</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, true)">4</button>
+                                        <button class="option-btn" onclick="checkAnswer(this, false)">40</button>
+                                    </div>
+                                    <div class="exercise-feedback" style="display:none"></div>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('5-2')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="5-3" id="lesson-5-3">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>5.3 — Pandas (Data Analysis Library)</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <strong>Pandas</strong> Python ki sabse important library hai data analysis ke liye. Ye Excel jaisa kaam karta hai, lekin zyada powerful!
+                                </div>
+
+                                <div class="code-block python-code">
+                                    <pre><code>import pandas as pd
+
+# CSV file read karo
+df = pd.read_csv("students.csv")
+
+# Data dekho
+print(df.head())        # Top 5 rows
+print(df.shape)         # Kitni rows & columns
+print(df.describe())    # Statistics summary
+
+# Filtering
+top_students = df[df['marks'] > 80]
+print(top_students)
+
+# Group by
+city_avg = df.groupby('city')['marks'].mean()
+print(city_avg)</code></pre>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('5-3')"><i class="fas fa-check"></i> Done! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" data-lesson="5-4" id="lesson-5-4">
+                    <div class="lesson-status"><i class="fas fa-lock"></i></div>
+                    <div class="lesson-content">
+                        <h3>5.4 — Data Visualization with Matplotlib</h3>
+                        <div class="lesson-body" style="display:none">
+                            <div class="lesson-text">
+                                <div class="code-block python-code">
+                                    <pre><code>import matplotlib.pyplot as plt
+
+# Bar Chart
+subjects = ['Math', 'Science', 'English', 'Hindi']
+marks = [85, 92, 78, 88]
+
+plt.bar(subjects, marks, color=['#6366f1','#10b981','#f59e0b','#ef4444'])
+plt.title('Subject wise Marks')
+plt.xlabel('Subject')
+plt.ylabel('Marks')
+plt.show()
+
+# Pie Chart
+plt.pie(marks, labels=subjects, autopct='%1.1f%%')
+plt.title('Marks Distribution')
+plt.show()
+
+# Line Chart
+months = ['Jan','Feb','Mar','Apr','May']
+sales = [100, 150, 130, 170, 200]
+plt.plot(months, sales, marker='o', color='#6366f1')
+plt.title('Monthly Sales')
+plt.show()</code></pre>
+                                </div>
+
+                                <div class="congrats-box">
+                                    <h4>🎉🎉🎉 SAB MODULES COMPLETE! 🎉🎉🎉</h4>
+                                    <p>Ab tum ek <strong>Junior Data Analyst</strong> ban chuke ho!</p>
+                                    <h4>Next Steps:</h4>
+                                    <ul>
+                                        <li>🔥 Kaggle pe real datasets pe practice karo</li>
+                                        <li>📊 Portfolio projects banao</li>
+                                        <li>📄 Resume update karo</li>
+                                        <li>💼 Internships apply karo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-actions">
+                                <button class="btn-complete" onclick="completeLesson('5-4')"><i class="fas fa-check"></i> Course Complete! 🎓</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="content-section" id="section-quiz">
+            <div class="module-header">
+                <div class="module-badge" style="--accent: #ef4444"><i class="fas fa-question-circle"></i></div>
+                <div>
+                    <h1>Quiz Zone 🧠</h1>
+                    <p>Apna knowledge test karo!</p>
+                </div>
+            </div>
+
+            <div class="quiz-container" id="quiz-container">
+                <div class="quiz-start" id="quiz-start">
+                    <div class="quiz-intro">
+                        <i class="fas fa-brain quiz-big-icon"></i>
+                        <h2>Ready for the Quiz?</h2>
+                        <p>10 questions — sab modules se mix!</p>
+                        <p>Har sahi answer = <strong>+10 XP</strong> 🌟</p>
+                        <button class="btn-primary btn-glow" onclick="startQuiz()">
+                            <i class="fas fa-play"></i> Quiz Start Karo!
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quiz-active" id="quiz-active" style="display:none">
+                    <div class="quiz-progress">
+                        <span id="quiz-qnum">Question 1/10</span>
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quiz-progress-fill" style="width: 10%"></div>
+                        </div>
+                        <span class="quiz-score">Score: <strong id="quiz-score">0</strong></span>
+                    </div>
+
+                    <div class="quiz-question-card" id="quiz-question-card">
+                        <h3 id="quiz-question-text"></h3>
+                        <div class="quiz-options" id="quiz-options"></div>
+                        <div class="quiz-feedback" id="quiz-feedback" style="display:none"></div>
+                        <button class="btn-primary" id="quiz-next-btn" style="display:none" onclick="nextQuizQuestion()">
+                            Next Question →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quiz-result" id="quiz-result" style="display:none">
+                    <div class="result-card">
+                        <div class="result-emoji" id="result-emoji">🎉</div>
+                        <h2 id="result-title">Great Job!</h2>
+                        <p id="result-score-text"></p>
+                        <div class="result-xp" id="result-xp"></div>
+                        <button class="btn-primary" onclick="resetQuiz()">
+                            <i class="fas fa-redo"></i> Phir Se Try Karo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

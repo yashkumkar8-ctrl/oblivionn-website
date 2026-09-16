@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Kumkar | Full-Stack Web Developer & UI Designer Portfolio</title>
+    <meta name="description" content="Portfolio of Yash Kumkar — Professional Web Developer & UI Designer. Specializing in custom websites, high-converting landing pages, and responsive web applications.">
+    <meta name="keywords" content="Yash Kumkar, Web Developer, Freelance Web Developer, Oblivionn, Frontend Developer, Website Design, Landing Pages, React Developer, Fiverr Web Developer">
+    <meta name="author" content="Yash Kumkar">
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Yash Kumkar | Full-Stack Web Developer Portfolio">
+    <meta property="og:description" content="High-performance custom websites, modern landing pages, and web apps built to convert. Hire on Fiverr.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yashkumkar8-ctrl.github.io/oblivionn-website/portfolio/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Glow Blobs & Grid Canvas -->
+    <div class="bg-mesh">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+        <canvas id="ambient-canvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#hero" class="brand-logo">
+                <span class="logo-code">&lt;</span>
+                <span class="logo-name">Yash</span>
+                <span class="logo-accent">Kumkar</span>
+                <span class="logo-code">/&gt;</span>
+                <span class="badge-dev">PRO DEV</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Tech Stack</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="btn-hire-nav">
+                    <i class="fa-brands fa-fiverr"></i>
+                    <span>Hire on Fiverr</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                </a>
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="section-container hero-container">
+                <div class="hero-content">
+                    <div class="status-pill">
+                        <span class="pulse-dot"></span>
+                        <span class="status-text">Available for Freelance & Contract Work</span>
+                    </div>
+
+                    <h1 class="hero-headline">
+                        Crafting <span class="gradient-text">High-Impact</span> Websites That Turn Visitors Into Clients.
+                    </h1>
+
+                    <p class="hero-description">
+                        Hi, I’m <strong>Yash Kumkar</strong> — Full-Stack Web Developer & UI Designer. I build ultra-fast, responsive, and conversion-focused websites with clean hand-written code, modern aesthetics, and seamless user experiences.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Hire Me on Fiverr</span>
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <a href="#projects" class="btn-secondary">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>View Live Work</span>
+                        </a>
+                        <a href="#contact" class="btn-ghost">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>Get a Free Quote</span>
+                        </a>
+                    </div>
+
+                    <!-- Metrics Strip -->
+                    <div class="metrics-strip">
+                        <div class="metric-item">
+                            <div class="metric-num">100%</div>
+                            <div class="metric-label">Clean Hand-Coded</div>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <div class="metric-num">98+</div>
+                            <div class="metric-label">PageSpeed Score</div>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <div class="metric-num">24-48h</div>
+                            <div class="metric-label">Rapid Delivery</div>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <div class="metric-num">100%</div>
+                            <div class="metric-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="code-window-card">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="window-title">developer-profile.ts</div>
+                            <div class="window-lang">TypeScript</div>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="c-keyword">const</span> <span class="c-var">freelancer</span> = {
+  <span class="c-prop">name</span>: <span class="c-string">"Yash Kumkar"</span>,
+  <span class="c-prop">role</span>: <span class="c-string">"Full-Stack Web Developer"</span>,
+  <span class="c-prop">location</span>: <span class="c-string">"India 🇮🇳 (Global Remote)"</span>,
+  <span class="c-prop">skills</span>: [
+    <span class="c-string">"HTML5/CSS3"</span>, <span class="c-string">"Modern JS (ES6+)"</span>,
+    <span class="c-string">"React"</span>, <span class="c-string">"Next.js"</span>, <span class="c-string">"Responsive UI"</span>,
+    <span class="c-string">"Performance & SEO"</span>, <span class="c-string">"Bug Fixes"</span>
+  ],
+  <span class="c-prop">services</span>: {
+    <span class="c-prop">starterGig</span>: <span class="c-string">"$10 / ₹850"</span>,
+    <span class="c-prop">avgTurnaround</span>: <span class="c-string">"24 - 48 Hours"</span>,
+    <span class="c-prop">guarantee</span>: <span class="c-string">"Unlimited Revisions & 100% Satisfaction"</span>
+  },
+  <span class="c-func">status</span>: () =&gt; <span class="c-string">"⚡ Ready to build your dream project!"</span>
+};</code></pre>
+                        </div>
+                        <div class="window-footer">
+                            <div class="badge-tag"><i class="fa-solid fa-check"></i> Clean Code Standards</div>
+                            <div class="badge-tag"><i class="fa-solid fa-mobile-screen"></i> 100% Mobile Ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-regular fa-user"></i> ABOUT ME</span>
+                    <h2 class="section-title">Driven by Quality, Obsessed with <span class="gradient-text">Performance</span></h2>
+                    <p class="section-subtitle">A web developer who treats your business goals with the same seriousness as code architecture.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card main-info">
+                        <div class="about-avatar-wrapper">
+                            <div class="avatar-glow"></div>
+                            <div class="avatar-box">
+                                <span class="avatar-initials">YK</span>
+                            </div>
+                        </div>
+                        <div class="about-text-content">
+                            <h3>Yash Kumkar</h3>
+                            <p class="designation">Freelance Web Developer & Founder of Oblivionn Studio</p>
+                            <p class="bio-paragraph">
+                                I build custom, lightning-fast digital experiences that help businesses, content creators, and startups stand out in a crowded digital landscape. No bloated WordPress templates or laggy page-builders — just clean, semantic code engineered for speed, aesthetics, and high conversion.
+                            </p>
+                            <div class="about-highlights">
+                                <div class="highlight-chip"><i class="fa-solid fa-bolt"></i> Fast Page Load Times</div>
+                                <div class="highlight-chip"><i class="fa-solid fa-shield-halved"></i> Cross-Browser Tested</div>
+                                <div class="highlight-chip"><i class="fa-solid fa-magnifying-glass-chart"></i> SEO-Friendly Architecture</div>
+                                <div class="highlight-chip"><i class="fa-solid fa-headset"></i> Dedicated Post-Launch Support</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-perks">
+                        <div class="perk-card">
+                            <div class="perk-icon"><i class="fa-solid fa-code"></i></div>
+                            <h4>Pixel-Perfect Code</h4>
+                            <p>Hand-written semantic HTML5 and modern CSS3 that render flawlessly on phones, tablets, laptops, and ultra-wide displays.</p>
+                        </div>
+                        <div class="perk-card">
+                            <div class="perk-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                            <h4>Speed Optimized</h4>
+                            <p>Optimized image loading, zero unnecessary JS bloat, and Core Web Vitals optimization to rank higher on Google search.</p>
+                        </div>
+                        <div class="perk-card">
+                            <div class="perk-icon"><i class="fa-solid fa-comments-dollar"></i></div>
+                            <h4>Budget-Friendly Rates</h4>
+                            <p>Transparent pricing tailored for Indian & international clients, starting at just $10 (₹850) on Fiverr with escrow protection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section (Aligned with Fiverr Gigs) -->
+        <section class="section services-section" id="services">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-cube"></i> MY SERVICES</span>
+                    <h2 class="section-title">What I Can <span class="gradient-text">Build For You</span></h2>
+                    <p class="section-subtitle">Everything you need to establish a commanding online presence, available directly on Fiverr.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                            <span class="service-price">From $10 <small>(₹850)</small></span>
+                        </div>
+                        <h3 class="service-title">Custom Website Development</h3>
+                        <p class="service-desc">Complete multi-page or single-page websites hand-coded with HTML5, CSS3, and JavaScript tailored to your exact business needs.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-circle-check"></i> 100% Responsive on all devices</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Clean, commented source code</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Contact form & social media integration</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Fast turnaround & deployment ready</li>
+                        </ul>
+                        <div class="service-footer">
+                            <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="service-btn">
+                                <span>Order on Fiverr</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card featured-service">
+                        <div class="featured-badge">MOST POPULAR</div>
+                        <div class="service-header">
+                            <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            <span class="service-price">From $10 <small>(₹850)</small></span>
+                        </div>
+                        <h3 class="service-title">High-Converting Landing Pages</h3>
+                        <p class="service-desc">Eye-catching, conversion-optimized landing pages designed specifically for marketing campaigns, product launches, and lead capture.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Compelling visual hierarchy & CTA design</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Lightning-fast load speed (95+ score)</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Lead generation form integration</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Analytics & tracking script ready</li>
+                        </ul>
+                        <div class="service-footer">
+                            <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="service-btn btn-highlight">
+                                <span>Order on Fiverr</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <span class="service-price">From $10 <small>(₹850)</small></span>
+                        </div>
+                        <h3 class="service-title">Personal & Agency Portfolios</h3>
+                        <p class="service-desc">Showcase your skills, projects, and personal brand with an ultra-sleek, dynamic portfolio that wins clients and recruiters.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Dark & modern aesthetic options</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Interactive project gallery & modals</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Resume / CV download integration</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Free GitHub Pages / Vercel hosting setup</li>
+                        </ul>
+                        <div class="service-footer">
+                            <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="service-btn">
+                                <span>Order on Fiverr</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
+                            <span class="service-price">From $5 <small>(₹425)</small></span>
+                        </div>
+                        <h3 class="service-title">Website Bug Fixing & Speedup</h3>
+                        <p class="service-desc">Quickly resolve layout issues, broken CSS, JavaScript bugs, mobile responsiveness errors, or slow page loading times.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-circle-check"></i> CSS & responsive layout fixes</li>
+                            <li><i class="fa-solid fa-circle-check"></i> JavaScript troubleshooting & fixes</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Performance & Core Web Vitals boost</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Rapid 12-24 hour turnaround</li>
+                        </ul>
+                        <div class="service-footer">
+                            <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="service-btn">
+                                <span>Order on Fiverr</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <span class="service-price">From $15 <small>(₹1,250)</small></span>
+                        </div>
+                        <h3 class="service-title">Website Redesign & Modernization</h3>
+                        <p class="service-desc">Transform your outdated, sluggish website into a stunning, sleek, high-performing digital experience that builds trust.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Contemporary UI/UX styling</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Mobile-first architecture overhaul</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Smoother animations & interactions</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Content migration included</li>
+                        </ul>
+                        <div class="service-footer">
+                            <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="service-btn">
+                                <span>Order on Fiverr</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon"><i class="fa-brands fa-react"></i></div>
+                            <span class="service-price">From $25 <small>(₹2,100)</small></span>
+                        </div>
+                        <h3 class="service-title">React & Dynamic Web Apps</h3>
+                        <p class="service-desc">Custom single page applications, dashboards, API-driven interfaces, and interactive tools built with React, Next.js, and modern JS.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Component-based scalable architecture</li>
+                            <li><i class="fa-solid fa-circle-check"></i> REST API & third-party integrations</li>
+                            <li><i class="fa-solid fa-circle-check"></i> State management & interactive UI</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Complete deployment to Vercel/Netlify</li>
+                        </ul>
+                        <div class="service-footer">
+                            <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="service-btn">
+                                <span>Order on Fiverr</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Showcase -->
+        <section class="section projects-section" id="projects">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-folder-open"></i> SHOWCASE</span>
+                    <h2 class="section-title">Selected <span class="gradient-text">Featured Work</span></h2>
+                    <p class="section-subtitle">Real-world applications, interactive platforms, and designs built with focus on speed and visual impact.</p>
+                </div>
+
+                <div class="project-filter-bar">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="webapp">Web Apps</button>
+                    <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                    <button class="filter-btn" data-filter="creative">Creative UI</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: DataSikho -->
+                    <div class="project-card" data-category="webapp">
+                        <div class="project-preview-box">
+                            <div class="mockup-header">
+                                <span class="mock-dot r"></span>
+                                <span class="mock-dot y"></span>
+                                <span class="mock-dot g"></span>
+                                <span class="mock-url">datasikho.local/dashboard</span>
+                            </div>
+                            <div class="preview-visual preview-datasikho">
+                                <div class="inner-preview">
+                                    <div class="preview-badge"><i class="fa-solid fa-chart-line"></i> DataSikho LMS</div>
+                                    <h4>Interactive Data Analytics Training Platform</h4>
+                                    <div class="preview-stats">
+                                        <span><i class="fa-solid fa-book-open"></i> 6 Full Modules</span>
+                                        <span><i class="fa-solid fa-list-check"></i> Quizzes</span>
+                                        <span><i class="fa-solid fa-award"></i> Progress Sync</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-tags">
+                                <span class="tag">HTML5/CSS3</span>
+                                <span class="tag">JavaScript ES6</span>
+                                <span class="tag">LocalStorage</span>
+                                <span class="tag">Gamified UI</span>
+                            </div>
+                            <h3 class="project-title">DataSikho — Learning Platform</h3>
+                            <p class="project-summary">
+                                A comprehensive, bilingual learning web app for aspiring data analysts. Features dynamic progress bars, quiz evaluation engines, cheat sheets, and responsive dashboard.
+                            </p>
+                            <div class="project-links">
+                                <a href="../data-analyst-training/" target="_blank" class="p-link live-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>Explore Live Demo</span>
+                                </a>
+                                <span class="badge-status">100% Live</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Oblivionn Esports -->
+                    <div class="project-card" data-category="creative">
+                        <div class="project-preview-box">
+                            <div class="mockup-header">
+                                <span class="mock-dot r"></span>
+                                <span class="mock-dot y"></span>
+                                <span class="mock-dot g"></span>
+                                <span class="mock-url">oblivionn.gg</span>
+                            </div>
+                            <div class="preview-visual preview-gaming">
+                                <div class="inner-preview">
+                                    <div class="preview-badge"><i class="fa-solid fa-gamepad"></i> Cyberpunk Esports</div>
+                                    <h4>Oblivionn Esports &amp; Team Hub</h4>
+                                    <div class="preview-stats">
+                                        <span><i class="fa-solid fa-atom"></i> Particle Canvas</span>
+                                        <span><i class="fa-solid fa-wand-magic"></i> Glitch FX</span>
+                                        <span><i class="fa-solid fa-trophy"></i> Roster Stats</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-tags">
+                                <span class="tag">HTML5 Canvas</span>
+                                <span class="tag">CSS Grid/Flex</span>
+                                <span class="tag">Vanilla JS</span>
+                                <span class="tag">Cyberpunk Design</span>
+                            </div>
+                            <h3 class="project-title">Oblivionn Esports Arena</h3>
+                            <p class="project-summary">
+                                High-octane gaming athlete website featuring custom HTML5 interactive particle physics, glitch text animations, player statistics, and social integration.
+                            </p>
+                            <div class="project-links">
+                                <a href="../" target="_blank" class="p-link live-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>Explore Live Demo</span>
+                                </a>
+                                <span class="badge-status">100% Live</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Nexus AI SaaS -->
+                    <div class="project-card" data-category="landing">
+                        <div class="project-preview-box">
+                            <div class="mockup-header">
+                                <span class="mock-dot r"></span>
+                                <span class="mock-dot y"></span>
+                                <span class="mock-dot g"></span>
+                                <span class="mock-url">nexusai-demo.dev</span>
+                            </div>
+                            <div class="preview-visual preview-saas">
+                                <div class="inner-preview">
+                                    <div class="preview-badge"><i class="fa-solid fa-microchip"></i> SaaS Landing Page</div>
+                                    <h4>Nexus AI — Next-Gen B2B Platform</h4>
+                                    <div class="preview-stats">
+                                        <span><i class="fa-solid fa-sliders"></i> Pricing Toggle</span>
+                                        <span><i class="fa-solid fa-mobile"></i> Mobile Ready</span>
+                                        <span><i class="fa-solid fa-rocket"></i> 99 PageSpeed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-tags">
+                                <span class="tag">Tailwind Architecture</span>
+                                <span class="tag">Modern Dark Mode</span>
+                                <span class="tag">Bento Grid</span>
+                                <span class="tag">Conversion CRO</span>
+                            </div>
+                            <h3 class="project-title">Nexus AI — Modern SaaS Showcase</h3>
+                            <p class="project-summary">
+                                High-converting B2B SaaS landing page with dark-mode glassmorphism, dynamic annual/monthly pricing calculator, and interactive product demo previews.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" class="p-link order-btn">
+                                    <i class="fa-solid fa-bolt"></i>
+                                    <span>Request Similar Build</span>
+                                </a>
+                                <span class="badge-status template-tag">Case Study</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Apex Studio Agency -->
+                    <div class="project-card" data-category="creative">
+                        <div class="project-preview-box">
+                            <div class="mockup-header">
+                                <span class="mock-dot r"></span>
+                                <span class="mock-dot y"></span>
+                                <span class="mock-dot g"></span>
+                                <span class="mock-url">apexstudio.design</span>
+                            </div>
+                            <div class="preview-visual preview-agency">
+                                <div class="inner-preview">
+                                    <div class="preview-badge"><i class="fa-solid fa-palette"></i> Creative Agency</div>
+                                    <h4>Apex Digital Design &amp; Web Studio</h4>
+                                    <div class="preview-stats">
+                                        <span><i class="fa-solid fa-cube"></i> Smooth Micro-FX</span>
+                                        <span><i class="fa-solid fa-envelope"></i> Lead Forms</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-tags">
+                                <span class="tag">Responsive CSS</span>
+                                <span class="tag">Typography First</span>
+                                <span class="tag">Lead Funnel</span>
+                                <span class="tag">SEO Optimized</span>
+                            </div>
+                            <h3 class="project-title">Apex Studio — Creative Portfolio</h3>
+                            <p class="project-summary">
+                                Sophisticated agency portfolio with fluid layout transitions, interactive client reviews, case studies, and integrated booking workflow.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" class="p-link order-btn">
+                                    <i class="fa-solid fa-bolt"></i>
+                                    <span>Request Similar Build</span>
+                                </a>
+                                <span class="badge-status template-tag">Case Study</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Technologies Matrix -->
+        <section class="section skills-section" id="skills">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-layer-group"></i> TECH STACK</span>
+                    <h2 class="section-title">Tools &amp; Technologies I Master</h2>
+                    <p class="section-subtitle">Modern industry standards for building reliable, performant web applications.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>Frontend Core</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>HTML5 (Semantic &amp; Accessible)</span><span>95%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 95%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>CSS3 (Flexbox, Grid, Animations)</span><span>90%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>JavaScript (ES6+, DOM, Async/Await)</span><span>88%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 88%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>React &amp; Next.js Basics</span><span>80%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 80%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <h3>Styling &amp; Frameworks</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>Responsive Mobile-First Design</span><span>96%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 96%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>Tailwind CSS &amp; Bootstrap</span><span>85%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>Modern Dark Mode &amp; Glassmorphism</span><span>92%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 92%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>Micro-interactions &amp; CSS FX</span><span>87%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 87%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-gears"></i>
+                            <h3>Workflow &amp; Optimization</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>Git, GitHub &amp; Version Control</span><span>90%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>Google PageSpeed &amp; SEO Meta</span><span>88%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 88%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>Cross-Browser Compatibility</span><span>94%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 94%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-meta"><span>Vercel / Netlify / GitHub Pages</span><span>92%</span></div>
+                                <div class="skill-bar"><div class="bar-fill" style="width: 92%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Tiers Section (Fiverr Compatible) -->
+        <section class="section pricing-section" id="pricing">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-tag"></i> TRANSPARENT RATES</span>
+                    <h2 class="section-title">Budget-Friendly <span class="gradient-text">Packages</span></h2>
+                    <p class="section-subtitle">Affordable rates tailored for Indian and global clients with 100% escrow protection via Fiverr.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Basic Tier -->
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <div class="plan-badge">STARTER</div>
+                            <h3 class="plan-name">Basic Package</h3>
+                            <div class="plan-price">
+                                <span class="currency">$</span>
+                                <span class="amount">10</span>
+                                <span class="inr">≈ ₹850 INR</span>
+                            </div>
+                            <p class="plan-desc">Ideal for personal portfolios, simple landing pages, or fixing existing code issues.</p>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fa-solid fa-check"></i> 1 Page Clean Hand-Coded Website</li>
+                            <li><i class="fa-solid fa-check"></i> 100% Mobile Responsive</li>
+                            <li><i class="fa-solid fa-check"></i> Working Contact Form</li>
+                            <li><i class="fa-solid fa-check"></i> 24-48 Hours Delivery</li>
+                            <li><i class="fa-solid fa-check"></i> 2 Revisions</li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="btn-plan">
+                                <span>Get Started</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Standard Tier -->
+                    <div class="pricing-card popular-plan">
+                        <div class="popular-ribbon">RECOMMENDED</div>
+                        <div class="plan-header">
+                            <div class="plan-badge">BUSINESS</div>
+                            <h3 class="plan-name">Standard Package</h3>
+                            <div class="plan-price">
+                                <span class="currency">$</span>
+                                <span class="amount">30</span>
+                                <span class="inr">≈ ₹2,500 INR</span>
+                            </div>
+                            <p class="plan-desc">Best for small businesses, agencies, and entrepreneurs looking for a complete online presence.</p>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fa-solid fa-check"></i> Up to 3-5 Fully Responsive Pages</li>
+                            <li><i class="fa-solid fa-check"></i> Modern UI with Interactive FX</li>
+                            <li><i class="fa-solid fa-check"></i> Basic On-Page SEO Optimization</li>
+                            <li><i class="fa-solid fa-check"></i> Free Deployment (GitHub / Netlify)</li>
+                            <li><i class="fa-solid fa-check"></i> 3-4 Days Delivery + 4 Revisions</li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-highlight">
+                                <span>Order Business Plan</span>
+                                <i class="fa-solid fa-bolt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Premium Tier -->
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <div class="plan-badge">PRO SUITE</div>
+                            <h3 class="plan-name">Premium Package</h3>
+                            <div class="plan-price">
+                                <span class="currency">$</span>
+                                <span class="amount">60</span>
+                                <span class="inr">≈ ₹5,000 INR</span>
+                            </div>
+                            <p class="plan-desc">Complete multi-page web solution, custom styling, advanced animations, and priority support.</p>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fa-solid fa-check"></i> Up to 7-10 Custom Coded Pages</li>
+                            <li><i class="fa-solid fa-check"></i> Advanced UI/UX Animations &amp; Micro-FX</li>
+                            <li><i class="fa-solid fa-check"></i> Full SEO, Schema &amp; Social Previews</li>
+                            <li><i class="fa-solid fa-check"></i> 95+ PageSpeed Optimization</li>
+                            <li><i class="fa-solid fa-check"></i> Unlimited Revisions + 14 Days Support</li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="btn-plan">
+                                <span>Order Pro Suite</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Me -->
+        <section class="section reasons-section">
+            <div class="section-container">
+                <div class="reasons-grid">
+                    <div class="reason-item">
+                        <div class="reason-icon"><i class="fa-solid fa-handshake"></i></div>
+                        <h4>100% Escrow Protection</h4>
+                        <p>Order safely through Fiverr — your funds are protected until you are completely satisfied with the delivery.</p>
+                    </div>
+                    <div class="reason-item">
+                        <div class="reason-icon"><i class="fa-solid fa-comments"></i></div>
+                        <h4>Fast Communication</h4>
+                        <p>Quick response times in English &amp; Hindi with transparent daily progress updates on your build.</p>
+                    </div>
+                    <div class="reason-item">
+                        <div class="reason-icon"><i class="fa-solid fa-code-branch"></i></div>
+                        <h4>Clean &amp; Maintainable</h4>
+                        <p>Well-organized folders, semantic class names, and detailed documentation so anyone can maintain it easily.</p>
+                    </div>
+                    <div class="reason-item">
+                        <div class="reason-icon"><i class="fa-solid fa-life-ring"></i></div>
+                        <h4>Free Post-Delivery Help</h4>
+                        <p>Get free support for setup, hosting configuration, and minor adjustments even after delivery completion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-paper-plane"></i> LET'S TALK</span>
+                    <h2 class="section-title">Ready to Start Your <span class="gradient-text">Next Project?</span></h2>
+                    <p class="section-subtitle">Reach out today for a free project quote, timeline estimate, or direct consultation.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-panel">
+                        <div class="info-card-fiverr">
+                            <div class="fiverr-badge-top"><i class="fa-brands fa-fiverr"></i> DIRECT FIVERR ORDER</div>
+                            <h3>Work with me on Fiverr</h3>
+                            <p>Fastest way to get started with verified payment protection, delivery countdown, and instant messaging.</p>
+                            <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener noreferrer" class="btn-fiverr-direct">
+                                <span>Open Fiverr Profile</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+
+                        <div class="contact-channels">
+                            <div class="channel-card">
+                                <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+                                <div class="channel-text">
+                                    <span class="channel-name">GitHub Profile</span>
+                                    <a href="https://github.com/yashkumkar8-ctrl" target="_blank" class="channel-link">@yashkumkar8-ctrl</a>
+                                </div>
+                            </div>
+                            <div class="channel-card">
+                                <div class="channel-icon"><i class="fa-brands fa-linkedin"></i></div>
+                                <div class="channel-text">
+                                    <span class="channel-name">LinkedIn</span>
+                                    <span class="channel-value">Yash Kumkar</span>
+                                </div>
+                            </div>
+                            <div class="channel-card">
+                                <div class="channel-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="channel-text">
+                                    <span class="channel-name">Location</span>
+                                    <span class="channel-value">India (Available Globally)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-panel">
+                        <form id="contact-form" class="contact-form">
+                            <h3 class="form-title">Send a Direct Message</h3>
+                            
+                            <div class="form-group">
+                                <label for="client-name">Your Name</label>
+                                <input type="text" id="client-name" placeholder="John Doe" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="client-email">Email Address</label>
+                                <input type="email" id="client-email" placeholder="john@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-type">Project Requirement</label>
+                                <select id="project-type">
+                                    <option value="landing-page">High-Converting Landing Page ($10+)</option>
+                                    <option value="custom-website">Custom Multi-Page Website ($30+)</option>
+                                    <option value="portfolio">Personal / Agency Portfolio ($10+)</option>
+                                    <option value="bug-fix">Bug Fixing / Speed Optimization ($5+)</option>
+                                    <option value="web-app">React / Dynamic Web Application ($25+)</option>
+                                    <option value="other">Other Inquiry / Custom Project</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-message">Project Details / Message</label>
+                                <textarea id="project-message" rows="4" placeholder="Tell me about your project, target audience, and desired timeline..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit" id="submit-btn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+
+                            <div class="form-toast" id="form-toast">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Thank you! Your message has been prepared. You can also message directly on Fiverr for instant response.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container footer-container">
+            <div class="footer-left">
+                <a href="#hero" class="brand-logo footer-logo">
+                    <span class="logo-code">&lt;</span>
+                    <span class="logo-name">Yash</span>
+                    <span class="logo-accent">Kumkar</span>
+                    <span class="logo-code">/&gt;</span>
+                </a>
+                <p class="footer-tagline">Crafting modern, high-converting digital web experiences.</p>
+            </div>
+
+            <div class="footer-nav">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://www.fiverr.com/yashkumkar2105" target="_blank" rel="noopener">Fiverr Profile</a>
+                <a href="../data-analyst-training/">DataSikho Platform</a>
+                <a href="../">Oblivionn Esports</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yash Kumkar. All rights reserved. Powered by Oblivionn Web Studio.</p>
+                <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
