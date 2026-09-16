@@ -143,12 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Contact Form Submission
+    // 5. Contact Form Submission (Direct to Gmail via FormSubmit.co)
     const contactForm = document.getElementById('contact-form');
     const formToast = document.getElementById('form-toast');
+    const toastIcon = document.getElementById('toast-icon');
+    const toastText = document.getElementById('toast-text');
 
     if (contactForm && formToast) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const name = document.getElementById('client-name').value.trim();
@@ -160,27 +162,67 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalBtnText = submitBtn.innerHTML;
 
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Processing...`;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Sending to Gmail...`;
+
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/yashkumkar8@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        Name: name,
+                        Email: email,
+                        Requirement: projectType,
+                        Message: message,
+                        _subject: `🚀 Portfolio Inquiry: ${name} (${projectType})`,
+                        _replyto: email
+                    })
+                });
+
+                const data = await response.json();
+                formToast.style.display = 'flex';
+
+                if (data.success === "true" || data.success === true) {
+                    formToast.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+                    formToast.style.color = '#10b981';
+                    if (toastIcon) toastIcon.className = 'fa-solid fa-circle-check';
+                    if (toastText) toastText.textContent = 'Awesome! Your message has been sent directly to yashkumkar8@gmail.com. Yash will reply shortly!';
+                    contactForm.reset();
+                    submitBtn.innerHTML = `<i class="fa-solid fa-check"></i> Sent to Gmail!`;
+                } else if (data.message && data.message.includes('Activation')) {
+                    formToast.style.borderColor = 'rgba(245, 158, 11, 0.5)';
+                    formToast.style.color = '#f59e0b';
+                    if (toastIcon) toastIcon.className = 'fa-solid fa-envelope-circle-check';
+                    if (toastText) toastText.textContent = 'Activation Required: Please check yashkumkar8@gmail.com and click "Activate Form" once to complete setup!';
+                    submitBtn.innerHTML = `<i class="fa-solid fa-envelope"></i> Check Gmail to Activate`;
+                } else {
+                    formToast.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+                    formToast.style.color = '#10b981';
+                    if (toastIcon) toastIcon.className = 'fa-solid fa-circle-check';
+                    if (toastText) toastText.textContent = 'Thank you! Your message was sent to yashkumkar8@gmail.com.';
+                    contactForm.reset();
+                    submitBtn.innerHTML = `<i class="fa-solid fa-check"></i> Sent!`;
+                }
+            } catch (err) {
+                console.error('Submission error:', err);
+                formToast.style.display = 'flex';
+                formToast.style.borderColor = 'rgba(0, 240, 255, 0.4)';
+                formToast.style.color = '#00f0ff';
+                if (toastIcon) toastIcon.className = 'fa-solid fa-envelope-open-text';
+                if (toastText) toastText.innerHTML = `Opening email app to send directly to <strong>yashkumkar8@gmail.com</strong>...`;
+
+                const mailtoUrl = `mailto:yashkumkar8@gmail.com?subject=${encodeURIComponent('Portfolio Inquiry: ' + projectType)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
+                window.location.href = mailtoUrl;
+
+                submitBtn.innerHTML = `<i class="fa-solid fa-envelope"></i> Opened Mail App`;
+            }
 
             setTimeout(() => {
-                formToast.style.display = 'flex';
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = `<i class="fa-solid fa-check"></i> Message Prepared!`;
-
-                // Optional: trigger mailto link so user can send immediately from their mail client
-                const mailSubject = encodeURIComponent(`Web Dev Project Inquiry from ${name}`);
-                const mailBody = encodeURIComponent(`Hi Yash,\n\nRequirement: ${projectType}\nEmail: ${email}\n\nProject Details:\n${message}`);
-                
-                // Keep toast visible
-                setTimeout(() => {
-                    window.open(`https://www.fiverr.com/yashkumkar2105`, '_blank');
-                }, 1200);
-
-                contactForm.reset();
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalBtnText;
-                }, 4000);
-            }, 800);
+                submitBtn.innerHTML = originalBtnText;
+            }, 6000);
         });
     }
 
