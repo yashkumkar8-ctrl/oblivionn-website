@@ -1,0 +1,50 @@
+[
+  {
+    "id": "stylist-1",
+    "name": "Zeeshan Habib",
+    "title": "Master Creative Director & Academy Mentor",
+    "experience": "14 Years",
+    "specialty": "Signature Precision Cuts, Balayage, Celebrity Makeovers",
+    "rating": 4.98,
+    "reviewsCount": 462,
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    "available": true,
+    "quote": "Hair is your crown. The right geometric cut transforms not just your face, but your confidence."
+  },
+  {
+    "id": "stylist-2",
+    "name": "Priyanka Kulkarni",
+    "title": "Senior Colorist & Chemical Transformation Head",
+    "experience": "10 Years",
+    "specialty": "French Balayage, Nanoplastia, Ash Blonde & Mocha Tones",
+    "rating": 4.97,
+    "reviewsCount": 389,
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+    "available": true,
+    "quote": "Coloring Indian hair requires scientific precision to preserve health while achieving high-fashion luminosity."
+  },
+  {
+    "id": "stylist-3",
+    "name": "Rohan Deshmukh",
+    "title": "Lead Barber & Male Aesthetic Architect",
+    "experience": "8 Years",
+    "specialty": "Imperial Beard Sculpting, Fade Geometry, Executive Spa",
+    "rating": 4.95,
+    "reviewsCount": 274,
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "available": true,
+    "quote": "Old-world royal barbering traditions fused with modern razor ergonomics."
+  },
+  {
+    "id": "stylist-4",
+    "name": "Sneha Joshi",
+    "title": "Head Spa Ritualist & Certified Trichologist",
+    "experience": "9 Years",
+    "specialty": "Japanese Waterfall Head Spa, Scalp Biome Rejuvenation",
+    "rating": 5.0,
+    "reviewsCount": 420,
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+    "available": true,
+    "quote": "The scalp is the soil for luxurious hair. Restoring balance is a sensory art."
+  }
+]

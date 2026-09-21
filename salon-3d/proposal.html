@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Luxury Virtual Salon — Client Proposal & Sales Pitch Deck</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
+
+    @page {
+      size: A4;
+      margin: 15mm 15mm 15mm 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #07070a;
+      color: #e5e5e5;
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      page-break-after: always;
+      position: relative;
+      min-height: 265mm;
+      padding: 25px 30px;
+      background: #0a0a0f;
+      border: 1px solid #222;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Cover Page */
+    .cover-page {
+      background: radial-gradient(circle at 80% 20%, rgba(141, 67, 244, 0.18), transparent 60%),
+                  radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.12), transparent 50%),
+                  #07070a;
+      border: 1px solid #2d2640;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 40px;
+    }
+
+    .brand-emblem {
+      font-size: 52px;
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .cover-tag {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(141, 67, 244, 0.15);
+      border: 1px solid #8D43F4;
+      border-radius: 999px;
+      color: #c084fc;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      font-family: 'Cinzel', serif;
+    }
+
+    .cover-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .cover-title span {
+      background: linear-gradient(135deg, #fceda1 0%, #d4af37 50%, #8D43F4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cover-sub {
+      font-size: 16px;
+      color: #a3a3a3;
+      max-width: 580px;
+      margin: 0 auto 45px;
+      font-weight: 300;
+    }
+
+    .cover-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 620px;
+      background: rgba(18, 18, 26, 0.8);
+      border: 1px solid #262438;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: left;
+    }
+
+    .meta-box span {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+    }
+
+    .meta-box strong {
+      font-size: 13px;
+      color: #fff;
+    }
+
+    /* Section Headers */
+    .page-header {
+      border-bottom: 1px solid #222;
+      padding-bottom: 12px;
+      margin-bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-left h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      color: #fff;
+    }
+
+    .header-left span {
+      font-size: 11px;
+      color: #d4af37;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-family: 'Cinzel', serif;
+    }
+
+    .header-badge {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: #14141c;
+      border: 1px solid #333;
+      color: #aaa;
+    }
+
+    .page-footer {
+      border-top: 1px solid #1f1f28;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: #666;
+    }
+
+    /* Content Cards */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: #101016;
+      border: 1px solid #20202c;
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .card.highlight {
+      border-color: rgba(141, 67, 244, 0.4);
+      background: #12101a;
+    }
+
+    .card.gold {
+      border-color: rgba(212, 175, 55, 0.4);
+      background: #14120a;
+    }
+
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card p {
+      font-size: 12px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .card ul li {
+      font-size: 11.5px;
+      color: #bbb;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card ul li::before {
+      content: "✦";
+      color: #d4af37;
+      font-size: 10px;
+    }
+
+    /* Comparison Table */
+    .table-wrap {
+      width: 100%;
+      margin-bottom: 18px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #151520;
+      color: #d4af37;
+      padding: 10px 14px;
+      border-bottom: 1px solid #333;
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #1a1a24;
+      color: #ccc;
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .text-gold { color: #d4af37; font-weight: 700; }
+    .text-purple { color: #c084fc; font-weight: 700; }
+    .text-danger { color: #ef4444; }
+    .text-success { color: #22c55e; }
+
+    /* Pricing Box */
+    .pricing-tier {
+      background: #111118;
+      border: 1px solid #242436;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .pricing-tier.featured {
+      border: 1px solid #8D43F4;
+      box-shadow: 0 0 25px rgba(141, 67, 244, 0.2);
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #8D43F4;
+      color: #fff;
+      font-size: 9px;
+      padding: 2px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .pricing-tier h4 {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .pricing-tier .price {
+      font-family: 'Syne', sans-serif;
+      font-size: 26px;
+      color: #d4af37;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .pricing-tier p {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 14px;
+    }
+
+    .pricing-tier ul {
+      text-align: left;
+      list-style: none;
+      font-size: 11px;
+      color: #bbb;
+    }
+
+    .pricing-tier ul li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pricing-tier ul li::before {
+      content: "✓";
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    /* Script Callout Box */
+    .script-box {
+      background: rgba(141, 67, 244, 0.08);
+      border-left: 3px solid #8D43F4;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+    }
+
+    .script-box strong {
+      display: block;
+      font-size: 12px;
+      color: #c084fc;
+      margin-bottom: 4px;
+    }
+
+    .script-box p {
+      font-size: 12px;
+      color: #ddd;
+      font-style: italic;
+    }
+
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #161622;
+      border: 1px solid #28283a;
+      padding: 6px 14px;
+      border-radius: 8px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    .stat-pill b {
+      color: #d4af37;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =====================================================================
+       PAGE 1: COVER PAGE
+       ===================================================================== -->
+  <div class="page cover-page">
+    <div>
+      <div class="brand-emblem">⚜️</div>
+      <div class="cover-tag">Exclusive B2B Tech Proposal</div>
+      <h1 class="cover-title">
+        The Next-Gen <span>3D Virtual Salon</span> & Automated VIP Booking Machine
+      </h1>
+      <p class="cover-sub">
+        Transforming your luxury salon from a traditional physical studio into an immersive interactive 3D digital flagship that converts high-paying clientele on autopilot.
+      </p>
+
+      <div class="cover-meta">
+        <div class="meta-box">
+          <span>Technology</span>
+          <strong>Three.js 3D + Node.js</strong>
+        </div>
+        <div class="meta-box">
+          <span>Target Market</span>
+          <strong>Luxury Salons & Spas</strong>
+        </div>
+        <div class="meta-box">
+          <span>Client Location</span>
+          <strong>Pune / Mumbai / Metro</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer" style="width: 100%; border-top: none; justify-content: center; margin-top: 30px;">
+      <span>Strictly Confidential • Commercial Proposal & Sales Pitch Deck</span>
+    </div>
+  </div>
+
+
+  <!-- =====================================================================
+       PAGE 2: THE PROBLEM VS 3D SOLUTION
+       ===================================================================== -->
+  <div class="page">
+    <div>
+      <div class="page-header">
+        <div class="header-left">
+          <span>Market Reality</span>
+          <h2>Why 95% of Salon Websites Fail to Get Clients</h2>
+        </div>
+        <div class="header-badge">Executive Summary</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="border-color: rgba(239, 68, 68, 0.3); background: #120b0b;">
+          <h3 style="color: #f87171;">❌ The ₹10,000 WordPress Template Trap</h3>
+          <p>Most local web designers sell slow, generic WordPress themes with blurry stock photos that salon owners never update:</p>
+          <ul>
+            <li>Customer lands on page and leaves within 8 seconds</li>
+            <li>No interactive experience — looks like every other cheap parlour</li>
+            <li>No automatic price calculator (Reception gets bombarded with basic price calls)</li>
+            <li>Zero security (Spam appointment submissions crash the form)</li>
+            <li>Doesn't showcase high-ticket Balayage, Keratin, or Head Spa treatments</li>
+          </ul>
+        </div>
+
+        <div class="card highlight">
+          <h3 style="color: #c084fc;">✨ The 3D Virtual Showroom Difference</h3>
+          <p>Our solution is built with Apple & Gucci level interactive 3D WebGL technology that gives clients an instant VIP feeling:</p>
+          <ul>
+            <li>User orbits and walks through the 3D salon in real-time</li>
+            <li>Customers test Indian hair shades live on a 3D Mannequin</li>
+            <li>Touchless 3D click-to-book directly on the styling chair & spa bed</li>
+            <li>Automated itemized ₹ estimate based on exact hair length & add-ons</li>
+            <li>Instant VIP Digital Pass generated with QR code check-in</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature Metric</th>
+              <th>Ordinary Salon Website</th>
+              <th>Our 3D Virtual Atelier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Customer Session Time</strong></td>
+              <td class="text-danger">Average 25 seconds</td>
+              <td class="text-success"><strong>3.5 to 5 Minutes</strong> (12x higher engagement)</td>
+            </tr>
+            <tr>
+              <td><strong>High-Ticket Conversion</strong></td>
+              <td class="text-danger">Low (Generic price requests)</td>
+              <td class="text-success"><strong>High</strong> (Pre-sells ₹4,000+ Balayage & Keratin)</td>
+            </tr>
+            <tr>
+              <td><strong>Visual First Impression</strong></td>
+              <td>2D Static Flat Pictures</td>
+              <td class="text-purple"><strong>Full 3D WebGL Virtual Tour</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Receptionist Workload</strong></td>
+              <td>Spends 4 hours/day answering rate queries</td>
+              <td class="text-success"><strong>100% Automated ₹ Estimator & Booking</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>3D Luxury Virtual Salon Proposal</span>
+      <span>Confidential & Proprietary • Page 2</span>
+    </div>
+  </div>
+
+
+  <!-- =====================================================================
+       PAGE 3: THE 5 INTERACTIVE 3D ZONES
+       ===================================================================== -->
+  <div class="page">
+    <div>
+      <div class="page-header">
+        <div class="header-left">
+          <span>Virtual Architecture</span>
+          <h2>Inside the 3D Virtual Atelier (5 Key Zones)</h2>
+        </div>
+        <div class="header-badge">Technology Showcase</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card gold">
+          <h3 class="text-gold">01. Habib's Precision Hydraulic Chair</h3>
+          <p>High-fidelity Italian leather styling chair with chrome hydraulic pump. Customers can click the chair in 3D to immediately reserve an appointment for Geometric Cuts & Couture Blowouts.</p>
+          <div style="margin-top: 8px;">
+            <span class="stat-pill"><b>₹950</b> Haircut Suite</span>
+            <span class="stat-pill"><b>360°</b> Orbit Physics</span>
+          </div>
+        </div>
+
+        <div class="card" style="border-color: rgba(76, 201, 240, 0.4); background: #081018;">
+          <h3 style="color: #4cc9f0;">02. Japanese Waterfall Head Spa Bay</h3>
+          <p>Dedicated hydrotherapy teak wood platform with an ergonomic massage bed, black ceramic basin, golden halo faucet, and animated flowing water ripples with rising steam mist.</p>
+          <div style="margin-top: 8px;">
+            <span class="stat-pill"><b>₹2,400</b> Spa Ritual</span>
+            <span class="stat-pill"><b>Fluid</b> Wave Shaders</span>
+          </div>
+        </div>
+
+        <div class="card highlight">
+          <h3 class="text-purple">03. Haute Vanity Mirror Station</h3>
+          <p>Illuminated ring vanity mirror with emissive neon halo lighting and dark obsidian marble console. Designed to simulate true daylight CRI for accurate hair color formulation.</p>
+          <div style="margin-top: 8px;">
+            <span class="stat-pill"><b>₹4,200</b> Balayage Suite</span>
+            <span class="stat-pill"><b>Unreal</b> Bloom Glow</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>04. Couture Color & Serum Dispensary</h3>
+          <p>3-tier brushed brass and glass shelving system featuring physical glass transmission & dispersion on cosmetic serum flacons in amber, violet, and emerald.</p>
+          <div style="margin-top: 8px;">
+            <span class="stat-pill"><b>₹5,500</b> Keratin Lab</span>
+            <span class="stat-pill"><b>PBR</b> Glass IOR 1.52</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="background: #0d0c14; border-color: #2b2342;">
+        <h3 class="text-purple">05. Interactive 3D Hair Color Mannequin (Indian Undertones)</h3>
+        <p>Clients can rotate a 3D sculpted mannequin head 360° and test real-time hair tones tailored specifically for Indian skin complexions: Caramel Honey, Obsidian Noir, Velvet Burgundy Wine, Rose Gold Muted Glaze, and Platinum Ash. Includes a live Glossiness & Nanoplastia shine slider.</p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>3D Luxury Virtual Salon Proposal</span>
+      <span>Confidential & Proprietary • Page 3</span>
+    </div>
+  </div>
+
+
+  <!-- =====================================================================
+       PAGE 4: COMMERCIAL PACKAGES & PRICING
+       ===================================================================== -->
+  <div class="page">
+    <div>
+      <div class="page-header">
+        <div class="header-left">
+          <span>Investment & Packages</span>
+          <h2>Commercial Quotation & Deliverables</h2>
+        </div>
+        <div class="header-badge">Commercials</div>
+      </div>
+
+      <div class="grid-3">
+        <!-- Tier 1 -->
+        <div class="pricing-tier">
+          <h4>Signature 3D Studio</h4>
+          <div class="price">₹65,000</div>
+          <p>For independent premium salons looking for a luxury online presence.</p>
+          <ul>
+            <li>Interactive 3D Salon Studio</li>
+            <li>Interactive 3D Styling Chair</li>
+            <li>Multi-Step Booking Wizard</li>
+            <li>Custom Hair Length ₹ Estimator</li>
+            <li>Mobile & Desktop Optimized</li>
+            <li>Domain & Cloud Deployment</li>
+            <li>3 Months Technical Support</li>
+          </ul>
+        </div>
+
+        <!-- Tier 2 (Featured) -->
+        <div class="pricing-tier featured">
+          <div class="pricing-badge">Most Popular</div>
+          <h4 class="text-purple">Ultra-Luxury Flagship</h4>
+          <div class="price text-gold">₹95,000</div>
+          <p>Complete Awwwards-tier 3D Virtual Showroom with full animation suite.</p>
+          <ul>
+            <li><strong>Everything in Signature +</strong></li>
+            <li><strong>Japanese Waterfall Head Spa Bay</strong></li>
+            <li><strong>Unreal Bloom Lighting Shaders</strong></li>
+            <li><strong>Fullscreen 3D Guided Drone Tour</strong></li>
+            <li><strong>Interactive 3D Hair Color Lab</strong></li>
+            <li><strong>Direct 3D Click-to-Book Raycasting</strong></li>
+            <li>Digital VIP Pass with QR Code</li>
+            <li>Enterprise Security (CSP & Anti-DDoS)</li>
+            <li>6 Months Technical Support & Training</li>
+          </ul>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="pricing-tier">
+          <h4>Franchise Enterprise</h4>
+          <div class="price">₹1,60,000</div>
+          <p>For salon chains & multi-branch luxury brands (Habib's, Toni&Guy, etc.).</p>
+          <ul>
+            <li><strong>Everything in Ultra-Luxury +</strong></li>
+            <li>Multi-Branch Switcher (e.g. Aundh, KP, Baner)</li>
+            <li>Custom 3D Stylists & VIP Suites</li>
+            <li>Admin Analytics & Revenue Dashboard</li>
+            <li>Direct WhatsApp API Integration</li>
+            <li>Priority 24/7 Cloud Support (1 Year)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ROI Box -->
+      <div class="card gold" style="padding: 18px 24px;">
+        <h3 class="text-gold">💡 Guaranteed Return on Investment (ROI) for Salon Owner:</h3>
+        <p style="font-size: 13px; color: #ddd;">
+          A typical Balayage / 24K Nanoplastia ritual charges <strong>₹4,500 – ₹6,000</strong>. 
+          If this 3D website generates just <strong>4 extra clients per month</strong> from Instagram & Google Maps, the salon generates <strong>₹24,000/month</strong> in new revenue. 
+          The entire investment is <strong>100% recovered within 90 to 100 days</strong>!
+        </p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>3D Luxury Virtual Salon Proposal</span>
+      <span>Confidential & Proprietary • Page 4</span>
+    </div>
+  </div>
+
+
+  <!-- =====================================================================
+       PAGE 5: SALES EXECUTIVE GUIDE & SCRIPT
+       ===================================================================== -->
+  <div class="page">
+    <div>
+      <div class="page-header">
+        <div class="header-left">
+          <span>Internal Guide</span>
+          <h2>Sales Executive Pitch Script & Objection Handling</h2>
+        </div>
+        <div class="header-badge">For Sales Rep</div>
+      </div>
+
+      <div class="script-box">
+        <strong>1. Opening Ice-Breaker (When meeting Salon Owner / Manager):</strong>
+        <p>"Sir/Ma'am, aapke salon ka ambience aur interior itna royal hai... lekin jab customer Google Maps ya Instagram par aapki website dekhta hai, toh wo standard 2D flat photo dekh kar normal salon samajh leta hai. Maine aapke salon ke liye ek interactive 3D Virtual Showroom banaya hai jisme customer screen par chair ghooma sakta hai aur haircut book kar sakta hai. 1 minute phone par dekhenge?"</p>
+      </div>
+
+      <div class="script-box">
+        <strong>2. The Live 30-Second Demo Hook:</strong>
+        <p>Open <code>http://localhost:3000</code> on iPad/Mobile ➔ Hit "Enter 3D Walkthrough" ➔ Rotate the chair ➔ Click the Japanese Waterfall Spa bed. <br>
+        Say: <em>"Dekhiye, customer seedha 3D me chair par touch karega aur uska VIP pass ban jayega with QR code. Reception par call karke price puchne ka time bachega!"</em></p>
+      </div>
+
+      <div class="script-box">
+        <strong>3. Objection: "Bhaiya humare paas pehle se website hai / ₹10,000 me ban jata hai":</strong>
+        <p>Reply: <em>"Sir, wo to informational brochure website hoti hai jo koi nahi dekhta. Yeh aapka **Digital VIP Flagship Store** hai. Aapke area me kisi bhi rival salon ke paas aisi 3D technology nahi hai. Pune ke high-ticket clients dekh kar hi impress ho jate hain."</em></p>
+      </div>
+
+      <div class="card" style="background: #12101a; border-color: #3b285b;">
+        <h3 class="text-purple">Payment Collection Milestones (Always Follow This):</h3>
+        <p style="font-size: 12px; color: #ccc;">
+          • <strong>40% Token Advance</strong>: To lock the slot and begin data/stylist customization.<br>
+          • <strong>40% Demo Milestone</strong>: When shown on preview domain with their actual rates & logo.<br>
+          • <strong>20% Final Handover</strong>: On live custom domain connection & staff walkthrough.
+        </p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>3D Luxury Virtual Salon Proposal</span>
+      <span>Confidential & Proprietary • Page 5</span>
+    </div>
+  </div>
+
+</body>
+</html>
