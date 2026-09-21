@@ -15,7 +15,18 @@
   <url>
     <loc>https://yashkumkar8-ctrl.github.io/oblivionn-website/data-analyst-training/</loc>
     <lastmod>2026-09-16</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yashkumkar8-ctrl.github.io/oblivionn-website/salon-3d/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yashkumkar8-ctrl.github.io/oblivionn-website/salon-3d/signature-65k/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 </urlset>

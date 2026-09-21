@@ -81,6 +81,11 @@ app.use(express.urlencoded({ extended: false, limit: '15kb' }));
 // Static Assets
 app.use(express.static(path.join(__dirname, 'public')));
 
+// ₹65,000 Signature 3D Studio Demo Routes
+app.get(['/signature-65k', '/demo-65k'], (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'signature-65k', 'index.html'));
+});
+
 // -----------------------------------------------------------------------------
 // 4. RATE LIMITING (Brute Force & DoS Prevention)
 // -----------------------------------------------------------------------------
