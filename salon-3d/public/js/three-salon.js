@@ -118,9 +118,10 @@ class SalonStudioScene {
     this.scene.background = new THREE.Color(0x08080b);
     this.scene.fog = new THREE.FogExp2(0x08080b, 0.042);
 
-    // 2. Camera
+    // 2. Camera (Mobile-aware wide FOV for portrait screens)
     const aspect = this.container.clientWidth / this.container.clientHeight;
-    this.camera = new THREE.PerspectiveCamera(45, aspect, 0.1, 100);
+    const initialFov = aspect < 1.0 ? 64 : 45;
+    this.camera = new THREE.PerspectiveCamera(initialFov, aspect, 0.1, 100);
     this.camera.position.copy(this.camTargetPos);
 
     // 3. Renderer
@@ -1104,6 +1105,11 @@ class SalonStudioScene {
     const width = this.isFullscreenTour ? window.innerWidth : this.container.clientWidth;
     const height = this.isFullscreenTour ? window.innerHeight : this.container.clientHeight;
     this.camera.aspect = width / height;
+    if (this.camera.aspect < 1.0) {
+      this.camera.fov = 64;
+    } else {
+      this.camera.fov = 45;
+    }
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(width, height);
     if (this.composer) {

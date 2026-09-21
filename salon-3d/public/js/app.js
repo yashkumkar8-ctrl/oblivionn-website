@@ -874,10 +874,16 @@ function setupLookupModal() {
 
   if (!modal) return;
 
-  trigger?.addEventListener('click', () => {
-    modal.classList.add('active');
-    input.focus();
-    window.playSalonSound('click');
+  document.querySelectorAll('.lookup-trigger-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Close mobile drawer if open
+      document.getElementById('mobileDrawerOverlay')?.classList.remove('active');
+      document.body.style.overflow = '';
+
+      modal.classList.add('active');
+      input.focus();
+      window.playSalonSound('click');
+    });
   });
 
   close?.addEventListener('click', () => {
@@ -945,22 +951,43 @@ function setupHeader() {
     }
   });
 
+  // Mobile Drawer Controls
   const mobileBtn = document.getElementById('mobileMenuBtn');
-  const navMenu = document.getElementById('nav-menu');
-  mobileBtn?.addEventListener('click', () => {
-    if (navMenu.style.display === 'flex') {
-      navMenu.style.display = 'none';
-    } else {
-      navMenu.style.display = 'flex';
-      navMenu.style.flexDirection = 'column';
-      navMenu.style.position = 'absolute';
-      navMenu.style.top = '100%';
-      navMenu.style.left = '0';
-      navMenu.style.width = '100%';
-      navMenu.style.background = '#070709';
-      navMenu.style.padding = '20px';
-      navMenu.style.borderBottom = '1px solid var(--border-gold)';
+  const drawerOverlay = document.getElementById('mobileDrawerOverlay');
+  const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+  const drawerLinks = document.querySelectorAll('.drawer-link');
+
+  function openMobileDrawer() {
+    if (drawerOverlay) {
+      drawerOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      window.playSalonSound('click');
     }
+  }
+
+  function closeMobileDrawer() {
+    if (drawerOverlay) {
+      drawerOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  mobileBtn?.addEventListener('click', openMobileDrawer);
+  closeDrawerBtn?.addEventListener('click', closeMobileDrawer);
+  drawerOverlay?.addEventListener('click', (e) => {
+    if (e.target === drawerOverlay) closeMobileDrawer();
+  });
+
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileDrawer();
+      window.playSalonSound('click');
+    });
+  });
+
+  document.getElementById('drawerBookBtn')?.addEventListener('click', () => {
+    closeMobileDrawer();
+    openBookingModal(1);
   });
 }
 

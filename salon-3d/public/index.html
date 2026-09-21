@@ -85,12 +85,88 @@
           </span>
         </button>
 
-        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open Mobile Menu">
           <i class="fa-solid fa-bars-staggered"></i>
         </button>
       </div>
     </div>
   </header>
+
+  <!-- MOBILE SLIDE-OVER NAVIGATION DRAWER -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" aria-hidden="true">
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-header">
+        <a href="#" class="logo">
+          <span class="logo-symbol">⚜️</span>
+          <div class="logo-text">
+            <span class="brand-name">HABIB'S<span class="gold-dot">.</span>SIGNATURE</span>
+            <span class="brand-sub">LUXURY ATELIER • AUNDH</span>
+          </div>
+        </a>
+        <button class="drawer-close-btn" id="closeDrawerBtn" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <nav class="drawer-nav" id="drawerNavLinks">
+          <a href="#hero-3d" class="drawer-link active"><i class="fa-solid fa-cube"></i> 3D Virtual Studio</a>
+          <a href="#hair-atelier" class="drawer-link"><i class="fa-solid fa-wand-magic-sparkles"></i> 3D Hair Color Lab</a>
+          <a href="#services-section" class="drawer-link"><i class="fa-solid fa-scissors"></i> Services & INR Menu</a>
+          <a href="#calculator-section" class="drawer-link"><i class="fa-solid fa-calculator"></i> Price Estimator</a>
+          <a href="#lookbook-section" class="drawer-link"><i class="fa-solid fa-images"></i> Transformations</a>
+          <a href="#stylists-section" class="drawer-link"><i class="fa-solid fa-user-tie"></i> Master Stylists</a>
+          <a href="#location-section" class="drawer-link"><i class="fa-solid fa-map-location-dot"></i> Aundh Location (Maps)</a>
+        </nav>
+
+        <div class="drawer-cta-box">
+          <button class="btn btn-gold btn-block open-booking-btn" id="drawerBookBtn">
+            <i class="fa-solid fa-calendar-check"></i> Book VIP Chair (Aundh)
+          </button>
+          <button class="btn btn-glass btn-block lookup-trigger-btn" id="drawerLookupBtn" style="margin-top: 10px;">
+            <i class="fa-solid fa-ticket"></i> Find My Reservation
+          </button>
+        </div>
+
+        <div class="drawer-quick-contacts">
+          <a href="tel:+919822084242" class="drawer-contact-item">
+            <i class="fa-solid fa-phone text-gold"></i>
+            <div>
+              <span>Direct Phone</span>
+              <strong>+91 98220 84242</strong>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/svcz6mJANuRGnAbF7" target="_blank" rel="noopener" class="drawer-contact-item">
+            <i class="fa-solid fa-diamond-turn-right text-gold"></i>
+            <div>
+              <span>Directions</span>
+              <strong>Sayaji Rao Gaikwad Complex, ITI Rd</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE FLOATING STICKY ACTION BAR -->
+  <div class="mobile-bottom-bar" id="mobileBottomBar">
+    <a href="tel:+919822084242" class="mobile-bar-item" title="Call Salon">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://maps.app.goo.gl/svcz6mJANuRGnAbF7" target="_blank" rel="noopener" class="mobile-bar-item" title="Google Maps Directions">
+      <i class="fa-solid fa-diamond-turn-right"></i>
+      <span>Directions</span>
+    </a>
+    <button class="mobile-bar-item primary open-booking-btn" title="Book Chair">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Book Chair</span>
+    </button>
+    <button class="mobile-bar-item lookup-trigger-btn" title="My Booking Pass">
+      <i class="fa-solid fa-ticket"></i>
+      <span>My Pass</span>
+    </button>
+  </div>
 
   <main>
     <!-- HERO SECTION: 3D SALON ENVIRONMENT -->
