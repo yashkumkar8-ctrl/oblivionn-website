@@ -2,17 +2,1030 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=../public/signature-65k/">
-  <title>Redirecting to Habib's Signature Salon — Signature 3D Studio (₹65k)...</title>
-  <script>
-    window.location.href = "../public/signature-65k/";
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habib's Signature Salon — Signature 3D Studio (₹65,000 Edition) | Aundh, Pune</title>
+  <meta name="description" content="Experience Habib's Signature Salon in Aundh, Pune. Interactive 3D styling chair studio, bespoke haircutting, multi-step booking wizard with standard on-screen digital pass.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✂️</text></svg>">
+
+  <!-- Google Fonts: Syne, Cinzel, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Base Clandestine Stylesheet & ₹65k Extension Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-65k.css">
 </head>
-<body style="background: #08080a; color: #fceda1; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; text-align: center;">
-  <div>
-    <h2>Habib's Signature Salon — Signature 3D Studio (₹65,000 Edition)</h2>
-    <p>Loading 3D salon styling experience...</p>
-    <p><a href="../public/signature-65k/" style="color: #e4c483; text-decoration: underline;">Click here if you are not redirected automatically.</a></p>
+<body>
+
+  <!-- Ambient Luxury Glow Orbs -->
+  <div class="glow-orb glow-top-left"></div>
+  <div class="glow-orb glow-center-right"></div>
+
+  <!-- TOP COMMERCIAL TIER IDENTIFIER BANNER -->
+  <div class="tier-announcement-bar">
+    <div class="tier-bar-inner">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="tier-badge-pill"><i class="fa-solid fa-cube"></i> TIER 1 COMMERCIAL DEMO</span>
+        <span><strong>Signature 3D Studio Package</strong> • ₹65,000 Quotation Deliverable</span>
+      </div>
+      <div class="tier-actions">
+        <button class="tier-link-btn open-compare-btn">
+          <i class="fa-solid fa-scale-balanced"></i> Compare ₹65k vs ₹95k
+        </button>
+        <a href="../" class="tier-link-btn upgrade" title="Switch to ₹95,000 Ultra-Luxury Flagship Demo">
+          <span>View ₹95K Flagship Edition</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <a href="../proposal.html" class="tier-link-btn" title="Open Client Pitch Deck & Proposal">
+          <i class="fa-solid fa-file-invoice-dollar text-gold"></i> Proposal
+        </a>
+      </div>
+    </div>
   </div>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="header" id="site-header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-symbol">⚜️</span>
+        <div class="logo-text">
+          <span class="brand-name">HABIB'S<span class="gold-dot">.</span>SIGNATURE</span>
+          <span class="brand-sub">SIGNATURE 3D STUDIO • AUNDH, PUNE</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero-3d" class="nav-link active">3D Studio</a>
+        <a href="#services-section" class="nav-link">Rituals & Pricing</a>
+        <a href="#calculator-section" class="nav-link">Price Estimator</a>
+        <a href="#lookbook-section" class="nav-link">Transformations</a>
+        <a href="#location-section" class="nav-link">Find Us (Maps)</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Audio Sound Toggle -->
+        <button class="icon-btn sound-toggle-btn" id="soundToggleBtn" title="Toggle Sound Feedback" aria-label="Toggle sound">
+          <i class="fa-solid fa-volume-xmark" id="soundIcon"></i>
+        </button>
+
+        <!-- Google Maps Quick Pin -->
+        <a href="https://maps.app.goo.gl/svcz6mJANuRGnAbF7" target="_blank" rel="noopener" class="icon-btn" title="Open Google Maps Location">
+          <i class="fa-solid fa-map-location-dot text-gold"></i>
+        </a>
+
+        <!-- Check Reservation -->
+        <button class="lookup-trigger-btn" id="lookupTriggerBtn">
+          <i class="fa-solid fa-ticket"></i> My Pass
+        </button>
+
+        <!-- Booking CTA -->
+        <button class="btn btn-gold open-booking-btn" id="headerBookBtn">
+          <span><i class="fa-solid fa-calendar-check"></i> Reserve Chair</span>
+        </button>
+
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open Mobile Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE-OVER NAVIGATION DRAWER -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" aria-hidden="true">
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-header">
+        <a href="#" class="logo">
+          <span class="logo-symbol">⚜️</span>
+          <div class="logo-text">
+            <span class="brand-name">HABIB'S<span class="gold-dot">.</span>SIGNATURE</span>
+            <span class="brand-sub">SIGNATURE 3D • AUNDH</span>
+          </div>
+        </a>
+        <button class="drawer-close-btn" id="closeDrawerBtn" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <nav class="drawer-nav" id="drawerNavLinks">
+          <a href="#hero-3d" class="drawer-link active"><i class="fa-solid fa-cube"></i> 3D Virtual Studio</a>
+          <a href="#services-section" class="drawer-link"><i class="fa-solid fa-scissors"></i> Services & INR Menu</a>
+          <a href="#calculator-section" class="drawer-link"><i class="fa-solid fa-calculator"></i> Price Estimator</a>
+          <a href="#lookbook-section" class="drawer-link"><i class="fa-solid fa-images"></i> Transformations</a>
+          <a href="#location-section" class="drawer-link"><i class="fa-solid fa-map-location-dot"></i> Aundh Location (Maps)</a>
+          <a href="#" class="drawer-link open-compare-btn text-gold"><i class="fa-solid fa-scale-balanced"></i> Compare Packages (₹65k vs ₹95k)</a>
+        </nav>
+
+        <div class="drawer-cta-box">
+          <button class="btn btn-gold btn-block open-booking-btn" id="drawerBookBtn">
+            <i class="fa-solid fa-calendar-check"></i> Book VIP Chair (Aundh)
+          </button>
+          <button class="btn btn-glass btn-block lookup-trigger-btn" id="drawerLookupBtn" style="margin-top: 10px;">
+            <i class="fa-solid fa-ticket"></i> Find My Reservation
+          </button>
+          <a href="../" class="btn btn-glass btn-block" style="margin-top: 10px; font-size: 12px; color: #d8b4fe;">
+            <i class="fa-solid fa-crown"></i> Open ₹95K Flagship Demo ↗
+          </a>
+        </div>
+
+        <div class="drawer-quick-contacts">
+          <a href="tel:+919822084242" class="drawer-contact-item">
+            <i class="fa-solid fa-phone text-gold"></i>
+            <div>
+              <span>Direct Phone</span>
+              <strong>+91 98220 84242</strong>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/svcz6mJANuRGnAbF7" target="_blank" rel="noopener" class="drawer-contact-item">
+            <i class="fa-solid fa-diamond-turn-right text-gold"></i>
+            <div>
+              <span>Directions</span>
+              <strong>Sayaji Rao Gaikwad Complex, ITI Rd</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE FLOATING STICKY ACTION BAR -->
+  <div class="mobile-bottom-bar" id="mobileBottomBar">
+    <a href="tel:+919822084242" class="mobile-bar-item" title="Call Salon">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://maps.app.goo.gl/svcz6mJANuRGnAbF7" target="_blank" rel="noopener" class="mobile-bar-item" title="Google Maps Directions">
+      <i class="fa-solid fa-diamond-turn-right"></i>
+      <span>Directions</span>
+    </a>
+    <button class="mobile-bar-item primary open-booking-btn" title="Book Chair">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Book Chair</span>
+    </button>
+    <button class="mobile-bar-item lookup-trigger-btn" title="My Booking Pass">
+      <i class="fa-solid fa-ticket"></i>
+      <span>My Pass</span>
+    </button>
+  </div>
+
+  <main>
+    <!-- HERO SECTION: SIGNATURE 3D SALON ENVIRONMENT -->
+    <section class="hero-section" id="hero-3d">
+      <div class="container hero-grid">
+        
+        <!-- Hero Left Column -->
+        <div class="hero-content">
+          <div class="luxury-badge">
+            <span class="pulse-dot"></span>
+            <span>ROYAL HERITAGE • SIGNATURE 3D STUDIO</span>
+          </div>
+
+          <h1 class="hero-title">
+            The Iconic Haircut. <br>
+            Reimagined in <span style="color: #fceda1; text-shadow: 0 0 20px rgba(212,175,55,0.4);">Signature 3D</span>
+          </h1>
+
+          <p class="hero-description">
+            Welcome to <strong>Habib's Signature Salon in Aundh, Pune</strong>. Explore our precision hydraulic styling suite in interactive 3D WebGL, calculate custom hair pricing, and secure your chair with a standard digital voucher.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-gold btn-lg open-booking-btn" id="heroBookCta">
+              <i class="fa-solid fa-calendar-check"></i> <span>Book Appointment (Aundh)</span>
+            </button>
+            <a href="https://maps.app.goo.gl/svcz6mJANuRGnAbF7" target="_blank" rel="noopener" class="btn btn-glass btn-lg">
+              <i class="fa-solid fa-location-dot text-gold"></i> <span>Open on Google Maps</span>
+            </a>
+          </div>
+
+          <!-- Live Metrics Strip -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <div class="metric-number">18,500+</div>
+              <div class="metric-label">Happy Clients in Pune</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-number">4.9 ★</div>
+              <div class="metric-label">Google Maps Rating</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-number">6 Slots</div>
+              <div class="metric-label">Available Today</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Salon Studio Viewport Card -->
+        <div class="hero-viewport-wrapper" style="position: relative;">
+          <div class="hero-viewport-card" id="heroViewportCard">
+            <div class="viewport-header">
+              <div class="viewport-status">
+                <span class="live-dot"></span>
+                <span>HABIB'S PRECISION STYLING STATION (3D)</span>
+              </div>
+              <div class="viewport-hint">
+                <i class="fa-solid fa-hand-pointer"></i> Rotate 360° • Click Chair to Book
+              </div>
+            </div>
+
+            <!-- Three.js Canvas Container -->
+            <div class="canvas-wrapper" id="salonCanvasContainer65k">
+              <canvas id="threeSalonCanvas65k"></canvas>
+
+              <!-- Interactive Camera Preset Pill Bar -->
+              <div class="camera-controls-bar">
+                <button class="cam-pill-btn active" data-preset="orbit">
+                  <i class="fa-solid fa-rotate"></i> Orbit 360°
+                </button>
+                <button class="cam-pill-btn" data-preset="front">
+                  <i class="fa-solid fa-crosshairs"></i> Front Station
+                </button>
+                <button class="cam-pill-btn" data-preset="chair">
+                  <i class="fa-solid fa-chair"></i> Chair Focus
+                </button>
+                <button class="cam-pill-btn" data-preset="mirror">
+                  <i class="fa-solid fa-eye"></i> Vanity Mirror
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES & TRANSPARENT INR MENU SECTION -->
+    <section class="section" id="services-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">HAUTE COIFFURE & TRICHOLOGY</span>
+          <h2 class="section-title">Habib's Signature Rituals & Pricing</h2>
+          <p class="section-desc">Hand-calibrated pricing menu for our flagship branch in Aundh, Pune. All rituals include complimentary hair diagnosis.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-category">Hair Craft</span>
+              <span class="service-price">₹950</span>
+            </div>
+            <h3>Habib's Signature Geometric Cut</h3>
+            <p>The iconic mathematical haircut pioneered by the Habib dynasty. Calibrated to facial bone structure and natural hair movement.</p>
+            <div class="service-footer">
+              <span class="service-time"><i class="fa-regular fa-clock"></i> 45 mins</span>
+              <button class="btn btn-gold btn-sm open-booking-btn" onclick="openBookingWithService('habib-1')">Book Chair</button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-category">Couture Color</span>
+              <span class="service-price">₹4,200</span>
+            </div>
+            <h3>Haute French Balayage & Glaze</h3>
+            <p>Seamless sun-kissed lightening with bespoke gloss toners tailored specifically for Indian skin undertones (Honey, Caramel, Mocha).</p>
+            <div class="service-footer">
+              <span class="service-time"><i class="fa-regular fa-clock"></i> 180 mins</span>
+              <button class="btn btn-gold btn-sm open-booking-btn" onclick="openBookingWithService('habib-2')">Book Chair</button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card featured">
+            <div class="service-header">
+              <span class="service-category">Texture Lab</span>
+              <span class="service-price text-gold">₹5,500</span>
+            </div>
+            <h3>24K Gold Nanoplastia Silk Infusion</h3>
+            <p>100% formaldehyde-free organic straightening and amino-acid restoration. Gives mirror-like shine and frizz-free locks for 6 months.</p>
+            <div class="service-footer">
+              <span class="service-time"><i class="fa-regular fa-clock"></i> 150 mins</span>
+              <button class="btn btn-gold btn-sm open-booking-btn" onclick="openBookingWithService('habib-3')">Book Chair</button>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-category">Scalp & Rituals</span>
+              <span class="service-price">₹1,800</span>
+            </div>
+            <h3>Olaplex Molecular Bond Rebuild</h3>
+            <p>Patented active chemistry that repairs broken disulfide bonds caused by chemical, thermal, and mechanical damage.</p>
+            <div class="service-footer">
+              <span class="service-time"><i class="fa-regular fa-clock"></i> 45 mins</span>
+              <button class="btn btn-gold btn-sm open-booking-btn" onclick="openBookingWithService('habib-4')">Book Chair</button>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-category">Scalp & Rituals</span>
+              <span class="service-price">₹1,500</span>
+            </div>
+            <h3>Royal Moroccan Argan Spa</h3>
+            <p>Deep thermal infusion using cold-pressed Argania Spinosa oil, providing rich nourishment to dehydrated and sun-exposed scalp.</p>
+            <div class="service-footer">
+              <span class="service-time"><i class="fa-regular fa-clock"></i> 60 mins</span>
+              <button class="btn btn-gold btn-sm open-booking-btn" onclick="openBookingWithService('habib-5')">Book Chair</button>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-category">Men's Grooming</span>
+              <span class="service-price">₹650</span>
+            </div>
+            <h3>Bespoke Beard Sculpt & Hot Towel</h3>
+            <p>Precision razor detailing, organic essential oil massage, and steaming herbal eucalyptus towel therapy.</p>
+            <div class="service-footer">
+              <span class="service-time"><i class="fa-regular fa-clock"></i> 35 mins</span>
+              <button class="btn btn-gold btn-sm open-booking-btn" onclick="openBookingWithService('habib-6')">Book Chair</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOM HAIR LENGTH ₹ ESTIMATOR SECTION -->
+    <section class="section calculator-section" id="calculator-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">TRANSPARENT CLIENT PRICING</span>
+          <h2 class="section-title">Interactive Hair Length ₹ Estimator</h2>
+          <p class="section-desc">Select your hair length and desired treatments for an instant, transparent price breakdown before visiting our salon.</p>
+        </div>
+
+        <div class="calculator-wrapper">
+          <div class="calc-config-col">
+            <!-- 1. Select Base Service -->
+            <div class="calc-group">
+              <label for="calcBaseService" class="calc-label">1. Select Primary Ritual</label>
+              <select id="calcBaseService" class="luxury-select">
+                <option value="950" data-name="Habib's Signature Geometric Cut" data-time="45" data-id="habib-1" selected>Habib's Signature Geometric Cut — ₹950 (45 mins)</option>
+                <option value="4200" data-name="Haute French Balayage & Glaze" data-time="180" data-id="habib-2">Haute French Balayage & Glaze — ₹4,200 (180 mins)</option>
+                <option value="5500" data-name="24K Gold Nanoplastia Silk Infusion" data-time="150" data-id="habib-3">24K Gold Nanoplastia Silk Infusion — ₹5,500 (150 mins)</option>
+                <option value="1800" data-name="Olaplex Molecular Bond Rebuild" data-time="45" data-id="habib-4">Olaplex Molecular Bond Rebuild — ₹1,800 (45 mins)</option>
+              </select>
+            </div>
+
+            <!-- 2. Select Hair Length -->
+            <div class="calc-group">
+              <label class="calc-label">2. Select Your Hair Length</label>
+              <div class="length-chips-grid">
+                <button type="button" class="calc-length-chip active" data-fee="0" data-label="Short / Pixie">
+                  <i class="fa-solid fa-scissors"></i>
+                  <span>Short / Pixie</span>
+                  <small>+₹0</small>
+                </button>
+                <button type="button" class="calc-length-chip" data-fee="800" data-label="Shoulder / Medium">
+                  <i class="fa-solid fa-arrows-up-down"></i>
+                  <span>Shoulder / Medium</span>
+                  <small>+₹800</small>
+                </button>
+                <button type="button" class="calc-length-chip" data-fee="1600" data-label="Waist / Long">
+                  <i class="fa-solid fa-ruler-vertical"></i>
+                  <span>Waist / Long</span>
+                  <small>+₹1,600</small>
+                </button>
+                <button type="button" class="calc-length-chip" data-fee="2500" data-label="Extra Long / Dense">
+                  <i class="fa-solid fa-crown"></i>
+                  <span>Extra Long / Dense</span>
+                  <small>+₹2,500</small>
+                </button>
+              </div>
+            </div>
+
+            <!-- 3. Add-on Treatments -->
+            <div class="calc-group">
+              <label class="calc-label">3. Complimentary Add-On Infusions</label>
+              <div class="calc-addons-list">
+                <label class="calc-addon-item">
+                  <input type="checkbox" class="calc-addon-input" value="650" data-name="Olaplex No.2 Molecular Mask" data-time="15" checked>
+                  <span class="addon-custom-box"></span>
+                  <div class="addon-text">
+                    <strong>Olaplex No.2 Molecular Mask</strong>
+                    <span>Repairs chemical stress during color processing (+15 mins)</span>
+                  </div>
+                  <span class="addon-price">+₹650</span>
+                </label>
+
+                <label class="calc-addon-item">
+                  <input type="checkbox" class="calc-addon-input" value="850" data-name="Kérastase Caviar Scalp Elixir" data-time="20">
+                  <span class="addon-custom-box"></span>
+                  <div class="addon-text">
+                    <strong>Kérastase Chronologiste Caviar Elixir</strong>
+                    <span>Deep thermal rejuvenation for anti-aging hair bounce (+20 mins)</span>
+                  </div>
+                  <span class="addon-price">+₹850</span>
+                </label>
+
+                <label class="calc-addon-item">
+                  <input type="checkbox" class="calc-addon-input" value="1100" data-name="French Gloss Glaze (Anti-Brass)" data-time="25">
+                  <span class="addon-custom-box"></span>
+                  <div class="addon-text">
+                    <strong>French Gloss Glaze (Anti-Brass)</strong>
+                    <span>Reflective semi-permanent toner sealing hair cuticle (+25 mins)</span>
+                  </div>
+                  <span class="addon-price">+₹1,100</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Live Receipt Column -->
+          <div class="calc-summary-col">
+            <div class="receipt-card">
+              <div class="receipt-header">
+                <span class="gold-badge">ESTIMATE BREAKDOWN</span>
+                <h3>Habib's Quotation</h3>
+                <p>Aundh Flagship • Transparent INR Billing</p>
+              </div>
+
+              <div class="receipt-body">
+                <div class="receipt-row">
+                  <span id="sumBaseName">Habib's Signature Geometric Cut</span>
+                  <strong id="sumBasePrice">₹950</strong>
+                </div>
+
+                <div class="receipt-row">
+                  <span id="sumLengthName">Hair Length (Short / Pixie)</span>
+                  <strong id="sumLengthPrice">₹0</strong>
+                </div>
+
+                <div id="sumAddonsContainer">
+                  <div class="receipt-row text-muted" style="display:flex;justify-content:space-between;margin-bottom:4px;font-size:12.5px;">
+                    <span>Olaplex No.2 Molecular Mask</span>
+                    <span>₹650</span>
+                  </div>
+                </div>
+
+                <div class="receipt-divider"></div>
+
+                <div class="receipt-row total-row">
+                  <div>
+                    <span>Total Estimated Bill</span>
+                    <small style="display:block;font-size:11px;color:#aaa;">Incl. all professional salon taxes</small>
+                  </div>
+                  <strong class="total-amount text-gold" id="sumTotalAmount">₹1,600</strong>
+                </div>
+
+                <div class="receipt-time-estimate">
+                  <i class="fa-regular fa-clock"></i> Estimated Salon Time: <strong id="sumTotalDuration">60 mins</strong>
+                </div>
+              </div>
+
+              <div class="receipt-actions">
+                <button class="btn btn-gold btn-block" id="calcBookCta">
+                  <i class="fa-solid fa-calendar-check"></i> Book Chair With This Estimate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSFORMATIONS LOOKBOOK SECTION -->
+    <section class="section" id="lookbook-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">REAL CLIENT RESULTS</span>
+          <h2 class="section-title">Habib's Transformations Lookbook</h2>
+          <p class="section-desc">Explore master hair styling, French balayage, and 24K Nanoplastia executed by our certified master colorists in Aundh, Pune.</p>
+        </div>
+
+        <div class="lookbook-grid">
+          <div class="lookbook-item">
+            <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=600&q=80" alt="Caramel Balayage Hair Transformation" loading="lazy">
+            <div class="lookbook-caption">
+              <h4>Honey Caramel Balayage</h4>
+              <span>Colorist: Shahnaz Ansari • Pune</span>
+            </div>
+          </div>
+          <div class="lookbook-item">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=80" alt="Precision Bob Haircut" loading="lazy">
+            <div class="lookbook-caption">
+              <h4>Architectural French Bob</h4>
+              <span>Stylist: Zeeshan Habib • Pune</span>
+            </div>
+          </div>
+          <div class="lookbook-item">
+            <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=600&q=80" alt="24K Nanoplastia Silk Finish" loading="lazy">
+            <div class="lookbook-caption">
+              <h4>24K Nanoplastia Mirror Silk</h4>
+              <span>Texture Lab • 6 Months Lasting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MASTER STYLISTS SECTION -->
+    <section class="section" id="stylists-section" style="background: rgba(14, 13, 20, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">PUNE ARTISTIC MASTERS</span>
+          <h2 class="section-title">Certified Master Stylists</h2>
+          <p class="section-desc">Trained under the legendary Habib methodology, delivering couture craftsmanship for discerning clientele.</p>
+        </div>
+
+        <div class="stylists-grid">
+          <!-- Stylist 1 -->
+          <div class="stylist-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Zeeshan Habib" class="stylist-img">
+            <div class="stylist-card-body">
+              <span class="stylist-role-badge">Creative Director</span>
+              <h3>Zeeshan Habib</h3>
+              <p class="stylist-bio">16+ years specializing in British-Indian geometric cuts and high-stakes bridal couture transformations.</p>
+              <div class="stylist-tags">
+                <span>Geometric Cuts</span>
+                <span>Bridal Couture</span>
+              </div>
+              <button class="btn btn-glass btn-block open-booking-btn" style="margin-top:14px;">Reserve With Zeeshan</button>
+            </div>
+          </div>
+
+          <!-- Stylist 2 -->
+          <div class="stylist-card">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Shahnaz Ansari" class="stylist-img">
+            <div class="stylist-card-body">
+              <span class="stylist-role-badge">Head Colorist</span>
+              <h3>Shahnaz Ansari</h3>
+              <p class="stylist-bio">12+ years master balayage expert specializing in warm caramel and cool mocha palettes for Indian hair tones.</p>
+              <div class="stylist-tags">
+                <span>French Balayage</span>
+                <span>Nanoplastia</span>
+              </div>
+              <button class="btn btn-glass btn-block open-booking-btn" style="margin-top:14px;">Reserve With Shahnaz</button>
+            </div>
+          </div>
+
+          <!-- Stylist 3 -->
+          <div class="stylist-card">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Rohit Verma" class="stylist-img">
+            <div class="stylist-card-body">
+              <span class="stylist-role-badge">Hair Architect</span>
+              <h3>Rohit Verma</h3>
+              <p class="stylist-bio">9+ years master cutter specializing in contemporary layered silhouettes, texturizing, and beard sculpting.</p>
+              <div class="stylist-tags">
+                <span>Textured Fades</span>
+                <span>Beard Sculpting</span>
+              </div>
+              <button class="btn btn-glass btn-block open-booking-btn" style="margin-top:14px;">Reserve With Rohit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION & GOOGLE MAPS SECTION -->
+    <section class="section" id="location-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">VISIT OUR ATELIER</span>
+          <h2 class="section-title">Habib's Signature Salon • Aundh, Pune</h2>
+          <p class="section-desc">Centrally located on ITI Road, Sayaji Rao Gaikwad Complex with valet parking.</p>
+        </div>
+
+        <div class="location-grid">
+          <!-- Info Column -->
+          <div class="location-info-card">
+            <div class="location-item">
+              <div class="loc-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4>Address & Landmark</h4>
+                <p>Sayaji Rao Gaikwad Complex, ITI Road, Pushpak Park, Aundh, Pune, Maharashtra 411007</p>
+                <small class="text-gold">Opposite Reliance Digital • Valet Parking Available</small>
+              </div>
+            </div>
+
+            <div class="location-item">
+              <div class="loc-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <h4>Salon Operating Hours</h4>
+                <p>Monday – Sunday: <strong>10:00 AM – 9:00 PM</strong></p>
+                <small class="text-muted">Online priority reservations recommended for weekend slots.</small>
+              </div>
+            </div>
+
+            <div class="location-item">
+              <div class="loc-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h4>Direct Phone & Appointments</h4>
+                <p><strong>+91 98220 84242</strong> / <strong>020 2588 4321</strong></p>
+                <small class="text-muted">Front desk VIP concierge assistance.</small>
+              </div>
+            </div>
+
+            <div class="location-actions" style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="https://maps.app.goo.gl/svcz6mJANuRGnAbF7" target="_blank" rel="noopener" class="btn btn-gold">
+                <i class="fa-solid fa-diamond-turn-right"></i> Open Navigation in Google Maps
+              </a>
+              <a href="tel:+919822084242" class="btn btn-glass">
+                <i class="fa-solid fa-phone"></i> Call Reception
+              </a>
+            </div>
+          </div>
+
+          <!-- Map Embed Frame -->
+          <div class="map-embed-wrapper" style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); min-height: 380px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3782.261971203582!2d73.8049386!3d18.5536553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf35f7bbf053%3A0x9f3e5da166d38506!2sHabibs%20Signature%20Salon!5e0!3m2!1sen!2sin!4v1711000000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style="border:0; min-height: 380px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Maps Location of Habib's Signature Salon Aundh Pune">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <a href="#" class="logo">
+          <span class="logo-symbol">⚜️</span>
+          <div class="logo-text">
+            <span class="brand-name">HABIB'S<span class="gold-dot">.</span>SIGNATURE</span>
+            <span class="brand-sub">SIGNATURE 3D STUDIO • AUNDH</span>
+          </div>
+        </a>
+        <p class="footer-bio">
+          Pioneering royal Indian hair artistry and precision haircutting. This demo represents the ₹65,000 Signature 3D Studio Commercial Deliverable.
+        </p>
+        <div class="social-links">
+          <a href="https://maps.app.goo.gl/svcz6mJANuRGnAbF7" target="_blank" rel="noopener" title="Google Maps"><i class="fa-solid fa-map-pin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Commercial Tier Specs</h4>
+        <ul class="footer-list">
+          <li><span>Package:</span> <strong class="text-gold">Signature 3D Studio (₹65k)</strong></li>
+          <li><span>3D Environment:</span> <span>Interactive Chair & Vanity</span></li>
+          <li><span>Pass System:</span> <span>Standard On-Screen Voucher</span></li>
+          <li><span>Support:</span> <span>3 Months Included</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Contact & Location</h4>
+        <p class="footer-address">
+          <i class="fa-solid fa-location-dot"></i> Sayaji Rao Gaikwad Complex, ITI Rd, Aundh, Pune 411007
+        </p>
+        <p class="footer-phone">
+          <i class="fa-solid fa-phone"></i> +91 98220 84242
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Habib's Signature Salon. Powered by Three.js WebGL & Node.js.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="open-compare-btn text-gold"><i class="fa-solid fa-scale-balanced"></i> Compare Packages</a>
+        <a href="../"><i class="fa-solid fa-crown"></i> ₹95K Flagship Demo</a>
+        <a href="../proposal.html">Commercial Proposal</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       MULTI-STEP BOOKING MODAL WITH STANDARD ON-SCREEN PASS
+       ===================================================================== -->
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-brand">
+          <span class="gold-symbol">⚜️</span>
+          <div>
+            <h3>Habib's Appointment Reservation</h3>
+            <span class="modal-step-indicator" id="modalStepIndicator">Step 1 of 4: Select Ritual</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeBookingModalBtn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-progress-bar">
+        <div class="progress-fill" id="modalProgressFill" style="width: 25%;"></div>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- STEP 1: SERVICE -->
+        <div class="booking-step active" id="bookingStep1">
+          <h4 class="step-title">Select Habib's Signature Service</h4>
+          <div class="modal-services-list" id="modalServicesList"></div>
+        </div>
+
+        <!-- STEP 2: STYLIST -->
+        <div class="booking-step" id="bookingStep2">
+          <h4 class="step-title">Select Master Stylist (Aundh Branch)</h4>
+          <div class="modal-stylists-list" id="modalStylistsList"></div>
+        </div>
+
+        <!-- STEP 3: DATE & TIME -->
+        <div class="booking-step" id="bookingStep3">
+          <h4 class="step-title">Select Date & Time Slot</h4>
+          <div class="date-picker-row" style="margin-bottom: 16px;">
+            <label for="bookingDateInput" class="field-label" style="display:block;margin-bottom:6px;font-size:13px;color:#aaa;">Preferred Date:</label>
+            <input type="date" id="bookingDateInput" class="luxury-input">
+          </div>
+
+          <label class="field-label" style="display:block;margin-bottom:8px;font-size:13px;color:#aaa;">Available Priority Slots at Aundh:</label>
+          <div class="time-slots-grid" id="timeSlotsGrid">
+            <button class="slot-btn" data-slot="10:00">10:00 AM</button>
+            <button class="slot-btn" data-slot="11:30">11:30 AM</button>
+            <button class="slot-btn" data-slot="13:00">01:00 PM</button>
+            <button class="slot-btn active" data-slot="14:30">02:30 PM</button>
+            <button class="slot-btn" data-slot="16:00">04:00 PM</button>
+            <button class="slot-btn" data-slot="17:30">05:30 PM</button>
+            <button class="slot-btn" data-slot="19:00">07:00 PM</button>
+          </div>
+        </div>
+
+        <!-- STEP 4: GUEST DETAILS -->
+        <div class="booking-step" id="bookingStep4">
+          <h4 class="step-title">Guest Details & Contact</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientName">Full Name *</label>
+              <input type="text" id="clientName" class="luxury-input" placeholder="e.g. Radhika Deshmukh" required>
+            </div>
+            <div class="form-group">
+              <label for="clientEmail">Email Address *</label>
+              <input type="email" id="clientEmail" class="luxury-input" placeholder="radhika@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientPhone">Mobile Phone *</label>
+              <input type="tel" id="clientPhone" class="luxury-input" placeholder="+91 98220 00000" required>
+            </div>
+            <div class="form-group">
+              <label for="clientNotes">Special Hair Preferences</label>
+              <input type="text" id="clientNotes" class="luxury-input" placeholder="e.g. Sensitive scalp, previous highlights">
+            </div>
+          </div>
+
+          <div class="booking-recap-box" id="step4Recap"></div>
+        </div>
+
+        <!-- STEP 5: STANDARD ON-SCREEN PASS -->
+        <div class="booking-step" id="bookingStep5">
+          <div class="success-ticket" id="successTicket">
+            <div class="ticket-header">
+              <span class="standard-pass-badge"><i class="fa-solid fa-receipt"></i> STANDARD ON-SCREEN PASS (₹65K TIER)</span>
+              <h3 id="ticketBookingId">HABIB-65K-XXXX</h3>
+              <p>Confirmed Priority Reservation at Habib's Signature Salon (Aundh, Pune).</p>
+            </div>
+
+            <div class="pass-notice-box">
+              <i class="fa-solid fa-circle-info text-gold"></i> <strong>Standard On-Screen Pass:</strong> Please screenshot or present this voucher on your phone screen upon reaching the reception desk.
+            </div>
+
+            <div class="ticket-grid">
+              <div>
+                <span class="ticket-label">Guest</span>
+                <strong id="ticketGuestName">Guest Name</strong>
+              </div>
+              <div>
+                <span class="ticket-label">Stylist</span>
+                <strong id="ticketStylist">Zeeshan Habib</strong>
+              </div>
+              <div>
+                <span class="ticket-label">Ritual</span>
+                <strong id="ticketService">Habib's Precision Cut</strong>
+              </div>
+              <div>
+                <span class="ticket-label">Date & Time</span>
+                <strong id="ticketDateTime">Tomorrow at 2:30 PM</strong>
+              </div>
+              <div>
+                <span class="ticket-label">Total Amount</span>
+                <strong class="text-gold" id="ticketTotal">₹950</strong>
+              </div>
+              <div>
+                <span class="ticket-label">Location</span>
+                <strong>ITI Road, Aundh, Pune</strong>
+              </div>
+            </div>
+
+            <!-- Touchless QR Code Verification -->
+            <div class="ticket-qr-section">
+              <div class="simulated-qr">
+                <i class="fa-solid fa-qrcode"></i>
+              </div>
+              <span class="qr-text">Touchless Reception Verification QR</span>
+            </div>
+
+            <!-- Flagship Upsell Note -->
+            <div class="whatsapp-tier-notice">
+              <i class="fa-solid fa-bell"></i>
+              <div>
+                <strong>Want Automated WhatsApp Delivery?</strong> In the ₹95,000 Flagship package, this ticket is automatically dispatched to the client's WhatsApp with live reception alerts.
+              </div>
+            </div>
+
+            <div class="ticket-actions" style="margin-top: 18px;">
+              <button class="btn btn-glass" id="printVoucherBtn">
+                <i class="fa-solid fa-print"></i> Print / Save Pass
+              </button>
+              <a href="https://maps.app.goo.gl/svcz6mJANuRGnAbF7" target="_blank" rel="noopener" class="btn btn-glass">
+                <i class="fa-solid fa-diamond-turn-right"></i> Navigate on Maps
+              </a>
+              <button class="btn btn-gold" id="finishBookingBtn">
+                <i class="fa-solid fa-check"></i> Done
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer" id="modalFooterNav">
+        <button class="btn btn-glass" id="modalBackBtn" style="visibility:hidden;">
+          <i class="fa-solid fa-chevron-left"></i> Back
+        </button>
+        <button class="btn btn-gold" id="modalNextBtn">
+          <span>Continue</span>
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       PACKAGE COMPARISON MODAL (₹65,000 vs ₹95,000 vs ₹1,60,000)
+       ===================================================================== -->
+  <div class="modal-backdrop" id="compareModal" aria-hidden="true">
+    <div class="modal-dialog comparison-modal-dialog">
+      <div class="modal-header">
+        <div class="modal-brand">
+          <span class="gold-symbol">⚖️</span>
+          <div>
+            <h3>Commercial Package Comparison</h3>
+            <span style="font-size: 11.5px; color: #aaa;">Habib's Signature Salon • Deliverables Matrix</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeCompareModalBtn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p style="font-size: 13px; color: #ccc; margin-bottom: 12px;">
+          Choose the package that aligns with your salon's vision. Both tiers deliver a custom 3D web application with zero monthly template subscriptions:
+        </p>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Deliverable Feature</th>
+                <th style="color:#93c5fd;">Signature 3D Studio<br><span style="font-size:14px;color:#fff;">₹65,000</span></th>
+                <th class="highlight-col">Ultra-Luxury Flagship<br><span style="font-size:14px;color:#fceda1;">₹95,000</span> <span style="font-size:10px;color:#ff8080;">(₹80k Offer)</span></th>
+                <th>Franchise Enterprise<br><span style="font-size:14px;color:#fff;">₹1,60,000</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Interactive 3D Salon Studio</strong></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Standard Studio</span></td>
+                <td class="highlight-col"><span class="check-yes"><i class="fa-solid fa-check"></i> Awwwards-Tier 3D</span></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Multi-Room 3D</span></td>
+              </tr>
+              <tr>
+                <td><strong>Interactive 3D Styling Chair</strong></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> 360° Orbit & Zoom</span></td>
+                <td class="highlight-col"><span class="check-yes"><i class="fa-solid fa-check"></i> 360° + Raycast Book</span></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Custom Chair 3D</span></td>
+              </tr>
+              <tr>
+                <td><strong>Multi-Step Booking Wizard</strong></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> 4 Steps Included</span></td>
+                <td class="highlight-col"><span class="check-yes"><i class="fa-solid fa-check"></i> 4 Steps Included</span></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Multi-Branch Steps</span></td>
+              </tr>
+              <tr>
+                <td><strong>VIP Booking Confirmation Pass</strong></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Standard On-Screen</span></td>
+                <td class="highlight-col"><span class="check-yes"><i class="fa-solid fa-check"></i> Automated WhatsApp Pass</span></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> WhatsApp Cloud API</span></td>
+              </tr>
+              <tr>
+                <td><strong>WhatsApp Live Reception Alert</strong></td>
+                <td><span class="check-no"><i class="fa-solid fa-xmark"></i> Not Included</span></td>
+                <td class="highlight-col"><span class="check-yes"><i class="fa-solid fa-check"></i> Instant Alert Included</span></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Staff Dashboard Alert</span></td>
+              </tr>
+              <tr>
+                <td><strong>Custom Hair Length ₹ Estimator</strong></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Included</span></td>
+                <td class="highlight-col"><span class="check-yes"><i class="fa-solid fa-check"></i> Included</span></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Multi-Tier Estimator</span></td>
+              </tr>
+              <tr>
+                <td><strong>Japanese Waterfall Spa Bay (3D)</strong></td>
+                <td><span class="check-no"><i class="fa-solid fa-xmark"></i> Not Included</span></td>
+                <td class="highlight-col"><span class="check-yes"><i class="fa-solid fa-check"></i> Included (3D Animated)</span></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Included</span></td>
+              </tr>
+              <tr>
+                <td><strong>3D Hair Color Mannequin Lab</strong></td>
+                <td><span class="check-no"><i class="fa-solid fa-xmark"></i> Not Included</span></td>
+                <td class="highlight-col"><span class="check-yes"><i class="fa-solid fa-check"></i> Included (5 Tones)</span></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Included (Custom)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Guided Fullscreen Drone Tour</strong></td>
+                <td><span class="check-no"><i class="fa-solid fa-xmark"></i> Not Included</span></td>
+                <td class="highlight-col"><span class="check-yes"><i class="fa-solid fa-check"></i> 5-Zone Camera Tour</span></td>
+                <td><span class="check-yes"><i class="fa-solid fa-check"></i> Multi-Branch Tour</span></td>
+              </tr>
+              <tr>
+                <td><strong>Technical Support & Hosting</strong></td>
+                <td>3 Months Support</td>
+                <td class="highlight-col"><strong>6 Months Priority + Free 1st Yr Domain/Cloud</strong></td>
+                <td>1 Year 24/7 Priority Support</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;flex-wrap:wrap;gap:10px;">
+          <a href="../proposal.html" class="btn btn-glass">
+            <i class="fa-solid fa-file-pdf"></i> Read Full Proposal & Roadmap
+          </a>
+          <a href="../" class="btn btn-gold">
+            <i class="fa-solid fa-crown"></i> Open ₹95,000 Flagship Demo ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       RESERVATION LOOKUP MODAL
+       ===================================================================== -->
+  <div class="modal-backdrop" id="lookupModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-sm">
+      <div class="modal-header">
+        <div class="modal-brand">
+          <span class="gold-symbol">⚜️</span>
+          <h3>Find Your Reservation</h3>
+        </div>
+        <button class="modal-close-btn" id="closeLookupModalBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p style="font-size: 13px; color: #aaa; margin-bottom: 12px;">
+          Enter your Booking ID (e.g. <code>HABIB-65K-8421</code>) or your registered 10-digit mobile number:
+        </p>
+
+        <div style="display:flex;gap:8px;margin-bottom:14px;">
+          <input type="text" id="lookupSearchInput" class="luxury-input" placeholder="e.g. 9822000000 or HABIB-..." style="flex:1;">
+          <button class="btn btn-gold" id="doLookupBtn">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+        </div>
+
+        <div id="lookupResultsList" style="max-height: 260px; overflow-y: auto;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Three.js Library & OrbitControls -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- ₹65,000 Demo Scripts -->
+  <script src="js/three-salon-65k.js"></script>
+  <script src="js/app-65k.js"></script>
+
 </body>
 </html>

@@ -80,10 +80,11 @@ app.use(express.urlencoded({ extended: false, limit: '15kb' }));
 
 // Static Assets
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/signature-65k', express.static(path.join(__dirname, 'signature-65k')));
 
 // ₹65,000 Signature 3D Studio Demo Routes
-app.get(['/signature-65k', '/demo-65k'], (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'signature-65k', 'index.html'));
+app.get(['/signature-65k', '/demo-65k', '/signature-65k/', '/demo-65k/'], (req, res) => {
+  res.sendFile(path.join(__dirname, 'signature-65k', 'index.html'));
 });
 
 // -----------------------------------------------------------------------------
