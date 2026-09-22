@@ -55,10 +55,10 @@ class SalonStudioScene {
       overview: {
         name: 'Royal Salon Studio',
         category: 'ZONE 01 • SALON ATELIER',
-        title: 'Habib\'s Signature Virtual Studio',
+        title: 'Salon Apple\'s Signature Virtual Studio',
         desc: 'An imperial sanctuary of British-Indian hairdressing heritage, scientific trichology, and bespoke luxury grooming.',
         service: 'Full VIP Consultation',
-        serviceId: 'habib-1',
+        serviceId: 'Salon Apple-1',
         price: 'From ₹950',
         pos: new THREE.Vector3(4.2, 3.2, 5.8),
         look: new THREE.Vector3(0, 1.6, 0)
@@ -66,10 +66,10 @@ class SalonStudioScene {
       chair: {
         name: 'Precision Styling Suite',
         category: 'ZONE 02 • ARCHITECTURAL CUT',
-        title: 'Habib\'s Precision Hydraulic Chair',
+        title: 'Salon Apple\'s Precision Hydraulic Chair',
         desc: 'Ergonomic Italian leather styling chair calibrated for geometric precision cutting, hand-painted balayage, and couture blowouts.',
-        service: 'Habib\'s Signature Geometric Cut',
-        serviceId: 'habib-1',
+        service: 'Salon Apple\'s Signature Geometric Cut',
+        serviceId: 'Salon Apple-1',
         price: '₹950',
         pos: new THREE.Vector3(0.0, 1.8, 3.2),
         look: new THREE.Vector3(0, 1.3, 0.6)
@@ -80,7 +80,7 @@ class SalonStudioScene {
         title: 'Japanese Waterfall Head Spa Bed',
         desc: 'Continuous micro-mist hydrotherapy arch with herbal scalp detoxification, acupressure relaxation, and Olaplex stem-cell repair.',
         service: 'Japanese Waterfall Head Spa',
-        serviceId: 'habib-4',
+        serviceId: 'Salon Apple-4',
         price: '₹2,400',
         pos: new THREE.Vector3(-2.8, 2.1, 2.6),
         look: new THREE.Vector3(-3.8, 1.2, 0.4)
@@ -91,7 +91,7 @@ class SalonStudioScene {
         title: 'Illuminated Halo Vanity Mirror',
         desc: 'High-CRI daylight ring illumination providing true color rendering for French gloss glazes and anti-brass toners.',
         service: 'Haute Balayage & French Glaze',
-        serviceId: 'habib-2',
+        serviceId: 'Salon Apple-2',
         price: '₹4,200',
         pos: new THREE.Vector3(1.4, 2.8, 1.5),
         look: new THREE.Vector3(0, 2.9, -1.7)
@@ -102,7 +102,7 @@ class SalonStudioScene {
         title: 'Luxury Serum & Glaze Dispensary',
         desc: 'Custom formulation dispensary of plant stem-cells, caviar keratin, and ammonia-free European pigments.',
         service: '24K Liquid Gold Keratin',
-        serviceId: 'habib-3',
+        serviceId: 'Salon Apple-3',
         price: '₹5,500',
         pos: new THREE.Vector3(3.2, 1.8, 2.0),
         look: new THREE.Vector3(3.5, 1.4, -0.5)
@@ -380,7 +380,7 @@ class SalonStudioScene {
     const seat = new THREE.Mesh(seatGeo, leatherMat);
     seat.position.set(0, 0.85, 0.6);
     seat.castShadow = true;
-    seat.userData = { serviceId: 'habib-1', title: "Habib's Precision Chair", price: 950 };
+    seat.userData = { serviceId: 'Salon Apple-1', title: "Salon Apple's Precision Chair", price: 950 };
     this.chairGroup.add(seat);
     this.clickableMeshes.push(seat);
 
@@ -396,7 +396,7 @@ class SalonStudioScene {
     back.position.set(0, 1.35, 0.18);
     back.rotation.x = -0.1;
     back.castShadow = true;
-    back.userData = { serviceId: 'habib-1', title: "Habib's Precision Chair", price: 950 };
+    back.userData = { serviceId: 'Salon Apple-1', title: "Salon Apple's Precision Chair", price: 950 };
     this.chairGroup.add(back);
     this.clickableMeshes.push(back);
 
@@ -480,7 +480,7 @@ class SalonStudioScene {
     const cushion = new THREE.Mesh(cushionGeo, leatherMat);
     cushion.position.set(0, 0.72, -0.2);
     cushion.castShadow = true;
-    cushion.userData = { serviceId: 'habib-4', title: 'Japanese Waterfall Head Spa', price: 2400 };
+    cushion.userData = { serviceId: 'Salon Apple-4', title: 'Japanese Waterfall Head Spa', price: 2400 };
     spaGroup.add(cushion);
     this.clickableMeshes.push(cushion);
 
@@ -501,7 +501,7 @@ class SalonStudioScene {
     const basin = new THREE.Mesh(basinGeo, basinMat);
     basin.position.set(0, 0.75, -1.5);
     basin.castShadow = true;
-    basin.userData = { serviceId: 'habib-4', title: 'Japanese Waterfall Head Spa', price: 2400 };
+    basin.userData = { serviceId: 'Salon Apple-4', title: 'Japanese Waterfall Head Spa', price: 2400 };
     spaGroup.add(basin);
     this.clickableMeshes.push(basin);
 

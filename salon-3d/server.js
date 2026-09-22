@@ -12,7 +12,7 @@ const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const ADMIN_API_KEY = process.env.ADMIN_API_KEY || 'AURA_SECURE_ATELIER_2026';
+const ADMIN_API_KEY = process.env.ADMIN_API_KEY || 'APPLE_SECURE_ATELIER_2026';
 
 // -----------------------------------------------------------------------------
 // 1. HTTP SECURITY HEADERS (Helmet & CSP)
@@ -342,7 +342,7 @@ app.post('/api/book', bookingLimiter, (req, res) => {
 
   // 6. Cryptographically Random VIP Code: HABIB-XXXX
   const randomSuffix = Math.floor(1000 + Math.random() * 9000);
-  const bookingId = `HABIB-${randomSuffix}`;
+  const bookingId = `APPLE-${randomSuffix}`;
 
   const newBooking = {
     bookingId,
@@ -439,7 +439,7 @@ app.use((err, req, res, next) => {
 // Start Secure Server
 app.listen(PORT, () => {
   console.log(`====================================================`);
-  console.log(`🛡️  AURA 3D Salon — Enterprise Secure Server`);
+  console.log(`🛡️  Salon Apple 3D — Enterprise Secure Server`);
   console.log(`✨ Helmet CSP & XSS Protection: Active`);
   console.log(`⏱️  Rate Limiting (Global & Booking): Active`);
   console.log(`🔒 PII Masking & Admin Guard: Active`);

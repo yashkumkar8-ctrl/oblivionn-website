@@ -1,5 +1,5 @@
 /**
- * HABIB'S SIGNATURE SALON — CLIENT APPLICATION LOGIC & API CONTROLLER
+ * SALON APPLE [UNISEX] — CLIENT APPLICATION LOGIC & API CONTROLLER
  * Handles Services, Stylists, Multi-Step Booking Wizard, Price Calculator (INR), and Web Audio
  */
 
@@ -109,23 +109,23 @@ window.playSalonSound = function(type) {
 // Fallback offline catalog for static hosting (GitHub Pages)
 const FALLBACK_SERVICES = [
   {
-    id: "habib-1",
+    id: "Salon Apple-1",
     category: "hair",
-    name: "Habib's Signature Geometric Cut & Styling",
-    tagline: "The iconic precision cut pioneered by the Habib dynasty, sculpted to accentuate facial contours.",
+    name: "Salon Apple Geometric Cut & Styling",
+    tagline: "The iconic precision cut pioneered by the Salon Apple dynasty, sculpted to accentuate facial contours.",
     price: 950,
     duration: "45 mins",
     popular: true,
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
     included: [
-      "Habib Trichology Scalp Diagnostic",
+      "Salon Apple Trichology Scalp Diagnostic",
       "Botanical Anti-Pollution Cleansing",
       "Precision Layering & Architectural Texturizing",
       "Ionic High-Volume Couture Blowdry"
     ]
   },
   {
-    id: "habib-2",
+    id: "Salon Apple-2",
     category: "color",
     name: "Haute Balayage & French Gloss Glaze",
     tagline: "Seamless hand-painted dimensional highlights infused with Olaplex bond repair.",
@@ -141,7 +141,7 @@ const FALLBACK_SERVICES = [
     ]
   },
   {
-    id: "habib-3",
+    id: "Salon Apple-3",
     category: "rituals",
     name: "24K Liquid Gold Keratin & Nanoplastia",
     tagline: "Ultra-sleek amino-protein reconstruction that eliminates frizz for up to 6 months.",
@@ -157,7 +157,7 @@ const FALLBACK_SERVICES = [
     ]
   },
   {
-    id: "habib-4",
+    id: "Salon Apple-4",
     category: "rituals",
     name: "Japanese Waterfall Head Spa & Scalp Detox",
     tagline: "Hydro-massage waterfall therapy with herbal scalp exfoliation and deep relaxation.",
@@ -173,7 +173,7 @@ const FALLBACK_SERVICES = [
     ]
   },
   {
-    id: "habib-5",
+    id: "Salon Apple-5",
     category: "grooming",
     name: "The Royal Maharajah Beard & Grooming Ritual",
     tagline: "Traditional hot towel treatment, straight-razor shaping, and botanical beard massage.",
@@ -189,7 +189,7 @@ const FALLBACK_SERVICES = [
     ]
   },
   {
-    id: "habib-6",
+    id: "Salon Apple-6",
     category: "skin",
     name: "Hydra-Infusion 24K Gold Bridal Facial",
     tagline: "Celebrity runway glow therapy with oxygen jet peeling and 24-karat gold leaf mask.",
@@ -209,7 +209,7 @@ const FALLBACK_SERVICES = [
 const FALLBACK_STYLISTS = [
   {
     id: "stylist-1",
-    name: "Zeeshan Habib",
+    name: "Zeeshan Salon Apple",
     title: "Master Creative Director & Academy Mentor",
     experience: "14 Years",
     specialty: "Signature Precision Cuts, Balayage, Celebrity Makeovers",
@@ -309,7 +309,7 @@ function renderServicesGrid(services) {
     <div class="service-card" data-category="${s.category}">
       <div class="service-card-img-wrap">
         <img src="${s.image}" alt="${s.name}" class="service-card-img" loading="lazy">
-        ${s.popular ? '<span class="service-popular-badge">Habib\'s Signature</span>' : ''}
+        ${s.popular ? '<span class="service-popular-badge">Salon Apple\'s Signature</span>' : ''}
       </div>
       <div class="service-card-body">
         <div class="service-header">
@@ -441,8 +441,8 @@ function renderModalStylistsList(stylists) {
       <div class="card-main">
         <div class="card-img-thumb" style="background:var(--gold-gradient);display:flex;align-items:center;justify-content:center;color:#000;font-size:20px;">⚜️</div>
         <div class="card-info">
-          <h5>Any Habib's Master Stylist on Duty</h5>
-          <p>We will assign the best matching specialist available at Aundh.</p>
+          <h5>Any Salon Apple's Master Stylist on Duty</h5>
+          <p>We will assign the best matching specialist available at Handewadi.</p>
         </div>
       </div>
       <div class="card-meta">
@@ -474,7 +474,7 @@ function renderModalStylistsList(stylists) {
       card.classList.add('active');
       const stId = card.dataset.id;
       if (stId === 'any') {
-        AppState.selectedStylist = { id: 'any', name: 'Master on Duty (Aundh)' };
+        AppState.selectedStylist = { id: 'any', name: 'Master on Duty (Handewadi)' };
       } else {
         AppState.selectedStylist = AppState.stylists.find(s => s.id === stId);
       }
@@ -567,8 +567,8 @@ function updateStep4Recap() {
   const recap = document.getElementById('step4Recap');
   if (!recap) return;
 
-  const s = AppState.selectedService || { name: "Habib's Precision Cut", price: 950 };
-  const st = AppState.selectedStylist || { name: 'Master on Duty (Aundh)' };
+  const s = AppState.selectedService || { name: "Salon Apple's Precision Cut", price: 950 };
+  const st = AppState.selectedStylist || { name: 'Master on Duty (Handewadi)' };
   const dateInput = document.getElementById('bookingDateInput');
   const date = dateInput ? dateInput.value : 'Upcoming';
   const slot = AppState.selectedTimeSlot || '14:30';
@@ -581,7 +581,7 @@ function updateStep4Recap() {
     <div style="font-size:13px;color:var(--text-secondary);line-height:1.6;">
       <div><i class="fa-solid fa-user-tie"></i> <strong>Stylist:</strong> ${st.name}</div>
       <div><i class="fa-regular fa-calendar"></i> <strong>Scheduled:</strong> ${date} at ${slot}</div>
-      <div><i class="fa-solid fa-location-dot"></i> <strong>Branch:</strong> ITI Road, Aundh, Pune</div>
+      <div><i class="fa-solid fa-location-dot"></i> <strong>Branch:</strong> ITI Road, Handewadi, Pune</div>
     </div>
   `;
 }
@@ -602,7 +602,7 @@ async function submitAppointment() {
     clientName: nameInput.value.trim(),
     clientEmail: emailInput.value.trim(),
     clientPhone: phoneInput.value.trim(),
-    serviceId: AppState.selectedService?.id || 'habib-1',
+    serviceId: AppState.selectedService?.id || 'Salon Apple-1',
     stylistId: AppState.selectedStylist?.id || 'stylist-1',
     date: dateInput ? dateInput.value : '2026-09-25',
     timeSlot: AppState.selectedTimeSlot || '14:30',
@@ -638,24 +638,24 @@ async function submitAppointment() {
     // If server succeeded OR running on static hosting (GitHub Pages)
     if (!b) {
       b = {
-        bookingId: `HABIB-${Math.floor(1000 + Math.random() * 9000)}`,
+        bookingId: `Salon Apple-${Math.floor(1000 + Math.random() * 9000)}`,
         clientName: payload.clientName,
         clientPhone: payload.clientPhone,
         clientEmail: payload.clientEmail,
-        stylistName: AppState.selectedStylist?.name || 'Zeeshan Habib',
+        stylistName: AppState.selectedStylist?.name || 'Zeeshan Salon Apple',
         serviceName: AppState.selectedService?.name || 'Signature Royal Cut',
         date: payload.date,
         timeSlot: payload.timeSlot,
         totalPrice: calculateTotal(),
-        status: 'Confirmed (Aundh VIP)'
+        status: 'Confirmed (Handewadi VIP)'
       };
     }
 
     // Persist reservation locally
     try {
-      const localBookings = JSON.parse(localStorage.getItem('habib_bookings') || '[]');
+      const localBookings = JSON.parse(localStorage.getItem('Salon Apple_bookings') || '[]');
       localBookings.unshift(b);
-      localStorage.setItem('habib_bookings', JSON.stringify(localBookings.slice(0, 30)));
+      localStorage.setItem('Salon Apple_bookings', JSON.stringify(localBookings.slice(0, 30)));
     } catch (e) {}
 
     window.playSalonSound('chime');
@@ -902,7 +902,7 @@ function setupLookupModal() {
         if (res.ok) data = await res.json();
       } catch (e) {
         // Fall back to localStorage
-        const local = JSON.parse(localStorage.getItem('habib_bookings') || '[]');
+        const local = JSON.parse(localStorage.getItem('Salon Apple_bookings') || '[]');
         const q = query.toLowerCase();
         data = local.filter(b => 
           (b.bookingId && b.bookingId.toLowerCase().includes(q)) ||

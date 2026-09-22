@@ -1,114 +1,110 @@
 [
   {
-    "id": "habib-1",
+    "id": "apple-1",
     "category": "hair",
-    "name": "Habib's Signature Geometric Cut & Styling",
-    "tagline": "The iconic precision cut pioneered by the Habib dynasty, sculpted to accentuate facial contours.",
-    "price": 950,
-    "duration": "45 mins",
+    "name": "Female Hair Package 1",
+    "tagline": "Wella Hair Wash, Hair Cut & Wella Hair Colour (Root touch up - upto 2 inch)",
+    "price": 1800,
+    "duration": "90 mins",
     "popular": true,
     "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
     "included": [
-      "Habib Trichology Scalp Diagnostic",
-      "Botanical Anti-Pollution Cleansing",
-      "Precision Layering & Architectural Texturizing",
-      "Ionic High-Volume Couture Blowdry"
+      "Wella Professional Hair Wash",
+      "Precision Hair Cut",
+      "Wella Hair Colour Root Touch-up"
     ]
   },
   {
-    "id": "habib-2",
-    "category": "color",
-    "name": "Haute Balayage & French Gloss Glaze",
-    "tagline": "Seamless hand-painted dimensional highlights infused with Olaplex bond repair.",
-    "price": 4200,
+    "id": "apple-2",
+    "category": "hair",
+    "name": "Female Hair Package 2",
+    "tagline": "Hair Cut, Global Hair Colour & Wella Baseline Hair Spa",
+    "price": 4500,
     "duration": "120 mins",
     "popular": true,
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
     "included": [
-      "Custom Undertone & Complexion Mapping",
-      "Ammonia-Free Lightening Therapy",
-      "Olaplex No.1 & No.2 Molecular Reconstruction",
-      "L'Oréal Acidic Color Gloss Lock"
+      "Precision Hair Cut",
+      "Global Hair Colour",
+      "Wella Baseline Hair Spa"
     ]
   },
   {
-    "id": "habib-3",
+    "id": "apple-3",
     "category": "rituals",
-    "name": "24K Liquid Gold Keratin & Nanoplastia",
-    "tagline": "Zero-frizz restorative lamination providing mirror-like reflective glass hair for 5+ months.",
-    "price": 5500,
-    "duration": "150 mins",
-    "popular": true,
+    "name": "Nanoplastia Protein Treatment",
+    "tagline": "Hair Cut, Hair Colour (Root touch up or Global or Highlights) & Nanoplastia Protein",
+    "price": 10000,
+    "duration": "180 mins",
+    "popular": false,
     "image": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80",
     "included": [
-      "Deep Protein Clarifying Pre-Wash",
-      "Nanotech Organic Amino-Acid Infusion",
-      "Infrared Cryo-Iron Sealing",
-      "Habib's Signature Take-Home Argan Serum"
+      "Precision Hair Cut",
+      "Custom Hair Colouring",
+      "Nanoplastia Protein Therapy"
     ]
   },
   {
-    "id": "habib-4",
-    "category": "rituals",
-    "name": "Japanese Waterfall Head Spa & Scalp Detox",
-    "tagline": "Continuous warm hydro-halo waterfall with acupressure lymphatic head and neck massage.",
-    "price": 2400,
-    "duration": "75 mins",
-    "popular": true,
-    "image": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
-    "included": [
-      "HD Microscopic Scalp Camera Analysis",
-      "Dead Sea Minerals & Tea Tree Exfoliation",
-      "Ultrasonic Micro-Mist Steam Canopy",
-      "Continuous Heated Waterfall Halo Therapy"
-    ]
-  },
-  {
-    "id": "habib-5",
-    "category": "grooming",
-    "name": "The Royal Maharajah Beard & Grooming Ritual",
-    "tagline": "Imperial hot-towel treatment, straight-razor precision edging, and sandalwood beard spa.",
-    "price": 850,
-    "duration": "45 mins",
-    "popular": false,
-    "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80",
-    "included": [
-      "Steamed Eucalyptus Cloth Preparation",
-      "Handcrafted Straight-Razor Sculpting",
-      "Cold-Pressed Mysore Sandalwood Oil Massage",
-      "Ice-Globe Pore Tightening Finish"
-    ]
-  },
-  {
-    "id": "habib-6",
+    "id": "apple-4",
     "category": "skin",
-    "name": "Hydra-Infusion 24K Gold Bridal Radiance Facial",
-    "tagline": "7-step clinical HydraFacial with pure gold peptide foil for instant red-carpet illumination.",
-    "price": 3500,
-    "duration": "60 mins",
+    "name": "Spectacular Festive Glow (For Her)",
+    "tagline": "Full Body Scrub, Skin Whitening Facial, Detan, Waxing & More",
+    "price": 4000,
+    "duration": "150 mins",
     "popular": true,
     "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
     "included": [
-      "Hydro-Dermabrasion Vortex Pore Cleansing",
-      "24K Pure Gold Leaf Sheet Mask",
-      "Oxygen Jet Spray & Hyaluronic Plumping",
-      "LED Phototherapy Collagen Light"
+      "Full Body Scrub & Skin Whitening Facial",
+      "Face Detan & Regular Waxing (FH, FL, UA)",
+      "Manicure or Hairwash",
+      "Pedicure or Blowdry & Eyebrows"
     ]
   },
   {
-    "id": "habib-7",
-    "category": "hair",
-    "name": "Botox Hair Therapy & Thermal Reconstruction",
-    "tagline": "Intensive deep-conditioning filling treatment to restore bleached and chemical-damaged cuticles.",
-    "price": 3800,
-    "duration": "90 mins",
+    "id": "apple-5",
+    "category": "grooming",
+    "name": "Spectacular Festive Glow (For Him)",
+    "tagline": "Full Body Scrub, Skin Whitening Facial, Detan & Men's Grooming",
+    "price": 3000,
+    "duration": "120 mins",
     "popular": false,
-    "image": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80",
+    "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80",
     "included": [
-      "Hydro-Peptide Fiber Cleansing",
-      "Hyaluronic & Collagen Micro-Injection Formulation",
-      "Thermal Sealing Blanket",
-      "Silk Gloss Finish"
+      "Full Body Scrub & Skin Whitening Facial",
+      "Face Detan",
+      "Hair Wash & Haircut",
+      "Shaving or Beard Trim"
+    ]
+  },
+  {
+    "id": "apple-6",
+    "category": "skin",
+    "name": "Richfeel Beauty Package",
+    "tagline": "Richfeel Skin Whitening Facial, Oxy Bleach/Detan, Waxing & Classic Mani/Pedi",
+    "price": 2800,
+    "duration": "120 mins",
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80",
+    "included": [
+      "Richfeel Skin Whitening Facial",
+      "Oxy Bleach or Face Detan",
+      "2G (FH, HL) & Regular (UA) Waxing",
+      "Classic Manicure & Pedicure & Eyebrows"
+    ]
+  },
+  {
+    "id": "apple-7",
+    "category": "rituals",
+    "name": "Signature Mani/Pedi Monday Offer",
+    "tagline": "Get Signature Menicure FREE on Signature Pedicure!",
+    "price": 1200,
+    "duration": "60 mins",
+    "popular": true,
+    "image": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
+    "included": [
+      "Signature Pedicure",
+      "FREE Signature Menicure",
+      "Nail Cut & File"
     ]
   }
 ]
