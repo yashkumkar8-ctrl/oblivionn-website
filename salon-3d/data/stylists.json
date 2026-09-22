@@ -2,55 +2,61 @@
   {
     "id": "stylist-1",
     "name": "Nishant",
-    "specialty": "Haircut Specialist",
-    "bio": "Expert in tailoring sharp, stylish cuts perfectly suited to your hair type.",
-    "avatar": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80",
+    "specialty": "Master Haircut & Texture Specialist",
+    "bio": "Praised by clients for patient consultations, sharp bespoke cuts, and tailored recommendations perfectly suited to individual hair types.",
+    "avatar": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=300&q=80",
     "rating": "4.9",
-    "reviews": 112
+    "reviews": 112,
+    "highlight": "Client favorite for precision tailoring"
   },
   {
     "id": "stylist-2",
-    "name": "Sebi",
-    "specialty": "Facial & Massage",
-    "bio": "Known for relaxing and patient facial treatments with wonderful massages.",
-    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80",
+    "name": "Ms. Sebi",
+    "specialty": "Aesthetician & Soothing Facial Massage",
+    "bio": "Celebrated for relaxing, patient facial treatments with wonderful soothing massages that leave skin fresh, luminous, and radiant.",
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
     "rating": "5.0",
-    "reviews": 85
+    "reviews": 85,
+    "highlight": "Glowing skin & tension release"
   },
   {
     "id": "stylist-3",
     "name": "Radha",
-    "specialty": "Facials & Skincare",
-    "bio": "Provides thorough and extremely relaxing facial treatments.",
-    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80",
+    "specialty": "Facials & Deep Skincare Therapist",
+    "bio": "Provides thorough, attentive, and deeply calming skin therapies with clinical-grade European skincare and detan treatments.",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
     "rating": "4.8",
-    "reviews": 92
+    "reviews": 92,
+    "highlight": "Thorough & patient facial care"
   },
   {
     "id": "stylist-4",
     "name": "Praveen",
-    "specialty": "Haircut & Therapy",
-    "bio": "Specializes in beautiful haircuts and deeply relaxing head massages.",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+    "specialty": "Haircut, Wash & Head Massage Therapy",
+    "bio": "Master of beautiful haircuts, rejuvenating hair washes, and deeply relaxing head massages described by clients as a therapeutic 2-hour session.",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
     "rating": "4.9",
-    "reviews": 76
+    "reviews": 76,
+    "highlight": "Acupressure wash & head massage"
   },
   {
     "id": "stylist-5",
     "name": "Varsha",
-    "specialty": "Bridal & Facials",
-    "bio": "Skilled, professional, and highly attentive to bridal services.",
-    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
+    "specialty": "Bridal Artistry & Skin Consultations",
+    "bio": "Skilled, professional, and attentive bridal consultant helping brides and couples discover treatments that best suit their natural skin tone.",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
     "rating": "5.0",
-    "reviews": 64
+    "reviews": 64,
+    "highlight": "Bespoke bridal & couple rituals"
   },
   {
     "id": "stylist-6",
     "name": "Gurfan",
-    "specialty": "Bridal & Hair",
-    "bio": "Exceptional expertise in bridal styling and attentive customer care.",
-    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80",
+    "specialty": "Bridal Hair & Precision Styling",
+    "bio": "Known for attentive customer care, exquisite bridal updos, modern texture styling, and flawless occasion looks.",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
     "rating": "4.8",
-    "reviews": 59
+    "reviews": 59,
+    "highlight": "Occasion & bridal hair mastery"
   }
 ]

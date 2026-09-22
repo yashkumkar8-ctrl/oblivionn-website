@@ -1,0 +1,57 @@
+[
+  {
+    "id": "rev-1",
+    "name": "Priyanka Bendbhar",
+    "rating": 5,
+    "timeAgo": "1 year ago",
+    "service": "Haircut by Nishant",
+    "stylist": "Nishant",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+    "text": "I recently visited Apple Saloon for a haircut, and I'm thoroughly impressed with the service I received from *Nishant*. From the moment I walked in, the staff made me feel welcomed and comfortable. Nishant took the time to listen to my preferences, offering helpful suggestions based on my hair type. The cut turned out exactly as I envisioned—sharp, stylish, and perfectly tailored. The atmosphere of the salon was relaxing, and the attention to detail throughout the entire experience was exceptional. Overall, I'm very happy with my haircut and will definitely be returning for future appointments. Highly recommend!",
+    "verified": true
+  },
+  {
+    "id": "rev-2",
+    "name": "Shivangi Bhattacharjee",
+    "rating": 5,
+    "timeAgo": "8 months ago",
+    "service": "Haircut, Wash & Facials",
+    "stylist": "Praveen & Radha",
+    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80",
+    "text": "Got my haircut and facial done here. The staff were extremely courteous and caring. Radha did a thorough job with the facial, she was very patient and made me completely relax. Praveen gave me a beautiful haircut, also got a hairwash from him, he gave me a very relaxing head massage during the wash. It felt like a 2 hour therapy session, would definitely recommend their services to anyone curious.",
+    "verified": true
+  },
+  {
+    "id": "rev-3",
+    "name": "Aishwarya Bhosale",
+    "rating": 5,
+    "timeAgo": "7 months ago",
+    "service": "Facials & Massage",
+    "stylist": "Ms. Sebi",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
+    "text": "I had a facial done here. 'Ms. Sebi' did a great job. She was so patient and made me feel relaxed and at ease by talking to me. She also gave a great massage. It was a nice experience here. I will surely visit next time!",
+    "verified": true
+  },
+  {
+    "id": "rev-4",
+    "name": "Mansi Adkar",
+    "rating": 5,
+    "timeAgo": "1 year ago",
+    "service": "Bridal Services & Facials",
+    "stylist": "Varsha & Gurfan",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80",
+    "text": "I recently visited this salon with my fiancé for facial appointments, and we had a wonderful experience! The entire process was smooth and seamless. A special mention to Varsha and Gurfan, who were absolutely the best at what they do – skilled, professional, and attentive. The salon's location is also a big plus – easy to find using maps. The staff is incredibly kind and helpful, taking the time to suggest services that best suit your skin type. Overall, a great experience, and I'd highly recommend this salon to anyone looking for quality services and excellent customer care!",
+    "verified": true
+  },
+  {
+    "id": "rev-5",
+    "name": "Tanaya Waghmare",
+    "rating": 5,
+    "timeAgo": "6 months ago",
+    "service": "Skin Glowing Facial",
+    "stylist": "Ms. Sebi",
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80",
+    "text": "I had a wonderful facial experience here. The staff was very professional and made me feel relaxed throughout the treatment. The salon was clean and hygienic, and my skin felt fresh and glowing after the facial. Sebi did a wonderful job.",
+    "verified": true
+  }
+]

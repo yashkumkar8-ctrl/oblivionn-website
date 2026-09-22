@@ -37,15 +37,15 @@ function request(options, data) {
   }, {
     clientName: '<script>alert(1)</script>Princess Diana',
     clientEmail: 'diana@royal.com',
-    clientPhone: '+1 555-1234',
-    serviceId: 'habib-1',
+    clientPhone: '+91 72490 28033',
+    serviceId: 'apple-hair-1',
     date: '2026-09-28',
     timeSlot: '11:30',
     notes: '<img src=x onerror=alert(1)>Special request'
   });
   console.log('XSS Booking Status:', xssBooking.status);
-  console.log('Sanitized Name:', xssBooking.data.booking.clientName);
-  console.log('Sanitized Notes:', xssBooking.data.booking.notes);
+  console.log('Sanitized Name:', xssBooking.data.booking?.clientName);
+  console.log('Sanitized Notes:', xssBooking.data.booking?.notes);
 
   console.log('\n--- 3. Testing Input Validation (Invalid Email & Past Date) ---');
   const invalidEmail = await request({
@@ -57,8 +57,8 @@ function request(options, data) {
   }, {
     clientName: 'Test Bad',
     clientEmail: 'not-an-email',
-    clientPhone: '+1 555-0000',
-    serviceId: 'habib-1',
+    clientPhone: '+91 72490 28033',
+    serviceId: 'apple-hair-1',
     date: '2026-09-28',
     timeSlot: '11:30'
   });
@@ -73,8 +73,8 @@ function request(options, data) {
   }, {
     clientName: 'Test Bad',
     clientEmail: 'good@example.com',
-    clientPhone: '+1 555-0000',
-    serviceId: 'habib-1',
+    clientPhone: '+91 72490 28033',
+    serviceId: 'apple-hair-1',
     date: '2020-01-01',
     timeSlot: '11:30'
   });
@@ -84,12 +84,34 @@ function request(options, data) {
   const searchRes = await request({
     hostname: 'localhost',
     port: 3000,
-    path: '/api/bookings?search=diana',
+    path: '/api/bookings?search=priyanka',
     method: 'GET'
   });
   console.log('Public Search Result (Masked PII):', searchRes.data[0]);
 
-  console.log('\n--- 5. Testing Admin Route Authorization ---');
+  console.log('\n--- 5. Testing Reviews and Calculator Endpoints ---');
+  const reviewsRes = await request({
+    hostname: 'localhost',
+    port: 3000,
+    path: '/api/reviews',
+    method: 'GET'
+  });
+  console.log('Reviews count:', reviewsRes.data?.length, 'Average rating:', reviewsRes.data?.[0]?.rating);
+
+  const calcRes = await request({
+    hostname: 'localhost',
+    port: 3000,
+    path: '/api/calculator/estimate',
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' }
+  }, {
+    basePrice: 7500,
+    lengthFee: 500,
+    addonFees: 650
+  });
+  console.log('Calculator estimate:', calcRes.data);
+
+  console.log('\n--- 6. Testing Admin Route Authorization ---');
   const unauthAdmin = await request({
     hostname: 'localhost',
     port: 3000,
@@ -103,7 +125,7 @@ function request(options, data) {
     port: 3000,
     path: '/api/admin/bookings',
     method: 'GET',
-    headers: { 'x-admin-key': 'AURA_SECURE_ATELIER_2026' }
+    headers: { 'x-admin-key': 'APPLE_SECURE_ATELIER_2026' }
   });
   console.log('Authorized Admin Access (200):', authAdmin.status === 200 ? 'YES ✓ (' + authAdmin.data.totalBookings + ' bookings)' : 'NO ✗');
 })();

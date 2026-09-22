@@ -131,6 +131,7 @@ const lookupLimiter = rateLimit({
 const DATA_DIR = path.join(__dirname, 'data');
 const SERVICES_FILE = path.join(DATA_DIR, 'services.json');
 const STYLISTS_FILE = path.join(DATA_DIR, 'stylists.json');
+const REVIEWS_FILE = path.join(DATA_DIR, 'reviews.json');
 const BOOKINGS_FILE = path.join(DATA_DIR, 'bookings.json');
 
 function readJSON(filePath, fallback = []) {
@@ -199,7 +200,7 @@ function isValidBookingDate(dateStr) {
 }
 
 // Valid operating hours whitelist
-const VALID_TIME_SLOTS = ['10:00', '11:30', '13:00', '14:30', '16:00', '17:30', '19:00'];
+const VALID_TIME_SLOTS = ['10:00', '11:30', '13:00', '14:30', '16:00', '17:30', '19:00', '20:30'];
 
 // Mask PII for public search protection
 function maskEmail(email) {
@@ -223,6 +224,8 @@ function maskPhone(phone) {
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'secure-online',
+    salon: 'Salon Apple [Unisex] Handewadi',
+    phone: '+91 72490 28033',
     timestamp: new Date().toISOString(),
     security: 'Helmet + RateLimit + Sanitized'
   });
@@ -245,6 +248,29 @@ app.get('/api/stylists', (req, res) => {
   res.json(stylists);
 });
 
+// API: Get verified customer reviews
+app.get('/api/reviews', (req, res) => {
+  const reviews = readJSON(REVIEWS_FILE, []);
+  res.json(reviews);
+});
+
+// API: Dynamic Price Calculator Estimate
+app.post('/api/calculator/estimate', (req, res) => {
+  const { basePrice, lengthFee = 0, addonFees = 0 } = req.body;
+  const base = Math.max(0, Number(basePrice) || 0);
+  const length = Math.max(0, Number(lengthFee) || 0);
+  const addons = Math.max(0, Number(addonFees) || 0);
+  const total = base + length + addons;
+  res.json({
+    base,
+    length,
+    addons,
+    total,
+    currency: 'INR',
+    formattedTotal: `₹${total.toLocaleString('en-IN')}`
+  });
+});
+
 // API: Live stats
 app.get('/api/stats', (req, res) => {
   const bookings = readJSON(BOOKINGS_FILE, []);
@@ -253,7 +279,9 @@ app.get('/api/stats', (req, res) => {
     activeStylists: stylists.length,
     todaySlotsRemaining: Math.max(3, 14 - bookings.length),
     satisfactionScore: 99.4,
-    totalHappyGuests: 2450 + bookings.length
+    rating: '4.8 ★',
+    totalReviews: '130+',
+    totalHappyGuests: 3800 + bookings.length
   });
 });
 

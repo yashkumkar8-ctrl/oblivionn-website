@@ -1,110 +1,229 @@
 [
   {
-    "id": "apple-1",
+    "id": "apple-hair-1",
     "category": "hair",
     "name": "Female Hair Package 1",
-    "tagline": "Wella Hair Wash, Hair Cut & Wella Hair Colour (Root touch up - upto 2 inch)",
+    "tagline": "Wella Hair Wash + Hair Cut + Wella Colour Root Touch-up (up to 2\")",
     "price": 1800,
+    "originalPrice": 2350,
+    "discount": "23% OFF",
     "duration": "90 mins",
     "popular": true,
+    "badge": "Popular Value",
     "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
     "included": [
       "Wella Professional Hair Wash",
-      "Precision Hair Cut",
-      "Wella Hair Colour Root Touch-up"
+      "Precision Hair Cut & Blowdry",
+      "Wella Hair Colour Root Touch-up (up to 2 inch)"
     ]
   },
   {
-    "id": "apple-2",
+    "id": "apple-hair-2",
     "category": "hair",
     "name": "Female Hair Package 2",
-    "tagline": "Hair Cut, Global Hair Colour & Wella Baseline Hair Spa",
+    "tagline": "Hair Cut + Global Hair Colour + Wella Baseline Hair Spa",
     "price": 4500,
+    "originalPrice": 5700,
+    "discount": "21% OFF",
     "duration": "120 mins",
     "popular": true,
+    "badge": "Best Seller",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
     "included": [
-      "Precision Hair Cut",
-      "Global Hair Colour",
-      "Wella Baseline Hair Spa"
+      "Precision Hair Cut & Style",
+      "Global Hair Colour (Wella Formulation)",
+      "Wella Baseline Deep Nourishing Hair Spa"
     ]
   },
   {
-    "id": "apple-3",
-    "category": "rituals",
-    "name": "Nanoplastia Protein Treatment",
-    "tagline": "Hair Cut, Hair Colour (Root touch up or Global or Highlights) & Nanoplastia Protein",
-    "price": 10000,
-    "duration": "180 mins",
+    "id": "apple-hair-3",
+    "category": "hair",
+    "name": "Female Hair Package 3 (Nanogel)",
+    "tagline": "Hair Cut + Hair Colour (Root / Global / Highlights) + Nanogel Treatment",
+    "price": 7500,
+    "originalPrice": 12700,
+    "discount": "41% OFF",
+    "duration": "150 mins",
     "popular": false,
+    "badge": "Save ₹5,200",
+    "image": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
+    "included": [
+      "Precision Tailored Hair Cut",
+      "Hair Colour (Root touch up, Global, or Highlights)",
+      "Advanced Nanogel Rejuvenation Therapy"
+    ]
+  },
+  {
+    "id": "apple-hair-4",
+    "category": "rituals",
+    "name": "Female Hair Package 4 (Nanoplastia)",
+    "tagline": "Hair Cut + Hair Colour + Nanoplastia Protein Treatment",
+    "price": 10000,
+    "originalPrice": 13700,
+    "discount": "27% OFF",
+    "duration": "180 mins",
+    "popular": true,
+    "badge": "Flagship Luxury",
     "image": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80",
     "included": [
-      "Precision Hair Cut",
-      "Custom Hair Colouring",
-      "Nanoplastia Protein Therapy"
+      "Master Hair Cut & Blowdry",
+      "Hair Colour (Root touch up, Global, or Highlights)",
+      "Nanoplastia Protein Deep Keratin Smoothing Therapy"
     ]
   },
   {
-    "id": "apple-4",
+    "id": "apple-glow-her",
     "category": "skin",
-    "name": "Spectacular Festive Glow (For Her)",
-    "tagline": "Full Body Scrub, Skin Whitening Facial, Detan, Waxing & More",
+    "name": "Festive Glow Package (For Her)",
+    "tagline": "Full Body Scrub, Skin Whitening Facial, Detan, Waxing & Mani-Pedi",
     "price": 4000,
+    "originalPrice": 5920,
+    "discount": "32% OFF",
     "duration": "150 mins",
     "popular": true,
+    "badge": "Festive Special",
     "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
     "included": [
-      "Full Body Scrub & Skin Whitening Facial",
-      "Face Detan & Regular Waxing (FH, FL, UA)",
+      "Full Body Exfoliating Scrub",
+      "Skin Whitening Radiant Facial",
+      "Face Detan Therapy",
+      "Regular Waxing (FH, FL, UA)",
       "Manicure or Hairwash",
-      "Pedicure or Blowdry & Eyebrows"
+      "Pedicure or Blowdry",
+      "Eyebrows Threading"
     ]
   },
   {
-    "id": "apple-5",
+    "id": "apple-glow-him",
     "category": "grooming",
-    "name": "Spectacular Festive Glow (For Him)",
-    "tagline": "Full Body Scrub, Skin Whitening Facial, Detan & Men's Grooming",
+    "name": "Festive Glow Package (For Him)",
+    "tagline": "Full Body Scrub, Skin Whitening Facial, Detan, Haircut & Beard",
     "price": 3000,
-    "duration": "120 mins",
-    "popular": false,
-    "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80",
-    "included": [
-      "Full Body Scrub & Skin Whitening Facial",
-      "Face Detan",
-      "Hair Wash & Haircut",
-      "Shaving or Beard Trim"
-    ]
-  },
-  {
-    "id": "apple-6",
-    "category": "skin",
-    "name": "Richfeel Beauty Package",
-    "tagline": "Richfeel Skin Whitening Facial, Oxy Bleach/Detan, Waxing & Classic Mani/Pedi",
-    "price": 2800,
+    "originalPrice": 3800,
+    "discount": "21% OFF",
     "duration": "120 mins",
     "popular": true,
+    "badge": "Gentlemen's Choice",
+    "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80",
+    "included": [
+      "Full Body Exfoliating Scrub",
+      "Skin Whitening Radiant Facial",
+      "Face Detan Therapy",
+      "Refreshing Hair Wash",
+      "Precision Haircut",
+      "Luxury Shaving or Beard Trim"
+    ]
+  },
+  {
+    "id": "apple-beauty-1",
+    "category": "skin",
+    "name": "Female Beauty Package 1",
+    "tagline": "Classic Face Clean Up + Regular Waxing + Eyebrows",
+    "price": 1000,
+    "originalPrice": 1570,
+    "discount": "36% OFF",
+    "duration": "60 mins",
+    "popular": false,
+    "badge": "Essential Glow",
+    "image": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
+    "included": [
+      "Classic Face Clean up",
+      "Regular Waxing (FH, FL, UA)",
+      "Precision Eyebrow Threading"
+    ]
+  },
+  {
+    "id": "apple-beauty-2",
+    "category": "skin",
+    "name": "Female Beauty Package 2 (2G/3G Waxing)",
+    "tagline": "2G Waxing (FH, FL) + 3G Waxing (UA) + Eyebrows",
+    "price": 1100,
+    "originalPrice": 1520,
+    "discount": "28% OFF",
+    "duration": "50 mins",
+    "popular": false,
+    "badge": "Smooth Skin",
+    "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80",
+    "included": [
+      "2G Gentle Waxing (FH, FL)",
+      "3G Advanced Waxing (UA)",
+      "Eyebrows Threading"
+    ]
+  },
+  {
+    "id": "apple-beauty-3",
+    "category": "skin",
+    "name": "Female Beauty Package 3 (Raaga Facial)",
+    "tagline": "Raaga Professional Facial, Detan, Waxing & Classic Mani-Pedi",
+    "price": 1800,
+    "originalPrice": 2570,
+    "discount": "30% OFF",
+    "duration": "120 mins",
+    "popular": true,
+    "badge": "Super Saver",
+    "image": "https://images.unsplash.com/photo-1512290900672-1f49cb79e09d?auto=format&fit=crop&w=800&q=80",
+    "included": [
+      "Raaga Professional Facial",
+      "Bleach or Face Detan",
+      "Regular Waxing (FH, FL, UA)",
+      "Classic Manicure & Pedicure",
+      "Eyebrows Threading"
+    ]
+  },
+  {
+    "id": "apple-beauty-4",
+    "category": "skin",
+    "name": "Female Beauty Package 4 (Richfeel)",
+    "tagline": "Richfeel Skin Whitening Facial, Oxy Bleach/Detan, Waxing & Mani-Pedi",
+    "price": 2800,
+    "originalPrice": 4270,
+    "discount": "34% OFF",
+    "duration": "135 mins",
+    "popular": true,
+    "badge": "Bridal Favorite",
     "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80",
     "included": [
       "Richfeel Skin Whitening Facial",
       "Oxy Bleach or Face Detan",
-      "2G (FH, HL) & Regular (UA) Waxing",
-      "Classic Manicure & Pedicure & Eyebrows"
+      "2G Waxing (FH, HL) & Regular Waxing (UA)",
+      "Classic Manicure & Pedicure",
+      "Eyebrows Threading"
     ]
   },
   {
-    "id": "apple-7",
+    "id": "apple-monday-special",
     "category": "rituals",
-    "name": "Signature Mani/Pedi Monday Offer",
-    "tagline": "Get Signature Menicure FREE on Signature Pedicure!",
+    "name": "Spectacular Monday Offer",
+    "tagline": "Book a Signature Pedicure & get Signature Manicure 100% FREE!",
     "price": 1200,
-    "duration": "60 mins",
+    "originalPrice": 2400,
+    "discount": "50% OFF",
+    "duration": "75 mins",
     "popular": true,
+    "badge": "Monday Only",
     "image": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
     "included": [
-      "Signature Pedicure",
-      "FREE Signature Menicure",
-      "Nail Cut & File"
+      "Deluxe Signature Pedicure with Foot Massage",
+      "Signature Manicure (COMPLIMENTARY)",
+      "Cuticle Care, Nail Shaping & French Polish"
+    ]
+  },
+  {
+    "id": "apple-haircut-nishant",
+    "category": "hair",
+    "name": "Precision Tailored Haircut",
+    "tagline": "Specialist cut tailored to your face structure & hair texture",
+    "price": 550,
+    "originalPrice": 750,
+    "discount": "26% OFF",
+    "duration": "45 mins",
+    "popular": true,
+    "badge": "Stylist Favorite",
+    "image": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=800&q=80",
+    "included": [
+      "Consultation by Specialist Nishant",
+      "Hair Texture Assessment",
+      "Precision Cut & Blowdry Styling"
     ]
   }
 ]

@@ -106,102 +106,196 @@ window.playSalonSound = function(type) {
 // 2. DATA FETCHING & UI POPULATION
 // =============================================================================
 
-// Fallback offline catalog for static hosting (GitHub Pages)
 const FALLBACK_SERVICES = [
   {
-    id: "Salon Apple-1",
+    id: "apple-hair-1",
     category: "hair",
-    name: "Salon Apple Geometric Cut & Styling",
-    tagline: "The iconic precision cut pioneered by the Salon Apple dynasty, sculpted to accentuate facial contours.",
-    price: 950,
-    duration: "45 mins",
-    popular: true,
-    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
-    included: [
-      "Salon Apple Trichology Scalp Diagnostic",
-      "Botanical Anti-Pollution Cleansing",
-      "Precision Layering & Architectural Texturizing",
-      "Ionic High-Volume Couture Blowdry"
-    ]
-  },
-  {
-    id: "Salon Apple-2",
-    category: "color",
-    name: "Haute Balayage & French Gloss Glaze",
-    tagline: "Seamless hand-painted dimensional highlights infused with Olaplex bond repair.",
-    price: 4200,
-    duration: "120 mins",
-    popular: true,
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
-    included: [
-      "Custom Undertone & Complexion Mapping",
-      "Ammonia-Free Lightening Therapy",
-      "Olaplex No.1 & No.2 Molecular Reconstruction",
-      "Acidic High-Shine French Liquid Glaze"
-    ]
-  },
-  {
-    id: "Salon Apple-3",
-    category: "rituals",
-    name: "24K Liquid Gold Keratin & Nanoplastia",
-    tagline: "Ultra-sleek amino-protein reconstruction that eliminates frizz for up to 6 months.",
-    price: 5500,
-    duration: "150 mins",
-    popular: false,
-    image: "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80",
-    included: [
-      "Deep Clarifying Thermal Detox",
-      "Bio-Collagen & Pure Keratin Infusion",
-      "Ultrasonic Micro-Mist Steam Seal",
-      "Mirror Lamination Thermal Pressing"
-    ]
-  },
-  {
-    id: "Salon Apple-4",
-    category: "rituals",
-    name: "Japanese Waterfall Head Spa & Scalp Detox",
-    tagline: "Hydro-massage waterfall therapy with herbal scalp exfoliation and deep relaxation.",
-    price: 2400,
-    duration: "75 mins",
-    popular: true,
-    image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
-    included: [
-      "Micro-Camera 200x Scalp Diagnostic",
-      "Herbal Exfoliating Detox Scrub",
-      "Continuous Warm Waterfall Halo Therapy",
-      "Acupressure Neck & Shoulder Tension Relief"
-    ]
-  },
-  {
-    id: "Salon Apple-5",
-    category: "grooming",
-    name: "The Royal Maharajah Beard & Grooming Ritual",
-    tagline: "Traditional hot towel treatment, straight-razor shaping, and botanical beard massage.",
-    price: 850,
-    duration: "40 mins",
-    popular: false,
-    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80",
-    included: [
-      "Pre-Shave Sandalwood Steam Towel",
-      "Feather-Edge Precision Blade Sculpting",
-      "Organic Argan & Jojoba Oil Conditioning",
-      "Alum & Cooling Rose Water Tonification"
-    ]
-  },
-  {
-    id: "Salon Apple-6",
-    category: "skin",
-    name: "Hydra-Infusion 24K Gold Bridal Facial",
-    tagline: "Celebrity runway glow therapy with oxygen jet peeling and 24-karat gold leaf mask.",
-    price: 3500,
+    name: "Female Hair Package 1",
+    tagline: "Wella Hair Wash + Hair Cut + Wella Colour Root Touch-up (up to 2\")",
+    price: 1800,
+    originalPrice: 2350,
+    discount: "23% OFF",
     duration: "90 mins",
     popular: true,
+    badge: "Popular Value",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
+    included: [
+      "Wella Professional Hair Wash",
+      "Precision Hair Cut & Blowdry",
+      "Wella Hair Colour Root Touch-up (up to 2 inch)"
+    ]
+  },
+  {
+    id: "apple-hair-2",
+    category: "hair",
+    name: "Female Hair Package 2",
+    tagline: "Hair Cut + Global Hair Colour + Wella Baseline Hair Spa",
+    price: 4500,
+    originalPrice: 5700,
+    discount: "21% OFF",
+    duration: "120 mins",
+    popular: true,
+    badge: "Best Seller",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
+    included: [
+      "Precision Hair Cut & Style",
+      "Global Hair Colour (Wella Formulation)",
+      "Wella Baseline Deep Nourishing Hair Spa"
+    ]
+  },
+  {
+    id: "apple-hair-3",
+    category: "hair",
+    name: "Female Hair Package 3 (Nanogel)",
+    tagline: "Hair Cut + Hair Colour (Root / Global / Highlights) + Nanogel Treatment",
+    price: 7500,
+    originalPrice: 12700,
+    discount: "41% OFF",
+    duration: "150 mins",
+    popular: false,
+    badge: "Save ₹5,200",
+    image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
+    included: [
+      "Precision Tailored Hair Cut",
+      "Hair Colour (Root touch up, Global, or Highlights)",
+      "Advanced Nanogel Rejuvenation Therapy"
+    ]
+  },
+  {
+    id: "apple-hair-4",
+    category: "rituals",
+    name: "Female Hair Package 4 (Nanoplastia)",
+    tagline: "Hair Cut + Hair Colour + Nanoplastia Protein Treatment",
+    price: 10000,
+    originalPrice: 13700,
+    discount: "27% OFF",
+    duration: "180 mins",
+    popular: true,
+    badge: "Flagship Luxury",
+    image: "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80",
+    included: [
+      "Master Hair Cut & Blowdry",
+      "Hair Colour (Root touch up, Global, or Highlights)",
+      "Nanoplastia Protein Deep Keratin Smoothing Therapy"
+    ]
+  },
+  {
+    id: "apple-glow-her",
+    category: "skin",
+    name: "Festive Glow Package (For Her)",
+    tagline: "Full Body Scrub, Skin Whitening Facial, Detan, Waxing & Mani-Pedi",
+    price: 4000,
+    originalPrice: 5920,
+    discount: "32% OFF",
+    duration: "150 mins",
+    popular: true,
+    badge: "Festive Special",
     image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
     included: [
-      "Ultrasonic Pore De-Congestion",
-      "Hyaluronic Acid Nano-Infusion",
-      "Genuine 24K Gold Foil Cellular Mask",
-      "Cryo-Globe Lymphatic Drainage Massage"
+      "Full Body Exfoliating Scrub",
+      "Skin Whitening Radiant Facial",
+      "Face Detan Therapy",
+      "Regular Waxing (FH, FL, UA)",
+      "Manicure or Hairwash",
+      "Pedicure or Blowdry",
+      "Eyebrows Threading"
+    ]
+  },
+  {
+    id: "apple-glow-him",
+    category: "grooming",
+    name: "Festive Glow Package (For Him)",
+    tagline: "Full Body Scrub, Skin Whitening Facial, Detan, Haircut & Beard",
+    price: 3000,
+    originalPrice: 3800,
+    discount: "21% OFF",
+    duration: "120 mins",
+    popular: true,
+    badge: "Gentlemen's Choice",
+    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80",
+    included: [
+      "Full Body Exfoliating Scrub",
+      "Skin Whitening Radiant Facial",
+      "Face Detan Therapy",
+      "Refreshing Hair Wash",
+      "Precision Haircut",
+      "Luxury Shaving or Beard Trim"
+    ]
+  },
+  {
+    id: "apple-beauty-3",
+    category: "skin",
+    name: "Female Beauty Package 3 (Raaga Facial)",
+    tagline: "Raaga Professional Facial, Detan, Waxing & Classic Mani-Pedi",
+    price: 1800,
+    originalPrice: 2570,
+    discount: "30% OFF",
+    duration: "120 mins",
+    popular: true,
+    badge: "Super Saver",
+    image: "https://images.unsplash.com/photo-1512290900672-1f49cb79e09d?auto=format&fit=crop&w=800&q=80",
+    included: [
+      "Raaga Professional Facial",
+      "Bleach or Face Detan",
+      "Regular Waxing (FH, FL, UA)",
+      "Classic Manicure & Pedicure",
+      "Eyebrows Threading"
+    ]
+  },
+  {
+    id: "apple-beauty-4",
+    category: "skin",
+    name: "Female Beauty Package 4 (Richfeel)",
+    tagline: "Richfeel Skin Whitening Facial, Oxy Bleach/Detan, Waxing & Mani-Pedi",
+    price: 2800,
+    originalPrice: 4270,
+    discount: "34% OFF",
+    duration: "135 mins",
+    popular: true,
+    badge: "Bridal Favorite",
+    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80",
+    included: [
+      "Richfeel Skin Whitening Facial",
+      "Oxy Bleach or Face Detan",
+      "2G Waxing (FH, HL) & Regular Waxing (UA)",
+      "Classic Manicure & Pedicure",
+      "Eyebrows Threading"
+    ]
+  },
+  {
+    id: "apple-monday-special",
+    category: "rituals",
+    name: "Spectacular Monday Offer",
+    tagline: "Book a Signature Pedicure & get Signature Manicure 100% FREE!",
+    price: 1200,
+    originalPrice: 2400,
+    discount: "50% OFF",
+    duration: "75 mins",
+    popular: true,
+    badge: "Monday Only",
+    image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
+    included: [
+      "Deluxe Signature Pedicure with Foot Massage",
+      "Signature Manicure (COMPLIMENTARY)",
+      "Cuticle Care, Nail Shaping & French Polish"
+    ]
+  },
+  {
+    id: "apple-haircut-nishant",
+    category: "hair",
+    name: "Precision Tailored Haircut",
+    tagline: "Specialist cut tailored to your face structure & hair texture",
+    price: 550,
+    originalPrice: 750,
+    discount: "26% OFF",
+    duration: "45 mins",
+    popular: true,
+    badge: "Stylist Favorite",
+    image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=800&q=80",
+    included: [
+      "Consultation by Specialist Nishant",
+      "Hair Texture Assessment",
+      "Precision Cut & Blowdry Styling"
     ]
   }
 ];
@@ -209,51 +303,127 @@ const FALLBACK_SERVICES = [
 const FALLBACK_STYLISTS = [
   {
     id: "stylist-1",
-    name: "Zeeshan Salon Apple",
-    title: "Master Creative Director & Academy Mentor",
-    experience: "14 Years",
-    specialty: "Signature Precision Cuts, Balayage, Celebrity Makeovers",
-    rating: 4.98,
-    reviewsCount: 462,
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
-    available: true,
-    quote: "Hair is your crown. The right geometric cut transforms not just your face, but your confidence."
+    name: "Nishant",
+    title: "Master Haircut & Texture Specialist",
+    specialty: "Precision Tailored Haircuts, Fade Architecture, Texture Styling",
+    bio: "Praised by clients for patient consultations, sharp bespoke cuts, and tailored recommendations perfectly suited to individual hair types.",
+    avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=400&q=80",
+    rating: 4.9,
+    reviewsCount: 112,
+    quote: "A great haircut begins by truly listening to your preferences and crafting lines tailored to your face shape."
   },
   {
     id: "stylist-2",
-    name: "Priyanka Kulkarni",
-    title: "Senior Colorist & Chemical Transformation Head",
-    experience: "10 Years",
-    specialty: "French Balayage, Nanoplastia, Ash Blonde & Mocha Tones",
-    rating: 4.97,
-    reviewsCount: 389,
+    name: "Ms. Sebi",
+    title: "Aesthetician & Soothing Facial Massage Specialist",
+    specialty: "Radiant Skin Whitening Facials, Acupressure Facial Massage, Rejuvenation",
+    bio: "Celebrated for relaxing, patient facial treatments with wonderful soothing massages that leave skin fresh, luminous, and radiant.",
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
-    available: true,
-    quote: "Coloring Indian hair requires scientific precision to preserve health while achieving high-fashion luminosity."
+    rating: 5.0,
+    reviewsCount: 85,
+    quote: "Skincare is a gentle art. When you relax completely, your natural skin radiance immediately shines through."
   },
   {
     id: "stylist-3",
-    name: "Rohan Deshmukh",
-    title: "Lead Barber & Male Aesthetic Architect",
-    experience: "8 Years",
-    specialty: "Precision Fades, Royal Beard Architecture, Scalp Therapies",
-    rating: 4.95,
-    reviewsCount: 312,
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
-    available: true,
-    quote: "Grooming is personal architecture. Clean lines and healthy scalp are the foundation of a distinguished man."
+    name: "Radha",
+    title: "Facials & Deep Skincare Therapist",
+    specialty: "Thorough Skin Cleansing, Detan Therapy, Sensitive Skin Treatments",
+    bio: "Provides thorough, attentive, and deeply calming skin therapies with clinical-grade European skincare and detan treatments.",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+    rating: 4.8,
+    reviewsCount: 92,
+    quote: "Every client's skin is unique. We customize each therapy for maximum hydration, glow, and relaxation."
   },
   {
     id: "stylist-4",
-    name: "Sneha Joshi",
-    title: "Japanese Head Spa & Trichology Specialist",
-    experience: "7 Years",
-    specialty: "Acupressure Hydrotherapy, Scalp Rejuvenation, Botanical Hair Spas",
-    rating: 4.99,
-    reviewsCount: 278,
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-    available: true,
-    quote: "True hair beauty begins deep within the follicle. The Japanese waterfall ritual brings tranquility and hair vitality."
+    name: "Praveen",
+    title: "Haircut, Wash & Head Massage Therapist",
+    specialty: "Bespoke Cuts, Acupressure Head Wash, 2-Hour Therapy Experience",
+    bio: "Master of beautiful haircuts, rejuvenating hair washes, and deeply relaxing head massages described by clients as a therapeutic 2-hour session.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    rating: 4.9,
+    reviewsCount: 76,
+    quote: "A salon visit should feel like complete therapy. Our head massage melts all stress while restoring scalp health."
+  },
+  {
+    id: "stylist-5",
+    name: "Varsha",
+    title: "Bridal Artistry & Skin Consultant",
+    specialty: "Bridal Transformations, Couple Packages, Skin Type Diagnostics",
+    bio: "Skilled, professional, and attentive bridal consultant helping brides and couples discover treatments that best suit their natural skin tone.",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+    rating: 5.0,
+    reviewsCount: 64,
+    quote: "Creating unforgettable bridal moments with flawless skin prep and warm, attentive care."
+  },
+  {
+    id: "stylist-6",
+    name: "Gurfan",
+    title: "Bridal Hair & Precision Styling Specialist",
+    specialty: "Bridal Updos, Couture Finishing, Attentive Guest Care",
+    bio: "Known for attentive customer care, exquisite bridal updos, modern texture styling, and flawless occasion looks.",
+    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+    rating: 4.8,
+    reviewsCount: 59,
+    quote: "Precision, elegance, and warmth. Every hairstyle should feel effortless and last all celebration long."
+  }
+];
+
+const FALLBACK_REVIEWS = [
+  {
+    id: "rev-1",
+    name: "Priyanka Bendbhar",
+    rating: 5,
+    timeAgo: "1 year ago",
+    service: "Haircut by Nishant",
+    stylist: "Nishant",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+    text: "I recently visited Apple Saloon for a haircut, and I'm thoroughly impressed with the service I received from *Nishant*. From the moment I walked in, the staff made me feel welcomed and comfortable. Nishant took the time to listen to my preferences, offering helpful suggestions based on my hair type. The cut turned out exactly as I envisioned—sharp, stylish, and perfectly tailored. The atmosphere of the salon was relaxing, and the attention to detail throughout the entire experience was exceptional. Overall, I'm very happy with my haircut and will definitely be returning for future appointments. Highly recommend!",
+    verified: true
+  },
+  {
+    id: "rev-2",
+    name: "Shivangi Bhattacharjee",
+    rating: 5,
+    timeAgo: "8 months ago",
+    service: "Haircut, Wash & Facials",
+    stylist: "Praveen & Radha",
+    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80",
+    text: "Got my haircut and facial done here. The staff were extremely courteous and caring. Radha did a thorough job with the facial, she was very patient and made me completely relax. Praveen gave me a beautiful haircut, also got a hairwash from him, he gave me a very relaxing head massage during the wash. It felt like a 2 hour therapy session, would definitely recommend their services to anyone curious.",
+    verified: true
+  },
+  {
+    id: "rev-3",
+    name: "Aishwarya Bhosale",
+    rating: 5,
+    timeAgo: "7 months ago",
+    service: "Facials & Massage",
+    stylist: "Ms. Sebi",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
+    text: "I had a facial done here. 'Ms. Sebi' did a great job. She was so patient and made me feel relaxed and at ease by talking to me. She also gave a great massage. It was a nice experience here. I will surely visit next time!",
+    verified: true
+  },
+  {
+    id: "rev-4",
+    name: "Mansi Adkar",
+    rating: 5,
+    timeAgo: "1 year ago",
+    service: "Bridal Services & Facials",
+    stylist: "Varsha & Gurfan",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80",
+    text: "I recently visited this salon with my fiancé for facial appointments, and we had a wonderful experience! The entire process was smooth and seamless. A special mention to Varsha and Gurfan, who were absolutely the best at what they do – skilled, professional, and attentive. The salon's location is also a big plus – easy to find using maps. The staff is incredibly kind and helpful, taking the time to suggest services that best suit your skin type. Overall, a great experience, and I'd highly recommend this salon to anyone looking for quality services and excellent customer care!",
+    verified: true
+  },
+  {
+    id: "rev-5",
+    name: "Tanaya Waghmare",
+    rating: 5,
+    timeAgo: "6 months ago",
+    service: "Skin Glowing Facial",
+    stylist: "Ms. Sebi",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80",
+    text: "I had a wonderful facial experience here. The staff was very professional and made me feel relaxed throughout the treatment. The salon was clean and hygienic, and my skin felt fresh and glowing after the facial. Sebi did a wonderful job.",
+    verified: true
   }
 ];
 
@@ -285,6 +455,14 @@ async function loadSalonData() {
     }
     renderStylistsGrid(AppState.stylists);
     renderModalStylistsList(AppState.stylists);
+
+    const revRes = await fetch('/api/reviews').catch(() => null);
+    let reviews = FALLBACK_REVIEWS;
+    if (revRes && revRes.ok) {
+      reviews = await revRes.json();
+    }
+    renderReviewsSection(reviews);
+
   } catch (err) {
     console.warn('Using local fallback salon data:', err);
     AppState.services = FALLBACK_SERVICES;
@@ -293,7 +471,35 @@ async function loadSalonData() {
     renderModalServicesList(AppState.services);
     renderStylistsGrid(AppState.stylists);
     renderModalStylistsList(AppState.stylists);
+    renderReviewsSection(FALLBACK_REVIEWS);
   }
+}
+
+function renderReviewsSection(reviews) {
+  const container = document.getElementById('reviewsGrid');
+  if (!container) return;
+
+  container.innerHTML = reviews.map(r => `
+    <div class="review-card">
+      <div class="review-card-header">
+        <div class="reviewer-meta">
+          <img src="${r.avatar}" alt="${r.name}" class="reviewer-avatar" loading="lazy">
+          <div>
+            <h4 class="reviewer-name">${r.name}</h4>
+            <span class="review-date-badge"><i class="fa-brands fa-google text-gold"></i> Verified Review • ${r.timeAgo}</span>
+          </div>
+        </div>
+        <div class="review-stars-gold">
+          ${'<i class="fa-solid fa-star"></i>'.repeat(r.rating)}
+        </div>
+      </div>
+      <p class="review-quote-text">"${r.text}"</p>
+      <div class="review-card-footer">
+        <span class="review-tag"><i class="fa-solid fa-scissors"></i> ${r.service}</span>
+        <span class="review-stylist-tag"><i class="fa-solid fa-user-check"></i> ${r.stylist}</span>
+      </div>
+    </div>
+  `).join('');
 }
 
 function renderServicesGrid(services) {
@@ -567,7 +773,7 @@ function updateStep4Recap() {
   const recap = document.getElementById('step4Recap');
   if (!recap) return;
 
-  const s = AppState.selectedService || { name: "Salon Apple's Precision Cut", price: 950 };
+  const s = AppState.selectedService || { name: "Female Hair Package 1", price: 1800 };
   const st = AppState.selectedStylist || { name: 'Master on Duty (Handewadi)' };
   const dateInput = document.getElementById('bookingDateInput');
   const date = dateInput ? dateInput.value : 'Upcoming';
@@ -581,7 +787,7 @@ function updateStep4Recap() {
     <div style="font-size:13px;color:var(--text-secondary);line-height:1.6;">
       <div><i class="fa-solid fa-user-tie"></i> <strong>Stylist:</strong> ${st.name}</div>
       <div><i class="fa-regular fa-calendar"></i> <strong>Scheduled:</strong> ${date} at ${slot}</div>
-      <div><i class="fa-solid fa-location-dot"></i> <strong>Branch:</strong> ITI Road, Handewadi, Pune</div>
+      <div><i class="fa-solid fa-location-dot"></i> <strong>Branch:</strong> Third Floor, Ladies Katta, Handewadi Rd, Undri, Pune 411028</div>
     </div>
   `;
 }
@@ -602,7 +808,7 @@ async function submitAppointment() {
     clientName: nameInput.value.trim(),
     clientEmail: emailInput.value.trim(),
     clientPhone: phoneInput.value.trim(),
-    serviceId: AppState.selectedService?.id || 'Salon Apple-1',
+    serviceId: AppState.selectedService?.id || 'apple-hair-1',
     stylistId: AppState.selectedStylist?.id || 'stylist-1',
     date: dateInput ? dateInput.value : '2026-09-25',
     timeSlot: AppState.selectedTimeSlot || '14:30',
@@ -632,30 +838,30 @@ async function submitAppointment() {
         return;
       }
     } catch (netErr) {
-      console.warn('Backend API offline (GitHub Pages mode). Generating client-side reservation pass:', netErr);
+      console.warn('Backend API offline. Generating client-side reservation pass:', netErr);
     }
 
-    // If server succeeded OR running on static hosting (GitHub Pages)
+    // If server succeeded OR running on static hosting
     if (!b) {
       b = {
-        bookingId: `Salon Apple-${Math.floor(1000 + Math.random() * 9000)}`,
+        bookingId: `APPLE-${Math.floor(1000 + Math.random() * 9000)}`,
         clientName: payload.clientName,
         clientPhone: payload.clientPhone,
         clientEmail: payload.clientEmail,
-        stylistName: AppState.selectedStylist?.name || 'Zeeshan Salon Apple',
-        serviceName: AppState.selectedService?.name || 'Signature Royal Cut',
+        stylistName: AppState.selectedStylist?.name || 'Nishant',
+        serviceName: AppState.selectedService?.name || 'Female Hair Package 1',
         date: payload.date,
         timeSlot: payload.timeSlot,
-        totalPrice: calculateTotal(),
+        totalPrice: AppState.selectedService?.price || 1800,
         status: 'Confirmed (Handewadi VIP)'
       };
     }
 
     // Persist reservation locally
     try {
-      const localBookings = JSON.parse(localStorage.getItem('Salon Apple_bookings') || '[]');
+      const localBookings = JSON.parse(localStorage.getItem('apple_salon_bookings') || '[]');
       localBookings.unshift(b);
-      localStorage.setItem('Salon Apple_bookings', JSON.stringify(localBookings.slice(0, 30)));
+      localStorage.setItem('apple_salon_bookings', JSON.stringify(localBookings.slice(0, 30)));
     } catch (e) {}
 
     window.playSalonSound('chime');
@@ -666,6 +872,20 @@ async function submitAppointment() {
     document.getElementById('ticketService').textContent = b.serviceName;
     document.getElementById('ticketDateTime').textContent = `${b.date} at ${b.timeSlot}`;
     document.getElementById('ticketTotal').textContent = formatINR(b.totalPrice);
+
+    // Setup WhatsApp direct link
+    const waText = `Hello Salon Apple Handewadi! I have reserved an appointment:
+• Booking Code: ${b.bookingId}
+• Service: ${b.serviceName}
+• Stylist: ${b.stylistName}
+• Date & Time: ${b.date} at ${b.timeSlot}
+• Guest: ${b.clientName} (${b.clientPhone})
+Please confirm my slot. Thank you!`;
+    const waUrl = `https://wa.me/917249028033?text=${encodeURIComponent(waText)}`;
+    const waBtn = document.getElementById('ticketWhatsAppBtn');
+    if (waBtn) {
+      waBtn.href = waUrl;
+    }
 
     goToBookingStep(5);
   } catch (err) {
