@@ -2831,6 +2831,11 @@ h1, h2, h3, h4 {
     padding: 16px 0 40px;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
   .luxury-badge {
     font-size: 9.5px;
     padding: 4px 10px;
